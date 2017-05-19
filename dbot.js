@@ -8,17 +8,14 @@ const child_process = require('child_process'); //api pour gérer les processus
 const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des mp3 depuis youtube
 const getYouTubeID = require('get-youtube-id');
 
-// Importation de mes APIs
-const tournoi = require('./mes_modules/tournoi/tournoi.js');
-const mesOutils = require('./mes_modules/mesOutils/mesOutils.js');
-
-//chargement du fichier de configuration
+//Chargement du fichier de configuration du D-BOT
 const config = require('./dbot_config.json');
-//chargement du fichier de tournoi
 
-// Initialisation du bot
-const client = new Discord.Client();
-console.log('\n**********************CHARGEMENT DU FICHIER DE CONFIGURATION***********************\n');
+//Version du D-BOT
+var version = 0.1;
+
+//Chargement du fichier de tournoi
+var tournoi = require('./data/tournoi/tournoi.json');
 
 //Initialisation de l'api youtube
 var YD = new YoutubeMp3Downloader({
@@ -28,6 +25,12 @@ var YD = new YoutubeMp3Downloader({
     "queueParallelism": 2, // How many parallel downloads/encodes should be started? 
     "progressTimeout": 4000 // How long should be the interval of the progress reports 
 });
+
+// Initialisation du bot
+const client = new Discord.Client();
+console.log('\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n');
+
+console.log('Version du D-BOT : ' + version);
 console.log('Chemin de ffmpegPath utilisé : ' + config.ffmpeg_path);
 
 //Token du bot 
@@ -41,7 +44,7 @@ console.log('Prefix des commandes utilisé : ' + config.prefix);
 //Id Admin
 const admin = config.idadmin;
 console.log('Id admin chargé : ' + config.idadmin);
-console.log('\n**********************CHARGEMENT DU FICHIER DE CONFIGURATION***********************\n\n');
+console.log('\n\n********************** CHARGEMENT DU FICHIER DE CONFIGURATION *******************\n\n');
 
 //Connection
 client.login(token);
@@ -278,11 +281,27 @@ try {
         }
         //*tournoistart
         if (commande[0] == 'tournoistart' && msg.author.id == admin) {
-            msg.channel.send('✪' + tournoi.nomtournoi + "✪\n");
-            msg.channel.send("Voici l'organisation des matchs : \n\n" + tournoi.listedesmatchs);
-        }
+            var listedesjoueurs = tournoi.participants;
+            var affichelistedesjoueurs = "";
+            listedesjoueurs.forEach(function (joueur) {
+                affichelistedesjoueurs += joueur + "\n";
+            })
+            var listedesmatch = ""
+            var compteur = 0;
+            while (listedesjoueurs.length > 1) {
+                compteur++;
+                var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+                var equipe1 = listedesjoueurs[joueurselectionne];
+                listedesjoueurs.splice(joueurselectionne, 1);
+                var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+                var equipe2 = listedesjoueurs[joueurselectionne];
+                listedesjoueurs.splice(joueurselectionne, 1);
+                //gestion de l'affichage
+                listedesmatch += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
+                return listedesmatch;
+            }
 
-        //        }
+        }
 
         //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
         if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
@@ -432,6 +451,10 @@ try {
         } else {
             return false;
         }
+    }
+
+    function random(max) {
+        return Math.floor((Math.random() * max) + 1);
     }
 
     function affichematch(msg, equipe1, equipe2) {
