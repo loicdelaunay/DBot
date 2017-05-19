@@ -124,6 +124,7 @@ try {
 
         //*aide affiche l'aide disponible
         if (commande[0] == 'aide' || commande[0] == '?') {
+            console.log('Affichage de l aide');
             msg.reply("Voici l'aide :" +
                 "\n - pour parler avec l 'ia du bot taper * avant votre message" +
                 "\n - /aideg pour obtenir l'aide générale" +
@@ -139,6 +140,7 @@ try {
 
         //*aideadmin affiche l'aide pour les admins
         if (commande[0] == 'aideadmin' && msg.author.id == admin) {
+            console.log('Affichage de l aide admin');
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /block "nom du client     pour bloquer un utilisateur. ' +
                 '\n - /unblock "nom du client" pour débloquer un utilisateur. ' +
@@ -149,6 +151,7 @@ try {
 
         //*aidemusique affiche l'aide pour la gestion de la musique
         if (commande[0] == 'aidemusique' && msg.author.id == admin) {
+            console.log('Affichage de l aide musique');
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id ' +
                 '\n - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url ' +
@@ -161,6 +164,7 @@ try {
 
         //*aideg affiche l'aide global
         if (commande[0] == 'aideg') {
+            console.log('Affichage de l aide général');
             msg.reply('Salut voici la liste de mes commandes générales :' +
                 '\n - /myavatar    pour avoir un lien vers votre avatar ' +
                 '\n - /ping     pour obtenir votre ping. ' +
@@ -173,11 +177,13 @@ try {
 
         //*aidewot affiche l'aide pour les commandes sur le jeu world of tanks
         if (commande[0] == 'aidewot') {
+            console.log('Affichage de l aide wot');
             msg.reply('Salut voici la liste de mes commandes WorldOfTanks :\n - /wotinfo "nomdujoueur"    pour obtenir les stats wot du joueur recherché sur les sites les plus réputés.');
         }
 
         //*wotinfo Affiche les commandes d'aide a wot
         if (commande[0] == 'wotinfo') {
+            console.log('Commande wotinfo éxécuté');
             msg.reply('Voici les statistiques wot du joueur : ' + args[0] + '\nPar world of tanks : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=' + args[0] + '\n' + 'Par WOT-LIFE : https://fr.wot-life.com/eu/player/' + args[0] + '\n' + 'Par WOT STAT : http://www.wotstats.org/stats/eu/' + args[0] + '\n' + 'Par NoobMeter : http://www.noobmeter.com/player/eu/' + args[0]);
         }
 
@@ -279,6 +285,7 @@ try {
         if (commande[0] == 'tournoiadd' && msg.author.id == admin) {
             msg.reply('Le joueur : ' + args[0] + 'a bien été rajouté au tournoi');
         }
+
         //*tournoistart
         if (commande[0] == 'tournoistart' && msg.author.id == admin) {
             var listedesjoueurs = tournoi.participants;
@@ -286,20 +293,21 @@ try {
             listedesjoueurs.forEach(function (joueur) {
                 affichelistedesjoueurs += joueur + "\n";
             })
-            var listedesmatch = ""
+            var listedesmatchs = ""
             var compteur = 0;
             while (listedesjoueurs.length > 1) {
                 compteur++;
-                var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+                var joueurselectionne = random(listedesjoueurs.length - 2);
                 var equipe1 = listedesjoueurs[joueurselectionne];
                 listedesjoueurs.splice(joueurselectionne, 1);
-                var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+                var joueurselectionne = random(listedesjoueurs.length - 2);
                 var equipe2 = listedesjoueurs[joueurselectionne];
                 listedesjoueurs.splice(joueurselectionne, 1);
                 //gestion de l'affichage
-                listedesmatch += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
-                return listedesmatch;
+                listedesmatchs += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
             }
+            msg.channel.send('🔱🔱🔱 ' + tournoi.nomtournoi + ' 🔱🔱🔱' + '\n\n\nVoici la liste des matchs: \n');
+            msg.channel.send(listedesmatchs);
 
         }
 
