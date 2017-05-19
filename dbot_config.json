@@ -1,0 +1,13 @@
+{
+    "ffmpeg_path": "D:/Programmes/ffmpeg/bin/ffmpeg.exe",
+    "_ffmpeg_path": "Pour pouvoir gérer l'audio merci de mettre le chemin vers ffmpeg.exe",
+
+    "token": "MjcxNjU2ODY2NTc1MDI0MTM4.C_IrRQ.TS8A40wUJUQ64CSt4QTliM29IgU",
+    "_token": "Token du bot fourni par discord",
+
+    "prefix": "/",
+    "_prefix": "Le début du message pour éxécuter la commande",
+
+    "idadmin": "118072401681448960",
+    "_idadmin": "id discord de l'admin du bot"
+}
