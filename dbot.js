@@ -13,7 +13,7 @@ const colors = require('colors'); // api pour gérer la couleur dans la console
 const config = require('./dbot_config.json');
 
 //Version du D-BOT
-var version = 0.2;
+var version = 0.3;
 
 //Chargement du fichier de tournoi
 var tournoi = require('./data/tournoi/tournoi.json');
@@ -304,6 +304,40 @@ try {
             msg.reply('Le joueur : ' + args[0] + 'a bien été rajouté au tournoi');
         }
 
+        //*tournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
+        if (commande[0] == 'tournoirule') {
+            const embed = new Discord.RichEmbed()
+                .setTitle("   ⚠   VOICI L'ORGANISATION DES TOURNOIS INTRA DOTY !   ⚠   ")
+                .setColor(0x00AE86)
+                .setDescription('Ici vous trouverez toutes les régles/informations concernant les tournois de la DOTY')
+                .setFooter('© D-BOT copyright Dream')
+                .setTimestamp()
+                .setThumbnail('http://www.loicdelaunay.fr/projets/dbot/tournoilogo.png')
+
+                .addField('Information 1:', '- Les matchs sont organisés automatiquement par le script du D-BOT.')
+
+                .addField('Information 2:', '- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi ).')
+
+                .addField('Information 3:', "- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible.")
+
+                .addField('Information 4:', '- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres.')
+
+                .addField('Information 5:', "- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi.")
+
+                .addField('Information 6:', "- Chaque match s'organise en 3 rounds ! Défaite du match = élimination du tournoi.")
+
+                .addField('Information 7:', '- Des informations complémentaires seront données à la création du tournoi.')
+
+                .addField('Information 8:', '- Les heures du tournoi seront données à sa création, une absence amènera à une disqualification immédiate.')
+
+                .addField('Déroulement:', "- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT par la suite, chaque équipe enverra en MESSAGE PRIVEE à l'arbitre le tank choisi sans l'avoir sélectionné, quand les deux équipes ont fini de choisirleur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci correspond bien au tank cité précédement.")
+
+
+            msg.channel.send({
+                embed
+            });
+        }
+
         //*tournoistart
         if (commande[0] == 'tournoistart' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
@@ -352,7 +386,18 @@ try {
             fs.readdirSync("./musique").forEach(file => {
                 listedesmusiques += file + "\n";
             })
-            msg.reply("****** LISTE DES MUSIQUES ******* \n\n" + listedesmusiques);
+
+            const embed = new Discord.RichEmbed()
+                .setTitle("   🎶   VOICI LA LISTE DES MUSIQUES DISPONIBLE !   🎶   ")
+                .setColor(0xbe2424)
+                .setDescription('Voici la liste des musiques disponible')
+                .setFooter('© D-BOT copyright Dream')
+                .setTimestamp()
+                .addField('Les musiques:', listedesmusiques)
+
+            msg.channel.send({
+                embed
+            });
         }
 
         //*musiquestop stop la musique en cours (UTILISE UN HACK SON)

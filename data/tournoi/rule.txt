@@ -1,0 +1,18 @@
+"⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+"
