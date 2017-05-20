@@ -13,7 +13,7 @@ const colors = require('colors'); // api pour gérer la couleur dans la console
 const config = require('./dbot_config.json');
 
 //Version du D-BOT
-var version = 0.1;
+var version = 0.2;
 
 //Chargement du fichier de tournoi
 var tournoi = require('./data/tournoi/tournoi.json');
@@ -43,7 +43,8 @@ colors.setTheme({
 
 // Initialisation du bot
 const client = new Discord.Client();
-console.log('\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n.');
+const entete = '\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n'
+console.log(entete.bgWhite.black);
 
 console.log('Version du D-BOT : ' + version);
 console.log('Chemin de ffmpegPath utilisé : ' + config.ffmpeg_path);
@@ -59,7 +60,9 @@ console.log('Prefix des commandes utilisé : ' + config.prefix);
 //Id Admin
 const admin = config.idadmin;
 console.log('Id admin chargé : ' + config.idadmin);
-console.log('\n\n********************** CHARGEMENT DU FICHIER DE CONFIGURATION *******************\n\n');
+
+const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
+console.log(entete2.bgWhite.black);
 
 //Connection
 client.login(token);
@@ -70,7 +73,7 @@ client.on('ready', () => {
     var heurestart = dt.format('d-m-Y H:M:S');
     client.user.setStatus("online");
     client.user.setGame("/aide pour obtenir de l'aide");
-    logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'error');
+    logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
 });
 
 
@@ -139,8 +142,7 @@ try {
 
         //*aide affiche l'aide disponible
         if (commande[0] == 'aide' || commande[0] == '?') {
-            logconsole('Affichage de l aide', info, msg);
-            logconsole('Affichage de l aide', info);
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Voici l'aide :" +
                 "\n - pour parler avec l 'ia du bot taper * avant votre message" +
                 "\n - /aideg pour obtenir l'aide générale" +
@@ -156,7 +158,7 @@ try {
 
         //*aideadmin affiche l'aide pour les admins
         if (commande[0] == 'aideadmin' && msg.author.id == admin) {
-            logconsole('Affichage de l aide admin', info);
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /block "nom du client     pour bloquer un utilisateur. ' +
                 '\n - /unblock "nom du client" pour débloquer un utilisateur. ' +
@@ -167,7 +169,7 @@ try {
 
         //*aidemusique affiche l'aide pour la gestion de la musique
         if (commande[0] == 'aidemusique' && msg.author.id == admin) {
-            logconsole('Affichage de l aide musique', info);
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id ' +
                 '\n - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url ' +
@@ -180,7 +182,7 @@ try {
 
         //*aideg affiche l'aide global
         if (commande[0] == 'aideg') {
-            console.log('Affichage de l aide général');
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes générales :' +
                 '\n - /myavatar    pour avoir un lien vers votre avatar ' +
                 '\n - /ping     pour obtenir votre ping. ' +
@@ -193,25 +195,26 @@ try {
 
         //*aidewot affiche l'aide pour les commandes sur le jeu world of tanks
         if (commande[0] == 'aidewot') {
-            console.log('Affichage de l aide wot');
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes WorldOfTanks :\n - /wotinfo "nomdujoueur"    pour obtenir les stats wot du joueur recherché sur les sites les plus réputés.');
         }
 
         //*wotinfo Affiche les commandes d'aide a wot
         if (commande[0] == 'wotinfo') {
-            console.log('Commande wotinfo éxécuté');
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Voici les statistiques wot du joueur : ' + args[0] + '\nPar world of tanks : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=' + args[0] + '\n' + 'Par WOT-LIFE : https://fr.wot-life.com/eu/player/' + args[0] + '\n' + 'Par WOT STAT : http://www.wotstats.org/stats/eu/' + args[0] + '\n' + 'Par NoobMeter : http://www.noobmeter.com/player/eu/' + args[0]);
         }
 
         //*info donne les infos du boy
         if (commande[0] == 'info') {
-            msg.reply('Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !' +
-                '\nVersion de Discord.JS utilisé : ' + Discord.version + '\nVersion de Node utilisé : ' + process.version);
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+            msg.reply("Le D-BOT est un bot discord basé sur DISCORD.JS développé par Dream il a pour but d'être un vrai couteau suisse !" +
+                '\nVersion du D-BOT : ' + version + '\nVersion de Discord.JS utilisé : ' + Discord.version + '\nVersion de Node utilisé : ' + process.version);
         }
 
         //*spam Commande de test, permet de spammer un chat
         if (commande[0] == 'spam' && msg.author.id === admin) {
-            msg.reply('D-BOT MOD SPAM');
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             for (var i = 0; i < args[0]; i++) {
                 msg.reply('D-BOT MOD SPAM');
             }
@@ -219,17 +222,20 @@ try {
 
         //*roll jette des dès compris entre 1 et 6
         if (commande[0] == 'roll') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le dé est sur la face : ' + random(6));
         }
 
         //*monid affiche l'id de l'utilisateur
         if (commande[0] == 'monid') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Votre ID : ' + msg.author.id);
         }
 
 
         //*register enregistre l'utilisateur dans la BDD local
         if (commande[0] == 'register') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Tu a bien été enregistré comme membre sur le D-BOT : ' + msg.author.username);
             var info = msg.author.id + ', 0, 0';
             var file = fs.writeFile('./data/' + msg.author.id + '.txt', JSON.stringify(info), function (err) {
@@ -241,23 +247,27 @@ try {
 
         //*mesinfos renseigne les information du joueur par rapport a la BDD du serveur
         if (commande[0] == 'mesinfos') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var infos = information(msg.author.id);
             msg.reply('\Ton ID : ' + infos[0] + '\Ton sel : ' + infos[1] + '\Ton niveau : ' + infos[2]);
         }
 
         //*ping donne le ping du joueur
         if (commande[0] == 'ping') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
         }
 
         //*close arrete le bot
         if (commande[0] == 'close' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Fermeture en cours ...')
             setTimeout(exitvalidation(msg), 2000);
         }
 
         //*restart relance le bot
         if (commande[0] == 'restart' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Restart en cours ....')
             restart();
             msg.reply("Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes")
@@ -266,31 +276,37 @@ try {
 
         //*online affiche le temps depuis lequel le bot est en ligne
         if (commande[0] == 'online') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Je suis en ligne depuis : " + heurestart);
         }
 
         //*myavatar affiche l'image de l'avatar du joueur
         if (commande[0] == 'myavatar') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
         }
 
         //*datecreation affiche la date de création du client
         if (commande[0] == 'datecreation') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
         }
 
         //*tournoiinit initialise à zéro le tournoi
         if (commande[0] == 'tournoiinit' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le tournoi à bien été initialisé');
         }
 
         //*tournoiadd args[0] = nom du joueur ajoute un joueur à la liste des participant du tournoi
         if (commande[0] == 'tournoiadd' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le joueur : ' + args[0] + 'a bien été rajouté au tournoi');
         }
 
         //*tournoistart
         if (commande[0] == 'tournoistart' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var listedesjoueurs = tournoi.participants;
             var affichelistedesjoueurs = "";
             listedesjoueurs.forEach(function (joueur) {
@@ -316,12 +332,14 @@ try {
 
         //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
         if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             YD.download(args[0], args[1]);
             msg.reply('Importation de la vidéo youtube avec id : ' + args[0] + ' sous le nom de : ' + args[1]);
         }
 
         //*musiqueimportyturl args[0] = url de la vidéo args[1] = nom de l'enregistrement
         if (commande[0] == 'musiqueimportyturl' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var id = getYouTubeID(args[0]);
             YD.download(id, args[1]);
             msg.reply('Importation de la vidéo youtube avec id : ' + args[0] + ' sous le nom de : ' + args[1]);
@@ -329,6 +347,7 @@ try {
 
         //*musiquelist Retourne une liste de toutes les musiques
         if (commande[0] == 'musiquelist') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var listedesmusiques = "";
             fs.readdirSync("./musique").forEach(file => {
                 listedesmusiques += file + "\n";
@@ -338,6 +357,7 @@ try {
 
         //*musiquestop stop la musique en cours (UTILISE UN HACK SON)
         if (commande[0] == 'musiquestop' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
                     var musique1 = connection.playFile('');
@@ -350,6 +370,7 @@ try {
 
         //*musiqueplay args[0] lance la musique avec args[0] = nom de la musique ex 1.mp3
         if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
                     var musique1 = connection.playFile('./musique/' + args[0]);
@@ -362,6 +383,7 @@ try {
 
         //*musiqueplaybyurl args[0] lance une musique par rapport à une url avec args[0] = url musique
         if (commande[0] == 'musicplaybyurl') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
                     try {
@@ -377,11 +399,13 @@ try {
 
         //*block args[0] met en prison un client args[0] = client
         if (commande[0] == 'block') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le rageux : ' + args[0] + ' a bien ete bloque');
         }
 
         //*unblock args[0] sort de prison un client args[0] = client
         if (commande[0] == 'unblock') {
+            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le rageux : ' + args[0] + ' a bien ete debloque');
         }
     });
@@ -396,15 +420,15 @@ try {
 
     //gestion de l'api de YOutubeMp3
     YD.on("finished", function (data) {
-        console.log(data);
+        logconsole("Le téléchargement de l'import Youtube est terminé", 'green');
     });
 
     YD.on("error", function (error) {
-        console.log(error);
+        logconsole(error, 'error');
     });
 
     YD.on("progress", function (progress) {
-        console.log(progress);
+        logconsole("Téléchargement en cours de l'import Youtube ...", 'info');
     });
 
     //Fonction retourne le dernier mot
