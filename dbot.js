@@ -7,6 +7,7 @@ const dateTime = require('node-datetime'); //api pour la gestion du temps
 const child_process = require('child_process'); //api pour gérer les processus
 const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des mp3 depuis youtube
 const getYouTubeID = require('get-youtube-id');
+const colors = require('colors'); // api pour gérer la couleur dans la console 
 
 //Chargement du fichier de configuration du D-BOT
 const config = require('./dbot_config.json');
@@ -26,9 +27,23 @@ var YD = new YoutubeMp3Downloader({
     "progressTimeout": 4000 // How long should be the interval of the progress reports 
 });
 
+//Initialisation des couleurs du thème de la console
+colors.setTheme({
+    silly: 'rainbow',
+    input: 'grey',
+    verbose: 'cyan',
+    prompt: 'grey',
+    info: 'green',
+    data: 'grey',
+    help: 'cyan',
+    warn: 'yellow',
+    debug: 'blue',
+    error: 'red'
+});
+
 // Initialisation du bot
 const client = new Discord.Client();
-console.log('\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n');
+console.log('\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n.');
 
 console.log('Version du D-BOT : ' + version);
 console.log('Chemin de ffmpegPath utilisé : ' + config.ffmpeg_path);
@@ -55,7 +70,7 @@ client.on('ready', () => {
     var heurestart = dt.format('d-m-Y H:M:S');
     client.user.setStatus("online");
     client.user.setGame("/aide pour obtenir de l'aide");
-    console.log('Le D-BOT est fonctionnel ! ' + heurestart);
+    logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'error');
 });
 
 
@@ -124,7 +139,8 @@ try {
 
         //*aide affiche l'aide disponible
         if (commande[0] == 'aide' || commande[0] == '?') {
-            console.log('Affichage de l aide');
+            logconsole('Affichage de l aide', info, msg);
+            logconsole('Affichage de l aide', info);
             msg.reply("Voici l'aide :" +
                 "\n - pour parler avec l 'ia du bot taper * avant votre message" +
                 "\n - /aideg pour obtenir l'aide générale" +
@@ -140,7 +156,7 @@ try {
 
         //*aideadmin affiche l'aide pour les admins
         if (commande[0] == 'aideadmin' && msg.author.id == admin) {
-            console.log('Affichage de l aide admin');
+            logconsole('Affichage de l aide admin', info);
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /block "nom du client     pour bloquer un utilisateur. ' +
                 '\n - /unblock "nom du client" pour débloquer un utilisateur. ' +
@@ -151,7 +167,7 @@ try {
 
         //*aidemusique affiche l'aide pour la gestion de la musique
         if (commande[0] == 'aidemusique' && msg.author.id == admin) {
-            console.log('Affichage de l aide musique');
+            logconsole('Affichage de l aide musique', info);
             msg.reply('Salut voici la liste de mes commandes admin :' +
                 '\n - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id ' +
                 '\n - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url ' +
@@ -243,20 +259,7 @@ try {
         //*restart relance le bot
         if (commande[0] == 'restart' && msg.author.id == admin) {
             msg.reply('Restart en cours ....')
-            const spawn = child_process.spawn;
-            const bat = spawn('cmd.exe', ['/c', 'startbot.bat']);
-
-            bat.stdout.on('data', (data) => {
-                console.log(data.toString());
-            });
-
-            bat.stderr.on('data', (data) => {
-                console.log(data.toString());
-            });
-
-            bat.on('exit', (code) => {
-                console.log(`Child exited with code ${code}`);
-            });
+            restart();
             msg.reply("Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes")
             setTimeout(exit, 3000);
         }
@@ -461,6 +464,57 @@ try {
         }
     }
 
+    function restart() {
+        const spawn = child_process.spawn;
+        const bat = spawn('cmd.exe', ['/c', 'startbot.bat']);
+
+        bat.stdout.on('data', (data) => {
+            console.log(data.toString());
+        });
+
+        bat.stderr.on('data', (data) => {
+            console.log(data.toString());
+        });
+
+        bat.on('exit', (code) => {
+            console.log(`Child exited with code ${code}`);
+        });
+    }
+
+
+    //Gestion des messages de log avec couleur et formatage
+    function logconsole(msg, type, objetmessage) {
+        var dt = dateTime.create();
+        var formatted = dt.format('d/m-H:M');
+        log = '['.cyan + formatted.cyan + '] :'.cyan + ' ' + msg;
+        if (objetmessage != null) {
+            log += ' par : ' + objetmessage.author.username + ' ' + objetmessage.author.id;
+        }
+        switch (type) {
+            case 'input':
+                log += ' (input)'.input;
+                break;
+            case 'info':
+                log += ' (info)'.info;
+                break;
+            case 'help':
+                log += ' (help)'.help;
+                break;
+            case 'warn':
+                log += ' (warn)'.warn;
+                break;
+            case 'debug':
+                log += ' (debug)'.debug;
+                break;
+            case 'error':
+                log += ' (error)'.error;
+                break;
+        }
+        console.log(log);
+
+    }
+
+
     function random(max) {
         return Math.floor((Math.random() * max) + 1);
     }
@@ -472,6 +526,7 @@ try {
 
 
 } catch (err) {
+    restart();
     addlogerreurs(err);
     console.log(err.message);
     return
