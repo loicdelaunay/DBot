@@ -143,45 +143,90 @@ try {
         //*aide affiche l'aide disponible
         if (commande[0] == 'aide' || commande[0] == '?') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-            msg.reply("Voici l'aide :" +
-                "\n - pour parler avec l 'ia du bot taper * avant votre message" +
-                "\n - /aideg pour obtenir l'aide générale" +
-                "\n - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks");
+
+            const embed = new Discord.RichEmbed()
+                .setTitle("   ❓   AIDE :   ❓   ")
+                .setColor(0x244dbe)
+                .setDescription("Voici l'aide de l'aide")
+                .setFooter('© D-BOT copyright Dream')
+                .setTimestamp()
+
+                .addField('\u200B', '\u200B')
+
+                .addField('*', "pour parler avec l 'ia du bot taper * avant votre message")
+                .addField('/aideg', "pour obtenir l'aide générale")
+                .addField('/aidewot', "pour obtenir l'aide à propos des commandes World Of Tanks")
 
             if (msg.author.id == admin) {
-                msg.reply("Avec votre rôle vous avez accès aux commandes suivantes :" +
-                    "\n - /aideadmin pour obtenir l'aide admin" +
-                    "\n - /aidemusique pour obtenir l'aide sur la gestrion des musiques" +
-                    "\n - /aidetournoi pour obtenir l'aide sur la gestion des tournois")
+                embed
+                    .addField('/aideadmin', "pour obtenir l'aide admin")
+                    .addField('/aidemusique', "pour obtenir l'aide sur la gestion des musiques")
+                    .addField('/aidetournoi', "pour obtenir l'aide sur la gestion des tournois")
             }
+
+            embed.addField('\u200B', '\u200B')
+            msg.channel.send({
+                embed
+            });
+
+
         }
 
         //*aideadmin affiche l'aide pour les admins
-        if (commande[0] == 'aideadmin' && msg.author.id == admin) {
+        else if (commande[0] == 'aideadmin' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-            msg.reply('Salut voici la liste de mes commandes admin :' +
-                '\n - /block "nom du client     pour bloquer un utilisateur. ' +
-                '\n - /unblock "nom du client" pour débloquer un utilisateur. ' +
-                '\n - /restart     pour restart le bot' +
-                '\n - /say    fait parler le bot dans un channel' +
-                '\n - /close     pour fermer le bot.');
+
+            const embed = new Discord.RichEmbed()
+                .setTitle("   ❓   AIDE ADMIN:   ❓   ")
+                .setColor(0xbe2424)
+                .setDescription("Voici l'aide pour les admins")
+                .setFooter('© D-BOT copyright Dream')
+                .setTimestamp()
+
+                .addField('\u200B', '\u200B')
+
+                .addField('/say', "Fait parler le bot dans un channel.")
+                .addField('/block "nom"', "pour bloquer un utilisateur.")
+                .addField('/unblock "nom"', "pour débloquer un utilisateur.")
+                .addField('/restart', "pour restart le bot.")
+                .addField('/close', "pour fermer le bot.")
+
+            embed.addField('\u200B', '\u200B')
+
+            msg.channel.send({
+                embed
+            });
         }
 
         //*aidemusique affiche l'aide pour la gestion de la musique
-        if (commande[0] == 'aidemusique' && msg.author.id == admin) {
+        else if (commande[0] == 'aidemusique' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-            msg.reply('Salut voici la liste de mes commandes admin :' +
-                '\n - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id ' +
-                '\n - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url ' +
-                '\n - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon ' +
-                '\n - /musiquesplaybyurl "url"     pour lire de la musique depuis une url ' +
-                '\n - /musiquestop     pour stopper la musique ' +
-                '\n - /musiquelist     retourne une liste de musique '
-            )
+
+            const embed = new Discord.RichEmbed()
+                .setTitle("   ❓   AIDE MUSIQUE:   ❓   ")
+                .setColor(0x179b2b)
+                .setDescription("Voici l'aide pour la musique")
+                .setFooter('© D-BOT copyright Dream')
+                .setTimestamp()
+
+                .addField('\u200B', '\u200B')
+
+                .addField('/musiqueimportytid "id de la musique" "nom du fichier importé', "pour importé une musique depuis youtube avec son id.")
+                .addField('/musiqueimportyturl "url de la musique" "nom du fichier importé"', "pour importé une musique depuis youtube avec son url.")
+                .addField('/musiqueplay "nomdelamusique"', "pour lire une musique dans le salon.")
+                .addField('/musiquesplaybyurl "url"', "pour lire de la musique depuis une url.")
+                .addField('/musiquestop', "pour stopper la musique.")
+                .addField('/musiquelist', "retourne une liste de musique.")
+
+            embed.addField('\u200B', '\u200B')
+
+            msg.channel.send({
+                embed
+            });
         }
 
         //*aideg affiche l'aide global
-        if (commande[0] == 'aideg') {
+        else if (commande[0] == 'aideg') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes générales :' +
                 '\n - /myavatar    pour avoir un lien vers votre avatar ' +
@@ -194,26 +239,26 @@ try {
         }
 
         //*aidewot affiche l'aide pour les commandes sur le jeu world of tanks
-        if (commande[0] == 'aidewot') {
+        else if (commande[0] == 'aidewot') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Salut voici la liste de mes commandes WorldOfTanks :\n - /wotinfo "nomdujoueur"    pour obtenir les stats wot du joueur recherché sur les sites les plus réputés.');
         }
 
         //*wotinfo Affiche les commandes d'aide a wot
-        if (commande[0] == 'wotinfo') {
+        else if (commande[0] == 'wotinfo') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Voici les statistiques wot du joueur : ' + args[0] + '\nPar world of tanks : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=' + args[0] + '\n' + 'Par WOT-LIFE : https://fr.wot-life.com/eu/player/' + args[0] + '\n' + 'Par WOT STAT : http://www.wotstats.org/stats/eu/' + args[0] + '\n' + 'Par NoobMeter : http://www.noobmeter.com/player/eu/' + args[0]);
         }
 
         //*info donne les infos du boy
-        if (commande[0] == 'info') {
+        else if (commande[0] == 'info') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Le D-BOT est un bot discord basé sur DISCORD.JS développé par Dream il a pour but d'être un vrai couteau suisse !" +
                 '\nVersion du D-BOT : ' + version + '\nVersion de Discord.JS utilisé : ' + Discord.version + '\nVersion de Node utilisé : ' + process.version);
         }
 
         //*spam Commande de test, permet de spammer un chat
-        if (commande[0] == 'spam' && msg.author.id === admin) {
+        else if (commande[0] == 'spam' && msg.author.id === admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             for (var i = 0; i < args[0]; i++) {
                 msg.reply('D-BOT MOD SPAM');
@@ -221,20 +266,20 @@ try {
         }
 
         //*roll jette des dès compris entre 1 et 6
-        if (commande[0] == 'roll') {
+        else if (commande[0] == 'roll') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le dé est sur la face : ' + random(6));
         }
 
         //*monid affiche l'id de l'utilisateur
-        if (commande[0] == 'monid') {
+        else if (commande[0] == 'monid') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Votre ID : ' + msg.author.id);
         }
 
 
         //*register enregistre l'utilisateur dans la BDD local
-        if (commande[0] == 'register') {
+        else if (commande[0] == 'register') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Tu a bien été enregistré comme membre sur le D-BOT : ' + msg.author.username);
             var info = msg.author.id + ', 0, 0';
@@ -246,27 +291,27 @@ try {
         }
 
         //*mesinfos renseigne les information du joueur par rapport a la BDD du serveur
-        if (commande[0] == 'mesinfos') {
+        else if (commande[0] == 'mesinfos') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var infos = information(msg.author.id);
             msg.reply('\Ton ID : ' + infos[0] + '\Ton sel : ' + infos[1] + '\Ton niveau : ' + infos[2]);
         }
 
         //*ping donne le ping du joueur
-        if (commande[0] == 'ping') {
+        else if (commande[0] == 'ping') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
         }
 
         //*close arrete le bot
-        if (commande[0] == 'close' && msg.author.id == admin) {
+        else if (commande[0] == 'close' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Fermeture en cours ...')
             setTimeout(exitvalidation(msg), 2000);
         }
 
         //*restart relance le bot
-        if (commande[0] == 'restart' && msg.author.id == admin) {
+        else if (commande[0] == 'restart' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Restart en cours ....')
             restart();
@@ -275,37 +320,37 @@ try {
         }
 
         //*online affiche le temps depuis lequel le bot est en ligne
-        if (commande[0] == 'online') {
+        else if (commande[0] == 'online') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply("Je suis en ligne depuis : " + heurestart);
         }
 
         //*myavatar affiche l'image de l'avatar du joueur
-        if (commande[0] == 'myavatar') {
+        else if (commande[0] == 'myavatar') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
         }
 
         //*datecreation affiche la date de création du client
-        if (commande[0] == 'datecreation') {
+        else if (commande[0] == 'datecreation') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
         }
 
         //*tournoiinit initialise à zéro le tournoi
-        if (commande[0] == 'tournoiinit' && msg.author.id == admin) {
+        else if (commande[0] == 'tournoiinit' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le tournoi à bien été initialisé');
         }
 
         //*tournoiadd args[0] = nom du joueur ajoute un joueur à la liste des participant du tournoi
-        if (commande[0] == 'tournoiadd' && msg.author.id == admin) {
+        else if (commande[0] == 'tournoiadd' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le joueur : ' + args[0] + 'a bien été rajouté au tournoi');
         }
 
         //*tournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
-        if (commande[0] == 'tournoirule') {
+        else if (commande[0] == 'tournoirule') {
             const embed = new Discord.RichEmbed()
                 .setTitle("   ⚠   VOICI L'ORGANISATION DES TOURNOIS INTRA DOTY !   ⚠   ")
                 .setColor(0x00AE86)
@@ -339,7 +384,7 @@ try {
         }
 
         //*tournoistart
-        if (commande[0] == 'tournoistart' && msg.author.id == admin) {
+        else if (commande[0] == 'tournoistart' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var listedesjoueurs = tournoi.participants;
             var affichelistedesjoueurs = "";
@@ -365,14 +410,14 @@ try {
         }
 
         //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
-        if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
+        else if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             YD.download(args[0], args[1]);
             msg.reply('Importation de la vidéo youtube avec id : ' + args[0] + ' sous le nom de : ' + args[1]);
         }
 
         //*musiqueimportyturl args[0] = url de la vidéo args[1] = nom de l'enregistrement
-        if (commande[0] == 'musiqueimportyturl' && msg.author.id == admin) {
+        else if (commande[0] == 'musiqueimportyturl' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var id = getYouTubeID(args[0]);
             YD.download(id, args[1]);
@@ -380,7 +425,7 @@ try {
         }
 
         //*musiquelist Retourne une liste de toutes les musiques
-        if (commande[0] == 'musiquelist') {
+        else if (commande[0] == 'musiquelist') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             var listedesmusiques = "";
             fs.readdirSync("./musique").forEach(file => {
@@ -401,7 +446,7 @@ try {
         }
 
         //*musiquestop stop la musique en cours (UTILISE UN HACK SON)
-        if (commande[0] == 'musiquestop' && msg.author.id == admin) {
+        else if (commande[0] == 'musiquestop' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
@@ -414,7 +459,7 @@ try {
         }
 
         //*musiqueplay args[0] lance la musique avec args[0] = nom de la musique ex 1.mp3
-        if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
+        else if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
@@ -427,7 +472,7 @@ try {
         }
 
         //*musiqueplaybyurl args[0] lance une musique par rapport à une url avec args[0] = url musique
-        if (commande[0] == 'musicplaybyurl') {
+        else if (commande[0] == 'musicplaybyurl') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             if (msg.member.voiceChannel) {
                 msg.member.voiceChannel.join().then(connection => { // 
@@ -443,13 +488,13 @@ try {
         }
 
         //*block args[0] met en prison un client args[0] = client
-        if (commande[0] == 'block') {
+        else if (commande[0] == 'block') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le rageux : ' + args[0] + ' a bien ete bloque');
         }
 
         //*unblock args[0] sort de prison un client args[0] = client
-        if (commande[0] == 'unblock') {
+        else if (commande[0] == 'unblock') {
             logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
             msg.reply('Le rageux : ' + args[0] + ' a bien ete debloque');
         }
