@@ -287,7 +287,8 @@ try {
 
                     .addField('\u200B', '\u200B')
 
-                    .addField('/wotinfo "nomdujoueur"', "pour obtenir les stats wot du joueur recherché sur les sites les plus réputés.")
+                    .addField('/wotstat "nomdujoueur" ou /wots "nomdujoueur"', "pour obtenir les stats wot du joueur recherché sur les sites les plus réputés.")
+                    .addField('/wotrecherche "nomdujoueur ou /wotr "nomdujoueur"', "pour obtenir une liste des joueurs avec id de la BDD World Of Tanks.")
 
                 embed.addField('\u200B', '\u200B')
 
@@ -296,8 +297,8 @@ try {
                 });
             }
 
-            //*wotinfo Affiche les commandes d'aide a wot
-            else if (commande[0] == 'wotinfo' || commande[0] == 'woti') {
+            //*wotstats "nomdujoueur" ou *wots "nomdujoueur" pour avoir les stats du joueur
+            else if (commande[0] == 'wotstat' || commande[0] == 'wots') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
 
                 const embed = new Discord.RichEmbed()
@@ -321,75 +322,139 @@ try {
                 });
             }
 
-            //*wotrecherche nomdujoueur ou *wotr nomdujoueur  permet de lancer une recherche sur un joueur
+            //*wottank "nomdutank?" ou *wott "nomdutank?" pour avoir les information d'un tank
+            else if (commande[0] == 'wottank' || commande[0] == 'wott') {
+                logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+
+                var tankopedia = WorldOfTanks.Tankopedia
+                console.log(tankopedia.findVehicle(args[0]));
+            }
+
+            //*wotinfo "nomdujoueur" ou *woti "nomdujoueur" pour avoir les information du joueur selon WorldOfTnkas
+            else if (commande[0] == 'wotinfo' || commande[0] == 'woti') {
+                logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                wot.get('account/info', {
+                        account_id: args[0]
+                    })
+                    .then(res => {
+                        resultat = res.data;
+                        console.log(resultat);
+                        console.log(resultat.args[0].client_language);
+                    })
+
+            }
+
+
+
+            //*wotrecherche "nomdujoueur" ou *wotr "nomdujoueur"  permet de lancer une recherche sur un joueur
             else if (commande[0] == 'wotrecherche' || commande[0] == 'wotr') {
                 msgresultat = "";
                 msgerreur = "";
                 compteur = 0;
                 listeresultat = ""
-                wot.get('account/list', {
-                        search: args[0]
-                    })
-                    .then(res => {
+                if (args[0].length < 3) {
+                    const embed = new Discord.RichEmbed()
+                        .setTitle("   ✎   WOT : ERREUR RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                        .setColor(0xce2020)
+                        .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                        .setFooter('© D-BOT copyright Dream')
+                        .setTimestamp()
 
-                        logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-                        console.log(res.data);
+                        .addField('\u200B', '\u200B')
 
-                        const embed = new Discord.RichEmbed()
-                            .setTitle("   ✎   WOT : RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
-                            .setColor(0xdbae34)
-                            .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
-                            .setFooter('© D-BOT copyright Dream')
-                            .setTimestamp()
+                        .addField("ERREUR : ", "Merci de faire une recherche avec un minimum de 3 caractères")
 
-                            .addField('\u200B', '\u200B')
+                    embed.addField('\u200B', '\u200B')
 
-                        res.data.forEach(function (ligne) {
-                            compteur += 1
-                        });
+                    msg.channel.send({
+                        embed
+                    });
+                } else {
+                    wot.get('account/list', {
+                            search: args[0]
+                        })
+                        .then(res => {
 
-                        //Si il y a trop de résultat 
-                        if (compteur > 10) {
+                            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                            console.log(res.data);
+
                             res.data.forEach(function (ligne) {
-                                listeresultat += "Nom du joueur : " + ligne.nickname + " Identifiant du joueur : " + ligne.account_id + "\n";
+                                compteur += 1
                             });
-                            msg.channel.send("Trop de réultat mise en format brut : \n" + listeresultat);
-                        } else {
-                            res.data.forEach(function (ligne) {
-                                embed.addField(ligne.nickname, "Identifiant du joueur : " + ligne.account_id)
-                            });
+                            console.log("Nombres de résultats : " + compteur);
+
+                            //Si il y a trop de résultat 
+                            if (compteur > 10 && compteur < 31) {
+                                res.data.forEach(function (ligne) {
+                                    listeresultat += "Nom du joueur : " + ligne.nickname + " Identifiant du joueur : " + ligne.account_id + "\n";
+                                });
+                                msg.channel.send("Trop de résultats ! mise en format brut : \n\n" + listeresultat + "\n Nombre de résultats : " + compteur + "\n Affichage sur le site web officiel : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0]);
+                            } else if (compteur > 31) {
+
+                                const embed = new Discord.RichEmbed()
+                                    .setTitle("   ✎   WOT : ERREUR RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                                    .setColor(0xfa0000)
+                                    .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                                    .setFooter('© D-BOT copyright Dream')
+                                    .setTimestamp()
+
+                                    .addField('\u200B', '\u200B')
+
+                                    .addField("ERREUR : ", "Trop de résultats")
+                                    .addField("RECHERCHE SUR LE SITE WORLD OF TANKS ?  : ", "https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0])
+
+                                embed.addField('\u200B', '\u200B')
+
+                                msg.channel.send({
+                                    embed
+                                });
+                            } else {
+
+                                const embed = new Discord.RichEmbed()
+                                    .setTitle("   ✎   WOT : RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                                    .setColor(0x5c1212)
+                                    .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                                    .setFooter('© D-BOT copyright Dream')
+                                    .setTimestamp()
+
+                                    .addField('\u200B', '\u200B')
+                                res.data.forEach(function (ligne) {
+                                    embed.addField(ligne.nickname, "Identifiant du joueur : " + ligne.account_id)
+                                });
+                                embed.addField('\u200B', '\u200B')
+                                embed.addField("Nombre de résultat", compteur)
+
+                                msg.channel.send({
+                                    embed
+
+                                });
+
+                            }
+                        })
+                        .catch(err => {
+                            logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                            console.log(err.message);
+
+                            const embed = new Discord.RichEmbed()
+                                .setTitle("   ✎   WOT : ERREUR PENDANT LA RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                                .setColor(0xdbae34)
+                                .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                                .setFooter('© D-BOT copyright Dream')
+                                .setTimestamp()
+
+                                .addField('\u200B', '\u200B')
+
+                                .addField("ERREUR : ", err.message)
+                                .addField("RECHERCHE SUR LE SITE WORLD OF TANKS ?  : ", "https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0])
+
                             embed.addField('\u200B', '\u200B')
-                            embed.addField("Nombre de résultat", compteur)
 
                             msg.channel.send({
                                 embed
 
                             });
-                        }
-                    })
-                    .catch(err => {
-                        logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-                        console.log(err.message);
-
-                        const embed = new Discord.RichEmbed()
-                            .setTitle("   ✎   WOT : ERREUR PENDANT LA RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
-                            .setColor(0xdbae34)
-                            .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
-                            .setFooter('© D-BOT copyright Dream')
-                            .setTimestamp()
-
-                            .addField('\u200B', '\u200B')
-
-                            .addField("ERREUR : ", err.message)
-                            .addField("RECHERCHE SUR LE SITE WORLD OF TANKS ?  : ", "https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0])
-
-                        embed.addField('\u200B', '\u200B')
-
-                        msg.channel.send({
-                            embed
-
                         });
-                    });
+                }
             }
 
             //*info donne les infos du bot
