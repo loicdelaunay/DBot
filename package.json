@@ -13,6 +13,7 @@
   "author": "Loïc DELAUNAY",
   "license": "",
   "dependencies": {
-    "discord.js": "^11.1.0"
+    "discord.js": "^11.1.0",
+    "wargamer": "^0.5.0"
   }
 }

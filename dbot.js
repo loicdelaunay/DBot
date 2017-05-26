@@ -8,15 +8,39 @@ const child_process = require('child_process'); //api pour gérer les processus
 const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des mp3 depuis youtube
 const getYouTubeID = require('get-youtube-id');
 const colors = require('colors'); // api pour gérer la couleur dans la console 
+const Wargamer = require('wargamer').default; //api défaut de wargamer
+const WorldOfTanks = require('wargamer').WorldOfTanks; //api extension de wargamer pour worldoftanks
+
 
 //Chargement du fichier de configuration du D-BOT
 const config = require('./dbot_config.json');
 
 //Version du D-BOT
-var version = 0.3;
+var version = 0.4;
 
 //Chargement du fichier de tournoi
-var tournoi = require('./data/tournoi/tournoi.json');
+const tournoi = require('./data/tournoi/tournoi.json');
+const tournoiparticipant = tournoi.participants;
+
+//Initialisation de la liste des maps
+const listemaps = ['Carélie',
+       'Live Oaks',
+       'Lakeville',
+       'LigneSiegfried',
+       'Mittengard',
+       'Abbaye'];
+const listemapsurl = ['http://wiki.wargaming.net/fr/Carélie',
+       'http://wiki.wargaming.net/fr/Live_Oaks',
+       'http://wiki.wargaming.net/fr/Lakeville',
+       'http://wiki.wargaming.net/fr/Ligne_Siegfried',
+       'http://wiki.wargaming.net/fr/Mittengard',
+       'http://wiki.wargaming.net/fr/Abbaye'];
+
+//Initialisation du wargamer pour worldoftanks
+const wot = Wargamer.WoT({
+    realm: 'eu',
+    applicationId: '9616efff59476333181678b1e112b9a3'
+});
 
 //Initialisation de l'api youtube
 var YD = new YoutubeMp3Downloader({
@@ -89,19 +113,15 @@ try {
         if (derniermot(msg.content) === 'ping') {
             msg.reply('Pong!');
             console.log('Blague : pong effectué !');
-        }
-        if (msg.content === 'AH!') {
+        } else if (msg.content === 'AH!') {
             msg.reply('https://i.ytimg.com/vi/HdZ5OD1KMGs/hqdefault.jpg');
             console.log('Blague : AH! effectué !');
-        }
-        if (derniermot(msg.content) === 'quoi' ||
+        } else if (derniermot(msg.content) === 'quoi' ||
             derniermot(msg.content) === 'quoi?') {
             msg.reply('feur');
-        }
-        if (derniermot(msg.content) === 'comment') {
+        } else if (derniermot(msg.content) === 'comment') {
             msg.reply('dant coustaud');
-        }
-        if (msg.content === 'hein') {
+        } else if (derniermot(msg.content) === 'hein') {
             msg.reply('deux');
         }
 
@@ -116,6 +136,7 @@ try {
                 msg.reply(response.output);
             });
         }
+
     });
 
 
@@ -276,11 +297,11 @@ try {
             }
 
             //*wotinfo Affiche les commandes d'aide a wot
-            else if (commande[0] == 'wotinfo') {
+            else if (commande[0] == 'wotinfo' || commande[0] == 'woti') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
 
                 const embed = new Discord.RichEmbed()
-                    .setTitle("   ⚝   WOT INFO:   ⚝   ")
+                    .setTitle("   ⚝   WOT : RECHERCHE DE STATS   ⚝   ")
                     .setColor(0x3b3b3b)
                     .setDescription("les stats wot du joueur : " + commande[0] + "recherchés sur les sites les plus réputés.")
                     .setFooter('© D-BOT copyright Dream')
@@ -300,7 +321,78 @@ try {
                 });
             }
 
-            //*info donne les infos du boy
+            //*wotrecherche nomdujoueur ou *wotr nomdujoueur  permet de lancer une recherche sur un joueur
+            else if (commande[0] == 'wotrecherche' || commande[0] == 'wotr') {
+                msgresultat = "";
+                msgerreur = "";
+                compteur = 0;
+                listeresultat = ""
+                wot.get('account/list', {
+                        search: args[0]
+                    })
+                    .then(res => {
+
+                        logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                        console.log(res.data);
+
+                        const embed = new Discord.RichEmbed()
+                            .setTitle("   ✎   WOT : RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                            .setColor(0xdbae34)
+                            .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                            .setFooter('© D-BOT copyright Dream')
+                            .setTimestamp()
+
+                            .addField('\u200B', '\u200B')
+
+                        res.data.forEach(function (ligne) {
+                            compteur += 1
+                        });
+
+                        //Si il y a trop de résultat 
+                        if (compteur > 10) {
+                            res.data.forEach(function (ligne) {
+                                listeresultat += "Nom du joueur : " + ligne.nickname + " Identifiant du joueur : " + ligne.account_id + "\n";
+                            });
+                            msg.channel.send("Trop de réultat mise en format brut : \n" + listeresultat);
+                        } else {
+                            res.data.forEach(function (ligne) {
+                                embed.addField(ligne.nickname, "Identifiant du joueur : " + ligne.account_id)
+                            });
+                            embed.addField('\u200B', '\u200B')
+                            embed.addField("Nombre de résultat", compteur)
+
+                            msg.channel.send({
+                                embed
+
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                        console.log(err.message);
+
+                        const embed = new Discord.RichEmbed()
+                            .setTitle("   ✎   WOT : ERREUR PENDANT LA RECHERCHE DU JOUEUR -" + args[0] + "-   ✎   ")
+                            .setColor(0xdbae34)
+                            .setDescription("Recherche les données sur un joueur à partir de la base de donnée WorldOfTanks")
+                            .setFooter('© D-BOT copyright Dream')
+                            .setTimestamp()
+
+                            .addField('\u200B', '\u200B')
+
+                            .addField("ERREUR : ", err.message)
+                            .addField("RECHERCHE SUR LE SITE WORLD OF TANKS ?  : ", "https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0])
+
+                        embed.addField('\u200B', '\u200B')
+
+                        msg.channel.send({
+                            embed
+
+                        });
+                    });
+            }
+
+            //*info donne les infos du bot
             else if (commande[0] == 'info') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
 
@@ -518,13 +610,15 @@ try {
             //*tournoistart
             else if (commande[0] == 'tournoistart' && msg.author.id == admin) {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-                var listedesjoueurs = tournoi.participants;
-                var affichelistedesjoueurs = "";
-                listedesjoueurs.forEach(function (joueur) {
-                    affichelistedesjoueurs += joueur + "\n";
-                })
+
+
                 var listedesmatchs = ""
                 var compteur = 0;
+                var listedesjoueurs = tournoiparticipant;
+
+                var embed = new Discord.RichEmbed()
+                embed.addField('\u200B', '\u200B')
+
                 while (listedesjoueurs.length > 1) {
                     compteur++;
                     var joueurselectionne = random(listedesjoueurs.length - 2);
@@ -533,11 +627,24 @@ try {
                     var joueurselectionne = random(listedesjoueurs.length - 2);
                     var equipe2 = listedesjoueurs[joueurselectionne];
                     listedesjoueurs.splice(joueurselectionne, 1);
+                    var mapselectionnee = random(listemaps.length)
+
                     //gestion de l'affichage
-                    listedesmatchs += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
+                    embed.addField('⚔ Match N°' + compteur, 'le joueur : #' + equipe1 + " va affronter : #" + equipe2 + ' sur la map : ' + '[' + listemaps[mapselectionnee] + ']' + '(' + listemapsurl[mapselectionnee] + ')');
                 }
-                msg.channel.send('🔱🔱🔱 ' + tournoi.nomtournoi + ' 🔱🔱🔱' + '\n\n\nVoici la liste des matchs: \n');
-                msg.channel.send(listedesmatchs);
+
+                embed
+                    .setTitle("   🔱   " + tournoi.nomtournoi + "   🔱   ")
+                    .setColor(0xafaf26)
+                    .setDescription('Voici la liste des matchs:')
+                    .setFooter('© D-BOT copyright Dream')
+                    .setTimestamp()
+
+                embed.addField('\u200B', '\u200B')
+
+                msg.channel.send({
+                    embed
+                });
 
             }
 
@@ -622,7 +729,7 @@ try {
             //*block args[0] met en prison un client args[0] = client
             else if (commande[0] == 'block') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
-                msg.reply('Le rageux : ' + args[0] + ' a bien ete bloque');
+                msg.reply('Le rageux : ' + args[0] + ' a bien été bloque');
             }
 
             //*unblock args[0] sort de prison un client args[0] = client
@@ -630,11 +737,11 @@ try {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
                 msg.reply('Le rageux : ' + args[0] + ' a bien ete debloque');
             } else {
-                logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
+                logconsole('Commande inconnu : ' + commande[0] + ' essayé', 'info', msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ⚠   COMMANDE INTROUVABLE:   ⚠   ")
-                    .setColor(0x179b2b)
+                    .setColor(0xafaf26)
                     .setDescription("La commande : /" + commande[0] + " n'a pas été reconnu")
                     .setFooter('© D-BOT copyright Dream')
                     .setTimestamp()
@@ -655,10 +762,18 @@ try {
 
     // Message de bienvenue
     client.on('guildMemberAdd', member => {
-        member.guild.defaultChannel.send(`Bienvenue, ${member}! ,sur le serveur Discord du clan DreamOfTheYear !`);
-        const channel = member.guild.channels.find('chatglobal', 'member-log');
-        if (!channel) return;
-        channel.send('Bienvenue :, ' + member);
+
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ☺   BIENVENUE:   ☺   ")
+            .setColor(0x00ff00)
+            .setAuthor(member.user.username, member.user.avatarURL)
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+            .addField("Bienvenue sur le serveur DreamOfTheYear !")
+
+        member.guild.defaultChannel.send({
+            embed
+        });
     });
 
     //gestion de l'api de YOutubeMp3
@@ -781,19 +896,14 @@ try {
 
     }
 
-
+    //Function retournant un aléatoire rond
     function random(max) {
         return Math.floor((Math.random() * max) + 1);
     }
 
-    function affichematch(msg, equipe1, equipe2) {
-        msg.reply("```le joueur : " + equipe1 + "va affronter : " + equipe2 + "```");
-    }
 
-
-
+    //Catch des erreurs et retour
 } catch (err) {
-    restart();
     addlogerreurs(err);
     console.log(err.message);
     return
