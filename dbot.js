@@ -1,5 +1,8 @@
 //***** D BOT *****//
 
+//* pour rechercher les commandes ctrl + f
+//$ pour rechercher les fonctions avec ctrl + f
+
 // Importation des APIs
 const Discord = require('discord.js'); // api de discord
 const fs = require('fs'); //api nodejs pour gestion des fichiers
@@ -99,6 +102,7 @@ client.on('ready', () => {
     client.user.setGame("/aide pour obtenir de l'aide");
     logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
 });
+
 
 
 try {
@@ -326,8 +330,42 @@ try {
             else if (commande[0] == 'wottank' || commande[0] == 'wott') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
 
-                var tankopedia = WorldOfTanks.Tankopedia
-                console.log(tankopedia.findVehicle(args[0]));
+                wot.get('encyclopedia/tanks')
+                    .then(res => {
+                        resultat = res.data
+                        console.log("Recherche de : " + args[0]);
+                        trouve = false;
+                        for (var i in resultat) {
+                            console.log("dans la boucle " + i + " Nom du tank à cette id : " + resultat[i].name_i18n);
+                            if (args[0] == resultat[i].name_i18n || args[0] == resultat[i].short_name_i18n) {
+                                console.log("Tank Trouvé ! ");
+                                affichetankinfo(i, msg);
+                                trouve = true;
+                                break;
+                            }
+                        }
+                        if (!trouve) {
+                            const embed = new Discord.RichEmbed()
+                                .setTitle("   ✎   WOT : ERREUR RECHERCE D'INFORMATION SUR LE TANK -" + args[0] + "-   ✎   ")
+                                .setColor(0x3b3b3b)
+                                .setDescription("Recherche les informations sur un tank à partir de la base de donnée WorldOfTanks.")
+                                .setFooter('© D-BOT copyright Dream')
+                                .setTimestamp()
+
+                                .addField('\u200B', '\u200B')
+
+                                .addField('ERREUR', "Le tank est introuvable, merci de vérifier l'orthographe")
+
+                            embed.addField('\u200B', '\u200B')
+
+                            msg.channel.send({
+                                embed
+                            });
+
+                        }
+                    })
+
+
             }
 
             //*wotinfo "nomdujoueur" ou *woti "nomdujoueur" pour avoir les information du joueur selon WorldOfTnkas
@@ -337,9 +375,29 @@ try {
                         account_id: args[0]
                     })
                     .then(res => {
-                        resultat = res.data;
-                        console.log(resultat);
-                        console.log(resultat.args[0].client_language);
+                        console.log(res);
+                        resultat = res.data[args[0]];
+                        var dernierebataille = new Date(resultat.last_battle_time * 1000);
+
+                        const embed = new Discord.RichEmbed()
+                            .setTitle("   ✎   WOT : RECHERCE D'INFORMATION CONCERNANT -" + args[0] + "-   ✎   ")
+                            .setColor(0x962d14)
+                            .setDescription("Recherche les informations sur un joueur à partir de la base de donnée WorldOfTanks")
+                            .setFooter('© D-BOT copyright Dream')
+                            .setTimestamp()
+
+                            .addField('\u200B', '\u200B')
+
+                            .addField("Langue : ", resultat.client_language)
+                            .addField("Dernière bataille : ", dernierebataille)
+                            .addField("Dernière bataille : ", dernierebataille)
+
+                        embed.addField('\u200B', '\u200B')
+
+                        msg.channel.send({
+                            embed
+                        });
+
                     })
 
             }
@@ -791,6 +849,11 @@ try {
                 }
             }
 
+            //*debug lance la commande de debug
+            else if (commande[0] == 'debug') {
+                console.log(tankstringtoid(args[0]));
+            }
+
             //*block args[0] met en prison un client args[0] = client
             else if (commande[0] == 'block') {
                 logconsole('Commande ' + commande[0] + ' éxécutée', 'info', msg);
@@ -909,6 +972,36 @@ try {
         } else {
             return false;
         }
+    }
+
+    //$affichetankinfo Affiche les informations du tank à l'id ID
+    function affichetankinfo(id, msg) {
+        console.log("Affichage du tank avec l'id : " + id);
+        wot.get('encyclopedia/vehicleprofile', {
+                tank_id: id
+            })
+            .then(res => {
+
+                resultat = res.data[id]
+                const embed = new Discord.RichEmbed()
+                    .setTitle("   ✎   WOT : RECHERCE D'INFORMATION SUR LE TANK -" + resultat.short_name_i18n + "-   ✎   ")
+                    .setColor(0x712817)
+                    .setDescription("Recherche les informations sur un tank à partir de la base de donnée WorldOfTanks")
+                    .setFooter('© D-BOT copyright Dream')
+                    .setTimestamp()
+
+                    .addField('\u200B', '\u200B')
+
+                    .addField("Blindage de la tourelle : ", resultat.armor.turret.front + "/" + resultat.armor.turret.sides + "/" + resultat.armor.turret.rear)
+                    .addField("Blindage du chassis : ", resultat.armor.hull.front + "/" + resultat.armor.hull.sides + "/" + resultat.armor.hull.rear)
+
+                embed.addField('\u200B', '\u200B')
+
+                msg.channel.send({
+                    embed
+
+                });
+            });
     }
 
     function restart() {
