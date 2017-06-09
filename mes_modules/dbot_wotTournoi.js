@@ -17,25 +17,9 @@ exports.info = function (msg) {
         .setDescription('Ici vous trouverez toutes les commandes concernant les tournois de la DOTY')
         .setFooter('© D-BOT copyright Dream')
         .setTimestamp()
-        .setThumbnail('http://www.loicdelaunay.fr/projets/dbot/tournoilogo.png')
 
-        .addField('Information 1:', '- Les matchs sont organisés automatiquement par le script du D-BOT.')
-
-        .addField('Information 2:', '- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi ).')
-
-        .addField('Information 3:', "- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible.")
-
-        .addField('Information 4:', '- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres.')
-
-        .addField('Information 5:', "- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi.")
-
-        .addField('Information 6:', "- Chaque match s'organise en 3 rounds ! Défaite du match = élimination du tournoi.")
-
-        .addField('Information 7:', '- Des informations complémentaires seront données à la création du tournoi.')
-
-        .addField('Information 8:', '- Les heures du tournoi seront données à sa création, une absence amènera à une disqualification immédiate.')
-
-        .addField('Déroulement:', "- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT par la suite, chaque équipe enverra en MESSAGE PRIVEE à l'arbitre le tank choisi sans l'avoir sélectionné, quand les deux équipes ont fini de choisirleurs tanks ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifiera que celui-ci correspond bien au tank cité précédemment.")
+        .addField('/wottournoirule', "pour obtenir les règle en vigueur concernant le tournoi.")
+        .addField('/wottournoistart', "pour obtenir les règle en vigueur concernant le tournoi.")
 
     msg.channel.send({
         embed

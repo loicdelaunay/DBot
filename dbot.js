@@ -12,6 +12,7 @@ const getYouTubeID = require('get-youtube-id');
 const colors = require('colors'); // api pour gérer la couleur dans la console 
 
 // Importation de mes modules
+const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module World of tanks
 const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
 const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
 
@@ -441,17 +442,14 @@ try {
             else if (commande[0] == 'restart' && msg.author.id == admin) {
                 logcommande(msg);
 
-                msg.reply('Restart en cours ....')
-                restart();
-                msg.reply("Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes")
-                setTimeout(exit, 3000);
+                dbot_divers.restart(msg);
             }
 
             //*online affiche le temps depuis lequel le bot est en ligne
             else if (commande[0] == 'online') {
                 logcommande(msg);
 
-                msg.reply("Je suis en ligne depuis : " + heurestart);
+                dbot_divers.online(msg);
             }
 
             //*myavatar affiche l'image de l'avatar du joueur
@@ -468,27 +466,33 @@ try {
                 msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
             }
 
-            //*aidewot ou *aidewt affiche l'aide pour les commandes sur le jeu world of tanks
-            else if (commande[0] == 'aidewottournoi' || commande[0] == "aidewt") {
+            // *-*-*- DEBUT WOTTOURNOI *-*-*- //
+
+            //*wottournoiaide ou *wotta affiche l'aide pour les commandes sur le jeu world of tanks
+            else if (commande[0] == 'wottournoiaide' || commande[0] == "wotta") {
                 logcommande(msg);
 
                 dbot_wotTournoi.info(msg);
             }
 
-            //*tournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
-            else if (commande[0] == 'tournoirule') {
+            //*wottournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
+            else if (commande[0] == 'wottournoirule') {
                 logcommande(msg);
 
                 dbot_wotTournoi.rule(msg);
             }
 
             //*tournoistart
-            else if (commande[0] == 'tournoistart' && msg.author.id == admin) {
+            else if (commande[0] == 'wottournoistart' && msg.author.id == admin) {
                 logcommande(msg);
 
                 dbot_wotTournoi.start(msg);
 
             }
+
+            // *-*-*- FIN WOTTOURNOI *-*-*- //
+
+            // *-*-*- DEBUT MUSIQUE *-*-*- //
 
             //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
             else if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
@@ -567,6 +571,8 @@ try {
                     msg.reply('Il faut dabord rejoindre un channel avant!');
                 }
             }
+
+            // *-*-*- FIN MUSIQUE *-*-*- //
 
             //*block args[0] met en prison un client args[0] = client
             else if (commande[0] == 'block') {
@@ -665,21 +671,7 @@ try {
         fs.appendFileSync('./logs/erreurs/logerreurs' + formatted + '.txt', text);
     }
 
-    //Fonction timer
-    function timer() {
-        // traitement
-        setTimeout(tafonction, 2000); /* rappel après 2 secondes = 2000 millisecondes */
-    }
-
-    function exit() {
-        process.exit(-1);
-    }
-
-    function exitvalidation(msg) {
-        msg.reply("Fin de l'éxécution du D-BOT")
-        process.exit(-1);
-    }
-
+    //Vérifie que le client est un admin
     function isadmin(client) {
         if (client == admin) {
             return true;
@@ -687,24 +679,6 @@ try {
             return false;
         }
     }
-
-    function restart() {
-        const spawn = child_process.spawn;
-        const bat = spawn('cmd.exe', ['/c', 'startbot.bat']);
-
-        bat.stdout.on('data', (data) => {
-            console.log(data.toString());
-        });
-
-        bat.stderr.on('data', (data) => {
-            console.log(data.toString());
-        });
-
-        bat.on('exit', (code) => {
-            console.log(`Child exited with code ${code}`);
-        });
-    }
-
 
     //$logconsole Gestion des messages de log avec couleur et formatage
     function logconsole(msg, type, objetmessage) {
@@ -742,12 +716,6 @@ try {
     function logcommande(msg) {
         logconsole('Commande ' + msg.content + ' éxécutée', 'info', msg);
     }
-
-    //Function retournant un aléatoire rond
-    function random(max) {
-        return Math.floor((Math.random() * max) + 1);
-    }
-
 
     //Catch des erreurs et retour
 } catch (err) {
