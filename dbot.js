@@ -1,37 +1,35 @@
 //***** D BOT *****//
+//AUTHEUR : Dream//
 
-//CTRL + F *nomdelacommande pour rechercher les commandes dans le projet 
+// CTRL + F *nomdelacommande pour rechercher les commandes dans le projet 
+// CTRL + F $nomdelafonction pour rechercher les fonctions dans le projet 
+
+// Chargement du fichier de configuration du D-BOT
+var config = require('./dbot_config.json');
+
+// Version du D-BOT
+const version = "0.9c";
 
 // Importation des APIs
-const Discord = require('discord.js'); // api de discord
-const fs = require('fs'); //api nodejs pour gestion des fichiers
+const Discord = require('discord.js'); // api de Discord 
+const client = new Discord.Client(); // api client de Discord
 const dateTime = require('node-datetime'); //api pour la gestion du temps
 const child_process = require('child_process'); //api pour gérer les processus
-const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des MP3 depuis Youtube
-const getYouTubeID = require('get-youtube-id');
 const colors = require('colors'); // api pour gérer la couleur dans la console 
+const path = require('path'); // api de gestion des chemins d'accès
 
 // Importation de mes modules
-const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module World of tanks
+const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
 const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
 const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
+const dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
+const dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
 
-//Chargement du fichier de configuration du D-BOT
-const config = require('./dbot_config.json');
+// Dossier de lancement du bot
+var appDir = path.dirname(require.main.filename);
 
-//Version du D-BOT
-var version = "0.9a";
 
-//Initialisation de l'api youtube
-var YD = new YoutubeMp3Downloader({
-    "ffmpegPath": config.ffmpeg_path, // Where is the FFmpeg binary located? 
-    "outputPath": "./musique", // Where should the downloaded and encoded files be stored? 
-    "youtubeVideoQuality": "highest", // What video quality should be used? 
-    "queueParallelism": 2, // How many parallel downloads/encodes should be started? 
-    "progressTimeout": 4000 // How long should be the interval of the progress reports 
-});
-
-//Initialisation des couleurs du thème de la console
+// Initialisation des couleurs du thème de la console
 colors.setTheme({
     silly: 'rainbow',
     input: 'grey',
@@ -46,50 +44,69 @@ colors.setTheme({
 });
 
 // Initialisation du bot
-const client = new Discord.Client();
 const entete = '\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n'
 console.log(entete.bgWhite.black);
 
+
 console.log('Version du D-BOT : ' + version);
-console.log('Chemin de ffmpegPath utilisé : ' + config.ffmpeg_path);
+console.log('Version de NODEJS : ' + process.version)
+console.log('Version de DISCORDJS : ' + Discord.version)
 
-//Token du bot 
+console.log('Chemin de ffmpegPath utilisé : ' + dbot_divers.ffmpegpath);
+
+// Token du bot 
 const token = config.token;
-console.log('Token utilisé : ' + config.token);
+console.log('Token Discord du bot utilisé : ' + config.token);
 
-//Prefix des commandes du bot
+// Préfix des commandes du bot
 const prefix = config.prefix;
 console.log('Prefix des commandes utilisé : ' + config.prefix);
 
-//Id Admin
+// Id Admin
 const admin = config.idadmin;
 console.log('Id admin chargé : ' + config.idadmin);
 
 const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
 console.log(entete2.bgWhite.black);
 
-//Connection
+// Connection à Discord
 client.login(token);
 
 // A la conncetion du bot
 client.on('ready', () => {
     var dt = dateTime.create();
-    var heurestart = dt.format('d-m-Y H:M:S');
+    var heurestart = dt.format('d-m-Y H:M:S'); //Set la date du bot sur son heure de démarrage 
     client.user.setStatus("online");
     client.user.setGame("/aide pour obtenir de l'aide");
-    logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
+    dbot_console.logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
 });
 
 
 
 try {
 
-    // Quand le bot reçoit un message
+
+    // -*-*-*-*- LES FONCTIONS DU PROJET -*-*-*-*-*-//
+
+
+    //Fonction tableau informations de l'utilisateur
+    function information(idauteur) {
+        var fichierinfo = fs.readFileSync('./data/' + idauteur + '.txt', 'utf8');
+        fichierinfo = fichierinfo.substring(1);
+        fichierinfo = fichierinfo.substring(0, fichierinfo.length - 1);
+        var infos = fichierinfo.split(",").slice();
+        return infos;
+    }
+
+    // -*-*-*-*- FIN DES FONCTIONS DU PROJET -*-*-*-*-*-//
+
+
+    // Quand le bot reçoit un message le traitement s'effectue ici 
     client.on('message', msg => {
 
         var dt = dateTime.create();
         var formatted = dt.format('d-m-Y H:M:S');
-        addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
+        dbot_console.addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
 
         if (derniermot(msg.content) === 'ping') {
             msg.reply('Pong!');
@@ -137,7 +154,7 @@ try {
             //login a une date
             var dt = dateTime.create();
             var formatted = dt.format('d-m-Y H:M:S');
-            addlogcommande("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a utilisé la commande suivante : ' + msg.content + ' posté le : ' + formatted + '\n');
+            dbot_console.addlogcommande("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a utilisé la commande suivante : ' + msg.content + ' posté le : ' + formatted + '\n');
         } else {
             var commande = '';
         }
@@ -147,7 +164,7 @@ try {
         if (msg.content.startsWith(prefix)) {
             //*aide affiche l'aide disponible  
             if (commande[0] == 'aide' || commande[0] == '?') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ❓   AIDE :   ❓   ")
@@ -179,7 +196,7 @@ try {
 
             //*aideadmin affiche l'aide pour les admins
             else if (commande[0] == 'aideadmin' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ❓   AIDE ADMIN:   ❓   ")
@@ -205,7 +222,7 @@ try {
 
             //*aidemusique affiche l'aide pour la gestion de la musique
             else if (commande[0] == 'aidemusique' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ❓   AIDE MUSIQUE:   ❓   ")
@@ -232,7 +249,7 @@ try {
 
             //*aideg affiche l'aide global
             else if (commande[0] == 'aideg') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ❓   AIDE GENERALES:   ❓   ")
@@ -259,21 +276,21 @@ try {
 
             //*aidewot affiche l'aide pour les commandes sur le jeu world of tanks
             else if (commande[0] == 'aidewot') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wot.aide(msg);
             }
 
             //*wotstats "nomdujoueur" ou *wots "nomdujoueur" pour avoir les stats du joueur
             else if (commande[0] == 'wotstat' || commande[0] == 'wots') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wot.wotstats(msg, args[0]);
             }
 
             //*wottank "nomdutank?" ou *wott "nomdutank?" pour avoir les information d'un tank
             else if (commande[0] == 'wottank' || commande[0] == 'wott') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wot.wottank(msg, args[0]);
 
@@ -281,7 +298,7 @@ try {
 
             //*wotinfo "nomdujoueur" ou *woti "nomdujoueur" pour avoir les information du joueur selon WorldOfTnkas
             else if (commande[0] == 'wotinfo' || commande[0] == 'woti') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wot.wotinfo(msg, args[0]);
             }
@@ -289,14 +306,14 @@ try {
 
             //*wotrecherche "nomdujoueur" ou *wotr "nomdujoueur"  permet de lancer une recherche sur un joueur
             else if (commande[0] == 'wotrecherche' || commande[0] == 'wotr') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wot.wotrecherche(msg, args[0]);
             }
 
             //*spam Commande de test, permet de spammer un chat
             else if (commande[0] == 'spam' && msg.author.id === admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 for (var i = 0; i < args[0]; i++) {
                     msg.reply('D-BOT MOD SPAM');
                 }
@@ -304,6 +321,7 @@ try {
 
             //*roll "nombre de dés" "nombres de faces" jette X dès a X faces
             else if (commande[0] == 'roll') {
+                //Vérifie que l'utilisateur est entrer un minimum de paramètre sinon set les paramètres par défaut
                 if (args[0] == null) {
                     args[0] = 1;
                 }
@@ -359,7 +377,7 @@ try {
 
             //*monid affiche l'id de l'utilisateur
             else if (commande[0] == 'monid') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ⚀   VOTRE ID:   ⚀   ")
@@ -381,7 +399,7 @@ try {
 
             //*info donne les infos du bot
             else if (commande[0] == 'info') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ✎   INFORMATION SUR LE D-BOT:   ✎   ")
@@ -406,7 +424,7 @@ try {
 
             //*register enregistre l'utilisateur dans la BDD local
             else if (commande[0] == 'register') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 msg.reply('Tu a bien été enregistré comme membre sur le D-BOT : ' + msg.author.username);
                 var info = msg.author.id + ', 0, 0';
                 var file = fs.writeFile('./data/' + msg.author.id + '.txt', JSON.stringify(info), function (err) {
@@ -418,21 +436,21 @@ try {
 
             //*mesinfos renseigne les information du joueur par rapport a la BDD du serveur
             else if (commande[0] == 'mesinfos') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 var infos = information(msg.author.id);
                 msg.reply('\Ton ID : ' + infos[0] + '\Ton sel : ' + infos[1] + '\Ton niveau : ' + infos[2]);
             }
 
             //*ping donne le ping du joueur
             else if (commande[0] == 'ping') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
             }
 
             //*close arrete le bot
             else if (commande[0] == 'close' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 msg.reply('Fermeture en cours ...')
                 setTimeout(exitvalidation(msg), 2000);
@@ -440,28 +458,28 @@ try {
 
             //*restart relance le bot
             else if (commande[0] == 'restart' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_divers.restart(msg);
             }
 
             //*online affiche le temps depuis lequel le bot est en ligne
             else if (commande[0] == 'online') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_divers.online(msg);
             }
 
             //*myavatar affiche l'image de l'avatar du joueur
             else if (commande[0] == 'myavatar') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
             }
 
             //*datecreation affiche la date de création du client
             else if (commande[0] == 'datecreation') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
             }
@@ -470,21 +488,21 @@ try {
 
             //*wottournoiaide ou *wotta affiche l'aide pour les commandes sur le jeu world of tanks
             else if (commande[0] == 'wottournoiaide' || commande[0] == "wotta") {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wotTournoi.info(msg);
             }
 
             //*wottournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
             else if (commande[0] == 'wottournoirule') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wotTournoi.rule(msg);
             }
 
             //*tournoistart
             else if (commande[0] == 'wottournoistart' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
 
                 dbot_wotTournoi.start(msg);
 
@@ -496,22 +514,21 @@ try {
 
             //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
             else if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
-                logcommande(msg);
-                YD.download(args[0], args[1]);
-                msg.reply('Importation de la vidéo youtube avec id : ' + args[0] + ' sous le nom de : ' + args[1]);
+                dbot_console.printConsoleCommande(msg);
+
+                dbot_youtube.importytif(msg, args[0], args[1])
             }
 
             //*musiqueimportyturl args[0] = url de la vidéo args[1] = nom de l'enregistrement
             else if (commande[0] == 'musiqueimportyturl' && msg.author.id == admin) {
-                logcommande(msg);
-                var id = getYouTubeID(args[0]);
-                YD.download(id, args[1]);
-                msg.reply('Importation de la vidéo youtube avec id : ' + args[0] + ' sous le nom de : ' + args[1]);
+                dbot_console.printConsoleCommande(msg);
+
+                dbot_youtube.importyturl(msg, args[0], args[1]);
             }
 
             //*musiquelist Retourne une liste de toutes les musiques
             else if (commande[0] == 'musiquelist') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 var listedesmusiques = "";
                 fs.readdirSync("./musique").forEach(file => {
                     listedesmusiques += file + "\n";
@@ -532,7 +549,7 @@ try {
 
             //*musiquestop stop la musique en cours (UTILISE UN HACK SON)
             else if (commande[0] == 'musiquestop' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 if (msg.member.voiceChannel) {
                     msg.member.voiceChannel.join().then(connection => { // 
                         var musique1 = connection.playFile('');
@@ -545,7 +562,7 @@ try {
 
             //*musiqueplay args[0] lance la musique avec args[0] = nom de la musique ex 1.mp3
             else if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 if (msg.member.voiceChannel) {
                     msg.member.voiceChannel.join().then(connection => { // 
                         var musique1 = connection.playFile('./musique/' + args[0]);
@@ -558,7 +575,7 @@ try {
 
             //*musiqueplaybyurl args[0] lance une musique par rapport à une url avec args[0] = url musique
             else if (commande[0] == 'musicplaybyurl') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 if (msg.member.voiceChannel) {
                     msg.member.voiceChannel.join().then(connection => { // 
                         try {
@@ -576,16 +593,16 @@ try {
 
             //*block args[0] met en prison un client args[0] = client
             else if (commande[0] == 'block') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 msg.reply('Le rageux : ' + args[0] + ' a bien été bloque');
             }
 
             //*unblock args[0] sort de prison un client args[0] = client
             else if (commande[0] == 'unblock') {
-                logcommande(msg);
+                dbot_console.printConsoleCommande(msg);
                 msg.reply('Le rageux : ' + args[0] + ' a bien ete debloque');
             } else {
-                logconsole('Commande inconnu : ' + commande[0] + ' essayé', 'info', msg);
+                dbot_console.logconsole('Commande inconnu : ' + commande[0] + ' essayé', 'info', msg);
 
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ⚠   COMMANDE INTROUVABLE:   ⚠   ")
@@ -624,102 +641,17 @@ try {
         });
     });
 
-    //gestion de l'api de YOutubeMp3
-    YD.on("finished", function (data) {
-        logconsole("Le téléchargement de l'import Youtube est terminé", 'green');
-    });
+    //Catch des erreurs et retour
+} catch (err) {
 
-    YD.on("error", function (error) {
-        logconsole(error, 'error');
-    });
-
-    YD.on("progress", function (progress) {
-        logconsole("Téléchargement en cours de l'import Youtube ...", 'info');
-    });
-
-    //Fonction retourne le dernier mot
-    function derniermot(mot) {
-        var n = mot.split(" ");
-        return n[n.length - 1];
-    }
-
-    //Fonction tableau informations de l'utilisateur
-    function information(idauteur) {
-        var fichierinfo = fs.readFileSync('./data/' + idauteur + '.txt', 'utf8');
-        fichierinfo = fichierinfo.substring(1);
-        fichierinfo = fichierinfo.substring(0, fichierinfo.length - 1);
-        var infos = fichierinfo.split(",").slice();
-        return infos;
-    }
-
-    //Fonction appendlog
-    function addlogmessage(text) {
-        var dt = dateTime.create();
-        var formatted = dt.format('d-m-Y');
-        fs.appendFileSync('./logs/messages/logmessages' + formatted + '.txt', text);
-    }
-
-    function addlogcommande(text) {
-        var dt = dateTime.create();
-        var formatted = dt.format('d-m-Y');
-        fs.appendFileSync('./logs/commandes/logcommandes' + formatted + '.txt', text);
-    }
-
+    //$logerreur log les erreurs
     function addlogerreurs(text) {
         var dt = dateTime.create();
         var formatted = dt.format('d-m-Y');
         fs.appendFileSync('./logs/erreurs/logerreurs' + formatted + '.txt', text);
     }
 
-    //Vérifie que le client est un admin
-    function isadmin(client) {
-        if (client == admin) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    //$logconsole Gestion des messages de log avec couleur et formatage
-    function logconsole(msg, type, objetmessage) {
-        var dt = dateTime.create();
-        var formatted = dt.format('d/m-H:M');
-        log = '['.cyan + formatted.cyan + '] :'.cyan + ' ' + msg;
-        if (objetmessage != null) {
-            log += ' par : ' + objetmessage.author.username + ' ' + objetmessage.author.id;
-        }
-        switch (type) {
-            case 'input':
-                log += ' (input)'.input;
-                break;
-            case 'info':
-                log += ' (info)'.info;
-                break;
-            case 'help':
-                log += ' (help)'.help;
-                break;
-            case 'warn':
-                log += ' (warn)'.warn;
-                break;
-            case 'debug':
-                log += ' (debug)'.debug;
-                break;
-            case 'error':
-                log += ' (error)'.error;
-                break;
-        }
-        console.log(log);
-
-    }
-
-    //$logcommande log les commandes dans la console
-    function logcommande(msg) {
-        logconsole('Commande ' + msg.content + ' éxécutée', 'info', msg);
-    }
-
-    //Catch des erreurs et retour
-} catch (err) {
-    addlogerreurs(err);
-    console.log(err.message);
+    addlogerreurs("\nERREUR CRITIQUE", err);
+    logconsole("ERREUR CRITIQUE : ".red + err.message.red, 'error');
     return
 }

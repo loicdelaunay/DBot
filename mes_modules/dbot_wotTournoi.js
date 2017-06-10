@@ -1,4 +1,4 @@
-//** DBOT WOT : Api pour la gestion des données du jeu WorldOfTanks dans le DBOT**//
+//** DBOT WOT TOURNOI : Api pour la gestion des données des tournois sur le jeu WorldOfTanks dans le DBOT**//
 
 
 

@@ -39,3 +39,9 @@ exports.restart = function (msg) {
 exports.exit = function () {
     process.exit(-1);
 }
+
+//Retourne le dernier mot
+exports.derniermot = function (mot) {
+    var n = mot.split(" ");
+    return n[n.length - 1];
+}
