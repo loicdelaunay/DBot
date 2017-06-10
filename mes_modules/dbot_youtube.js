@@ -37,7 +37,7 @@ YD.on("progress", function (progress) {
 });
 exports.commande = function (msg, args, commande) {
     //*youtubeimportid args[0] = id de la vidéo args[1] = nom de l'enregistrement
-    else if (commande[0] == 'youtubeimportid' && msg.author.id == admin) {
+    if (commande[0] == 'youtubeimportid' && msg.author.id == admin) {
         dbot_console.printConsoleCommande(msg);
 
         YD.download(idvideo, nomenregistrememnt);

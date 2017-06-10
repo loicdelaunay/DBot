@@ -55,23 +55,23 @@ exports.commande = function (msg, args, commande) {
         });
     }
 
-    //*wotstats "nomdujoueur" ou *wots "nomdujoueur" pour avoir les stats du joueur
+    //*wotstats "nomdujoueur" ou *wots "nomdujoueur" -> pour avoir les stats du joueur
     else if (commande[0] == 'wotstat' || commande[0] == 'wots') {
         dbot_console.printConsoleCommande(msg);
 
         const embed = new Discord.RichEmbed()
-            .setTitle("   🎮   WOT : RECHERCHE DE STATS SUR : " + nomdujoueur.toUpperCase() + "   🎮   ")
+            .setTitle("   🎮   WOT : RECHERCHE DE STATS SUR : " + args[0].toUpperCase() + "   🎮   ")
             .setColor(0x3b3b3b)
-            .setDescription("les stats wot du joueur : " + nomdujoueur + "recherchés sur les sites les plus réputés.")
+            .setDescription("les stats wot du joueur : " + args[0] + "recherchés sur les sites les plus réputés.")
             .setFooter('© D-BOT copyright Dream')
             .setTimestamp()
 
             .addField('\u200B', '\u200B')
 
-            .addField('Par World Of Tanks', 'https://worldoftanks.eu/fr/community/accounts/#wot&at_search=' + nomdujoueur)
-            .addField('Par WOT-LIFE', 'https://fr.wot-life.com/eu/player/' + nomdujoueur)
-            .addField('Par WOT STAT', 'http://www.wotstats.org/stats/eu/' + nomdujoueur)
-            .addField('Par NoobMeter', 'http://www.noobmeter.com/player/eu/' + nomdujoueur)
+            .addField('Par World Of Tanks', 'https://worldoftanks.eu/fr/community/accounts/#wot&at_search=' + args[0])
+            .addField('Par WOT-LIFE', 'https://fr.wot-life.com/eu/player/' + args[0])
+            .addField('Par WOT STAT', 'http://www.wotstats.org/stats/eu/' + args[0])
+            .addField('Par NoobMeter', 'http://www.noobmeter.com/player/eu/' + args[0])
 
         embed.addField('\u200B', '\u200B')
 
@@ -80,7 +80,7 @@ exports.commande = function (msg, args, commande) {
         });
     }
 
-    //*wottank "nomdutank?" ou *wott "nomdutank?" pour avoir les information d'un tank
+    //*wottank "nomdutank?" ou *wott "nomdutank?" -> pour avoir les information d'un tank
     else if (commande[0] == 'wottank' || commande[0] == 'wott') {
         dbot_console.printConsoleCommande(msg);
 
@@ -90,7 +90,7 @@ exports.commande = function (msg, args, commande) {
             .then(res => {
                 resultat = res.data
                 trouve = false;
-                recherche = nomdutank;
+                recherche = args[0];
                 recherche = recherche.charAt(0).toUpperCase() + recherche.substring(1).toLowerCase();
                 console.log(recherche);
                 for (var i in resultat) {
@@ -163,6 +163,7 @@ exports.commande = function (msg, args, commande) {
         msgresultat = "";
         msgerreur = "";
         compteur = 0;
+        nomdujoueur = args[0]
         listeresultat = ""
         if (nomdujoueur.length < 3) {
             const embed = new Discord.RichEmbed()
@@ -198,7 +199,7 @@ exports.commande = function (msg, args, commande) {
                         res.data.forEach(function (ligne) {
                             listeresultat += "Nom du joueur : " + ligne.nickname + " Identifiant du joueur : " + ligne.account_id + "\n";
                         });
-                        msg.channel.send("Trop de résultats ! mise en format brut : \n\n" + listeresultat + "\n Nombre de résultats : " + compteur + "\n Affichage sur le site web officiel : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args[0]);
+                        msg.channel.send("Trop de résultats ! mise en format brut : \n\n" + listeresultat + "\n Nombre de résultats : " + compteur + "\n Affichage sur le site web officiel : https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + nomdujoueur);
                     } else if (compteur > 31) {
 
                         const embed = new Discord.RichEmbed()

@@ -54,12 +54,79 @@ exports.commande = function (msg, args, commande) {
         process.exit(-1);
     }
 
-
     //*datecreation affiche la date de création du client
     else if (commande[0] == 'datecreation') {
         dbot_console.printConsoleCommande(msg);
 
         msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
+    }
+
+    //*ping -> donne le ping du joueur
+    else if (commande[0] == 'ping') {
+        dbot_console.printConsoleCommande(msg);
+
+        msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
+    }
+
+    //*myavatar -> affiche l'image de l'avatar du joueur
+    else if (commande[0] == 'myavatar') {
+        dbot_console.printConsoleCommande(msg);
+
+        msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
+    }
+
+    //*spam -> Commande de test permet de spammer un chat
+    else if (commande[0] == 'spam' && msg.author.id === admin) {
+        dbot_console.printConsoleCommande(msg);
+        for (var i = 0; i < args[0]; i++) {
+            msg.reply('D-BOT MOD SPAM');
+        }
+    }
+
+    //*info -> donne les infos du bot
+    else if (commande[0] == 'info') {
+        dbot_console.printConsoleCommande(msg);
+
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ✎   INFORMATION SUR LE D-BOT:   ✎   ")
+            .setColor(0xdbae34)
+            .setDescription("Le D-BOT est un bot discord basé sur DISCORD.JS développé par Dream il a pour but d'être un vrai couteau suisse !")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+
+            .addField('\u200B', '\u200B')
+
+            .addField('Version du D-BOT : ', version)
+            .addField('Version de Discord.JS utilisé : ', Discord.version)
+            .addField('Version de Node utilisé : ', process.version)
+
+        embed.addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
+    }
+
+    //*monid -> affiche l'id de l'utilisateur qui éxécute la commande
+    else if (commande[0] == 'monid') {
+        dbot_console.printConsoleCommande(msg);
+
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ⚀   VOTRE ID:   ⚀   ")
+            .setColor(0xc9c9c9)
+            .setDescription("Affiche votre identifiant Discord")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+
+            .addField('\u200B', '\u200B')
+
+            .addField('Votre ID :', msg.author.id)
+
+            .addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
     }
 
     //*roll "nombre de dés" "nombres de faces" -> jette args[0] dès a args[1] faces

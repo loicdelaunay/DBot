@@ -7,6 +7,7 @@ const Discord = require('discord.js'); // api de discord
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
+const dbot_permission = require('../mes_modules/dbot_permission.js'); // Importation de mon module Console
 
 //Chargement du fichier de tournoi
 const tournoi = require('../data/wotTournoi/tournoi.json');
@@ -69,7 +70,7 @@ exports.commande = function (msg, args, commande) {
     }
 
     //*tournoistart -> Lance le tournoi
-    else if (commande[0] == 'wottournoistart' && msg.author.id == admin) {
+    else if (commande[0] == 'wottournoistart' && dbot_permission.isadmin(msg.author.id)) {
         dbot_console.printConsoleCommande(msg);
 
         var listedesmatchs = ""
