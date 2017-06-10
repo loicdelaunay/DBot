@@ -5,6 +5,9 @@ const path = require('path'); // api de gestion des chemins d'accès
 const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des MP3 depuis Youtube
 const getYouTubeID = require('get-youtube-id');
 
+// Importation de mes modules
+const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
+
 // Dossier de lancement du bot
 var appDir = path.dirname(require.main.filename);
 
@@ -32,18 +35,27 @@ YD.on("error", function (error) {
 YD.on("progress", function (progress) {
     logconsole("Téléchargement en cours de l'import Youtube ...", 'info');
 });
+exports.commande = function (msg, args, commande) {
+    //*youtubeimportid args[0] = id de la vidéo args[1] = nom de l'enregistrement
+    else if (commande[0] == 'youtubeimportid' && msg.author.id == admin) {
+        dbot_console.printConsoleCommande(msg);
 
+        YD.download(idvideo, nomenregistrememnt);
+        msg.reply('Importation de la vidéo youtube avec id : ' + idvideo + ' sous le nom de : ' + nomenregistrememnt);
+    }
+
+    //*youtubeimporturl args[0] = url de la vidéo args[1] = nom de l'enregistrement
+    else if (commande[0] == 'youtubeimporturl' && msg.author.id == admin) {
+        dbot_console.printConsoleCommande(msg);
+
+        var id = getYouTubeID(urlvideo); //Transforme l'url de la vidéo YT en ID YT
+        YD.download(id, nomenregistrememnt);
+        msg.reply("Importation de la vidéo youtube avec l'url : " + urlvideo + ' sous le nom de : ' + nomenregistrememnt);
+    }
+
+}
+
+//Chemin d'accès de ffmpeg
 exports.ffmpegpath = function () {
-    return ffmpegPath
-}
-
-exports.importytid = function (msg, idvideo, nomenregistrememnt) {
-    YD.download(idvideo, nomenregistrememnt);
-    msg.reply('Importation de la vidéo youtube avec id : ' + idvideo + ' sous le nom de : ' + nomenregistrememnt);
-}
-
-exports.importyturl = function (msg, urlvideo, nomenregistrememnt) {
-    var id = getYouTubeID(urlvideo); //Transforme l'url de la vidéo YT en ID YT
-    YD.download(id, nomenregistrememnt);
-    msg.reply("Importation de la vidéo youtube avec l'url : " + urlvideo + ' sous le nom de : ' + nomenregistrememnt);
+    return ffmpegPath;
 }

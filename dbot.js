@@ -5,12 +5,12 @@
 // CTRL + F $nomdelafonction pour rechercher les fonctions dans le projet 
 
 // Chargement du fichier de configuration du D-BOT
-var config = require('./dbot_config.json');
+const config = require('./dbot_config.json');
 
 // Version du D-BOT
 const version = "0.9c";
 
-// Importation des APIs
+// Importation des modules
 const Discord = require('discord.js'); // api de Discord 
 const client = new Discord.Client(); // api client de Discord
 const dateTime = require('node-datetime'); //api pour la gestion du temps
@@ -24,6 +24,7 @@ const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon mod
 const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
 const dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
 const dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
+const dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
 
 // Dossier de lancement du bot
 var appDir = path.dirname(require.main.filename);
@@ -52,7 +53,7 @@ console.log('Version du D-BOT : ' + version);
 console.log('Version de NODEJS : ' + process.version)
 console.log('Version de DISCORDJS : ' + Discord.version)
 
-console.log('Chemin de ffmpegPath utilisé : ' + dbot_divers.ffmpegpath);
+console.log('Chemin de ffmpegPath utilisé : ' + dbot_youtube.ffmpegpath());
 
 // Token du bot 
 const token = config.token;
@@ -63,8 +64,7 @@ const prefix = config.prefix;
 console.log('Prefix des commandes utilisé : ' + config.prefix);
 
 // Id Admin
-const admin = config.idadmin;
-console.log('Id admin chargé : ' + config.idadmin);
+console.log('Id admin chargé : ' + dbot_permission.idadmin());
 
 const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
 console.log(entete2.bgWhite.black);
@@ -108,18 +108,18 @@ try {
         var formatted = dt.format('d-m-Y H:M:S');
         dbot_console.addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
 
-        if (derniermot(msg.content) === 'ping') {
+        if (dbot_divers.derniermot(msg.content) === 'ping') {
             msg.reply('Pong!');
             console.log('Blague : pong effectué !');
-        } else if (msg.content === 'AH!') {
+        } else if (dbot_divers.derniermot(msg.content) === 'AH!') {
             msg.reply('https://i.ytimg.com/vi/HdZ5OD1KMGs/hqdefault.jpg');
             console.log('Blague : AH! effectué !');
-        } else if (derniermot(msg.content) === 'quoi' ||
-            derniermot(msg.content) === 'quoi?') {
+        } else if (dbot_divers.derniermot(msg.content) === 'quoi' ||
+            dbot_divers.derniermot(msg.content) === 'quoi?') {
             msg.reply('feur');
-        } else if (derniermot(msg.content) === 'comment') {
+        } else if (dbot_divers.derniermot(msg.content) === 'comment') {
             msg.reply('dant coustaud');
-        } else if (derniermot(msg.content) === 'hein') {
+        } else if (dbot_divers.derniermot(msg.content) === 'hein') {
             msg.reply('deux');
         }
 
@@ -141,7 +141,7 @@ try {
     // Quand le bot recoit une commande
     client.on('message', msg => {
 
-        //découpe le message en argument par chaque espaces 
+        //découpe le message en argument pour chaque espaces 
         var args = msg.content.split(" ").slice(1);
 
         //découpage du message pour récupérer la commande
@@ -162,7 +162,21 @@ try {
         //Les aides 
 
         if (msg.content.startsWith(prefix)) {
-            //*aide affiche l'aide disponible  
+
+            // *-*-*-*- PASSAGE DE LA COMMANDE DANS LES MODULES *-*-*-*-*- //
+
+            //Passage de la commande dans le module DBOT DIVERS
+            dbot_divers.commande(msg, args, commande);
+
+            //Passage de la commande dans le module DBOT WOT
+            dbot_wot.commande(msg, args, commande);
+
+            //Passage de la commande dans le module DBOT WOTTOURNOI
+            dbot_wotTournoi.commande(msg, args, commande);
+
+            // *-*-*-*- FIN DU PASSAGE DE LA COMMANDE DANS LES MODULES *-*-*-*-*- //
+
+            //*aide -> affiche l'aide global ( une pour chaue module )
             if (commande[0] == 'aide' || commande[0] == '?') {
                 dbot_console.printConsoleCommande(msg);
 
@@ -179,7 +193,7 @@ try {
                     .addField('/aideg', "pour obtenir l'aide générale")
                     .addField('/aidewot', "pour obtenir l'aide à propos des commandes World Of Tanks")
 
-                if (msg.author.id == admin) {
+                if (dbot_permission.isadmin(msg.author.id)) {
                     embed
                         .addField('/aideadmin', "pour obtenir l'aide admin")
                         .addField('/aidemusique', "pour obtenir l'aide sur la gestion des musiques")
@@ -190,7 +204,6 @@ try {
                 msg.channel.send({
                     embed
                 });
-
 
             }
 
@@ -212,33 +225,6 @@ try {
                     .addField('/unblock "nom"', "pour débloquer un utilisateur.")
                     .addField('/restart', "pour restart le bot.")
                     .addField('/close', "pour fermer le bot.")
-
-                embed.addField('\u200B', '\u200B')
-
-                msg.channel.send({
-                    embed
-                });
-            }
-
-            //*aidemusique affiche l'aide pour la gestion de la musique
-            else if (commande[0] == 'aidemusique' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                const embed = new Discord.RichEmbed()
-                    .setTitle("   ❓   AIDE MUSIQUE:   ❓   ")
-                    .setColor(0x179b2b)
-                    .setDescription("Voici l'aide pour la musique")
-                    .setFooter('© D-BOT copyright Dream')
-                    .setTimestamp()
-
-                    .addField('\u200B', '\u200B')
-
-                    .addField('/musiqueimportytid "id de la musique" "nom du fichier importé', "pour importé une musique depuis youtube avec son id.")
-                    .addField('/musiqueimportyturl "url de la musique" "nom du fichier importé"', "pour importé une musique depuis youtube avec son url.")
-                    .addField('/musiqueplay "nomdelamusique"', "pour lire une musique dans le salon.")
-                    .addField('/musiquesplaybyurl "url"', "pour lire de la musique depuis une url.")
-                    .addField('/musiquestop', "pour stopper la musique.")
-                    .addField('/musiquelist', "retourne une liste de musique.")
 
                 embed.addField('\u200B', '\u200B')
 
@@ -274,104 +260,11 @@ try {
                 });
             }
 
-            //*aidewot affiche l'aide pour les commandes sur le jeu world of tanks
-            else if (commande[0] == 'aidewot') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wot.aide(msg);
-            }
-
-            //*wotstats "nomdujoueur" ou *wots "nomdujoueur" pour avoir les stats du joueur
-            else if (commande[0] == 'wotstat' || commande[0] == 'wots') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wot.wotstats(msg, args[0]);
-            }
-
-            //*wottank "nomdutank?" ou *wott "nomdutank?" pour avoir les information d'un tank
-            else if (commande[0] == 'wottank' || commande[0] == 'wott') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wot.wottank(msg, args[0]);
-
-            }
-
-            //*wotinfo "nomdujoueur" ou *woti "nomdujoueur" pour avoir les information du joueur selon WorldOfTnkas
-            else if (commande[0] == 'wotinfo' || commande[0] == 'woti') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wot.wotinfo(msg, args[0]);
-            }
-
-
-            //*wotrecherche "nomdujoueur" ou *wotr "nomdujoueur"  permet de lancer une recherche sur un joueur
-            else if (commande[0] == 'wotrecherche' || commande[0] == 'wotr') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wot.wotrecherche(msg, args[0]);
-            }
-
             //*spam Commande de test, permet de spammer un chat
             else if (commande[0] == 'spam' && msg.author.id === admin) {
                 dbot_console.printConsoleCommande(msg);
                 for (var i = 0; i < args[0]; i++) {
                     msg.reply('D-BOT MOD SPAM');
-                }
-            }
-
-            //*roll "nombre de dés" "nombres de faces" jette X dès a X faces
-            else if (commande[0] == 'roll') {
-                //Vérifie que l'utilisateur est entrer un minimum de paramètre sinon set les paramètres par défaut
-                if (args[0] == null) {
-                    args[0] = 1;
-                }
-                if (args[1] == null) {
-                    args[1] = 6;
-
-                }
-                if (args[0] > 10 || args[1] > 64) {
-                    const embed = new Discord.RichEmbed()
-                        .setTitle("   ⚀   JET DE DES:   ⚀   ")
-                        .setColor(0xc9c9c9)
-                        .setDescription("ERREUR")
-                        .setFooter('© D-BOT copyright Dream')
-                        .setTimestamp()
-                        .setThumbnail('https://cdn.pixabay.com/photo/2012/04/16/11/48/dice-35637_960_720.png')
-
-                        .addField('\u200B', '\u200B')
-
-                        .addField('Maximum 10 dés et 64 faces')
-
-                        .addField('\u200B', '\u200B')
-
-                    msg.channel.send({
-                        embed
-                    });
-                } else {
-                    const embed = new Discord.RichEmbed()
-                        .setTitle("   ⚀   JET DE DES:   ⚀   ")
-                        .setColor(0xc9c9c9)
-                        .setDescription("Jet de " + args[0] + " dé(s) à " + args[1] + " faces")
-                        .setFooter('© D-BOT copyright Dream')
-                        .setTimestamp()
-                        .setThumbnail('https://cdn.pixabay.com/photo/2012/04/16/11/48/dice-35637_960_720.png')
-
-                        .addField('\u200B', '\u200B')
-
-                    var total = 0;
-                    for (var i = 0; i < args[0]; i++) {
-                        embed.addField('Le dé ' + (i + 1) + ' est sur la face : ', random(args[1]))
-                        total += random(args[1]);
-                    }
-                    embed.addField('\u200B', '\u200B')
-                    embed.addField('Total des dés : ', total);
-
-
-                    embed.addField('\u200B', '\u200B')
-
-                    msg.channel.send({
-                        embed
-                    });
                 }
             }
 
@@ -448,148 +341,12 @@ try {
                 msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
             }
 
-            //*close arrete le bot
-            else if (commande[0] == 'close' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                msg.reply('Fermeture en cours ...')
-                setTimeout(exitvalidation(msg), 2000);
-            }
-
-            //*restart relance le bot
-            else if (commande[0] == 'restart' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_divers.restart(msg);
-            }
-
-            //*online affiche le temps depuis lequel le bot est en ligne
-            else if (commande[0] == 'online') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_divers.online(msg);
-            }
-
             //*myavatar affiche l'image de l'avatar du joueur
             else if (commande[0] == 'myavatar') {
                 dbot_console.printConsoleCommande(msg);
 
                 msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
             }
-
-            //*datecreation affiche la date de création du client
-            else if (commande[0] == 'datecreation') {
-                dbot_console.printConsoleCommande(msg);
-
-                msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
-            }
-
-            // *-*-*- DEBUT WOTTOURNOI *-*-*- //
-
-            //*wottournoiaide ou *wotta affiche l'aide pour les commandes sur le jeu world of tanks
-            else if (commande[0] == 'wottournoiaide' || commande[0] == "wotta") {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wotTournoi.info(msg);
-            }
-
-            //*wottournoirule = nom du joueur ajoute un joueur à la liste des participant du tournoi
-            else if (commande[0] == 'wottournoirule') {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wotTournoi.rule(msg);
-            }
-
-            //*tournoistart
-            else if (commande[0] == 'wottournoistart' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_wotTournoi.start(msg);
-
-            }
-
-            // *-*-*- FIN WOTTOURNOI *-*-*- //
-
-            // *-*-*- DEBUT MUSIQUE *-*-*- //
-
-            //*musiqueimportytid args[0] = id de la vidéo args[1] = nom de l'enregistrement
-            else if (commande[0] == 'musiqueimportytid' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_youtube.importytif(msg, args[0], args[1])
-            }
-
-            //*musiqueimportyturl args[0] = url de la vidéo args[1] = nom de l'enregistrement
-            else if (commande[0] == 'musiqueimportyturl' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                dbot_youtube.importyturl(msg, args[0], args[1]);
-            }
-
-            //*musiquelist Retourne une liste de toutes les musiques
-            else if (commande[0] == 'musiquelist') {
-                dbot_console.printConsoleCommande(msg);
-                var listedesmusiques = "";
-                fs.readdirSync("./musique").forEach(file => {
-                    listedesmusiques += file + "\n";
-                })
-
-                const embed = new Discord.RichEmbed()
-                    .setTitle("   🎶   VOICI LA LISTE DES MUSIQUES DISPONIBLE !   🎶   ")
-                    .setColor(0xbe2424)
-                    .setDescription('Voici la liste des musiques disponible')
-                    .setFooter('© D-BOT copyright Dream')
-                    .setTimestamp()
-                    .addField('Les musiques:', listedesmusiques)
-
-                msg.channel.send({
-                    embed
-                });
-            }
-
-            //*musiquestop stop la musique en cours (UTILISE UN HACK SON)
-            else if (commande[0] == 'musiquestop' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-                if (msg.member.voiceChannel) {
-                    msg.member.voiceChannel.join().then(connection => { // 
-                        var musique1 = connection.playFile('');
-                        musique1.pause();
-                    }).catch(console.log);
-                } else {
-                    msg.reply('Il faut dabord rejoindre un channel avant!');
-                }
-            }
-
-            //*musiqueplay args[0] lance la musique avec args[0] = nom de la musique ex 1.mp3
-            else if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-                if (msg.member.voiceChannel) {
-                    msg.member.voiceChannel.join().then(connection => { // 
-                        var musique1 = connection.playFile('./musique/' + args[0]);
-                        musique1.setVolume(0.5);
-                    }).catch(console.log);
-                } else {
-                    msg.reply('Il faut dabord rejoindre un channel avant!');
-                }
-            }
-
-            //*musiqueplaybyurl args[0] lance une musique par rapport à une url avec args[0] = url musique
-            else if (commande[0] == 'musicplaybyurl') {
-                dbot_console.printConsoleCommande(msg);
-                if (msg.member.voiceChannel) {
-                    msg.member.voiceChannel.join().then(connection => { // 
-                        try {
-                            connection.playArbitraryInput(args[0].toString());
-                        } catch (e) {
-                            msg.reply('Une erreur est survenue :' + e);
-                        }
-                    }).catch(console.log);
-                } else {
-                    msg.reply('Il faut dabord rejoindre un channel avant!');
-                }
-            }
-
-            // *-*-*- FIN MUSIQUE *-*-*- //
 
             //*block args[0] met en prison un client args[0] = client
             else if (commande[0] == 'block') {
