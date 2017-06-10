@@ -2,14 +2,16 @@
 
 // Importation des APIs
 const Discord = require('discord.js'); // api de discord
+const fs = require('fs'); // api fs
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
+const dbot_permission = require('../mes_modules/dbot_permission.js'); // Importation de mon module Permission
 
 exports.commande = function (msg, args, commande) {
 
     //*aidemusique affiche l'aide pour la gestion de la musique
-    if (commande[0] == 'aidemusique' && msg.author.id == admin) {
+    if (commande[0] == 'aidemusique' && dbot_permission.isadmin(msg.author.id)) {
         dbot_console.printConsoleCommande(msg);
 
         const embed = new Discord.RichEmbed()
@@ -39,7 +41,7 @@ exports.commande = function (msg, args, commande) {
     else if (commande[0] == 'musiquelist') {
         dbot_console.printConsoleCommande(msg);
         var listedesmusiques = "";
-        fs.readdirSync("./musique").forEach(file => {
+        fs.readdirSync("../DBOT/data/musiques").forEach(file => {
             listedesmusiques += file + "\n";
         })
 
@@ -56,7 +58,7 @@ exports.commande = function (msg, args, commande) {
         });
     }
     //*musiquestop stop la musique en cours (UTILISE UN HACK SON)
-    else if (commande[0] == 'musiquestop' && msg.author.id == admin) {
+    else if (commande[0] == 'musiquestop' && dbot_permission.isadmin(msg.author.id)) {
         dbot_console.printConsoleCommande(msg);
         if (msg.member.voiceChannel) {
             msg.member.voiceChannel.join().then(connection => { // 
@@ -68,7 +70,7 @@ exports.commande = function (msg, args, commande) {
         }
     }
     //*musiqueplay args[0] lance la musique avec args[0] = nom de la musique ex 1.mp3
-    else if (commande[0] == 'musiqueplay' && msg.author.id == admin) {
+    else if (commande[0] == 'musiqueplay' && dbot_permission.isadmin(msg.author.id)) {
         dbot_console.printConsoleCommande(msg);
         if (msg.member.voiceChannel) {
             msg.member.voiceChannel.join().then(connection => { // 

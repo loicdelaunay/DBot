@@ -12,7 +12,7 @@ const dbot_permission = require('../mes_modules/dbot_permission.js'); // Importa
 
 exports.commande = function (msg, args, commande) {
     //*block args[0] met en prison un client args[0] = client
-    else if (commande[0] == 'block') {
+    if (commande[0] == 'block') {
         dbot_console.printConsoleCommande(msg);
         msg.reply('Le rageux : ' + args[0] + ' a bien été bloque');
     }

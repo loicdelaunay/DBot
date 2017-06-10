@@ -5,12 +5,52 @@ const Discord = require('discord.js'); // api de discord
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
+const dbot_permission = require('../mes_modules/dbot_permission.js'); // Importation de mon module Permission
 
 
 exports.commande = function (msg, args, commande) {
 
+    //*aidedivers ou *aided -> affiche l'aide global
+    if (commande[0] == 'aidedivers' || commande[0] == 'aided') {
+        dbot_console.printConsoleCommande(msg);
+
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ❓   AIDE DIVERS:   ❓   ")
+            .setColor(0x177d9b)
+            .setDescription("Voici l'aide global du bot")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+
+            .addField('\u200B', '\u200B')
+
+            .addField('/myavatar', "pour avoir un lien vers votre avatar.")
+            .addField('/ping', "pour obtenir votre ping.")
+            .addField('/monid', "pour obtenir votre id.")
+            .addField('/datecreation', "pour obtenir la date de création de votre compte discord.")
+            .addField('/roll "nombre de dés" "nombre de face du dé"', "pour jeter X dès à X faces.")
+            .addField('/info', "pour obtenir les informations concernant le D-BOT.")
+
+        //si l'utilisateur a les droits administrateurs
+        if (dbot_permission.isadmin(msg.author.id)) {
+            embed
+                .addField('\u200B', '\u200B')
+                .addField('Commandes Admin', 'Ci dessous les commandes admin : ')
+                .addField('/say', "Fait parler le bot dans un channel.")
+                .addField('/block "nom"', "pour bloquer un utilisateur.")
+                .addField('/unblock "nom"', "pour débloquer un utilisateur.")
+                .addField('/restart', "pour restart le bot.")
+                .addField('/close', "pour fermer le bot.")
+        }
+
+        embed.addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
+    }
+
     //*close -> Arrete le bot
-    if (commande[0] == 'close' && msg.author.id == admin) {
+    else if (commande[0] == 'close' && msg.author.id == admin) {
         dbot_console.printConsoleCommande(msg);
 
         //TODO
@@ -18,26 +58,27 @@ exports.commande = function (msg, args, commande) {
 
     //*restart -> Relance le bot
     else if (commande[0] == 'restart' && msg.author.id == admin) {
-        dbot_console.printConsoleCommande(msg);
-
-        const spawn = child_process.spawn;
-        const bat = spawn('cmd.exe', ['/c', 'startbot.bat']);
-
-        msg.reply('Restart en cours ....')
-
-        bat.stdout.on('data', (data) => {
-            console.log(data.toString());
-        });
-
-        bat.stderr.on('data', (data) => {
-            console.log(data.toString());
-        });
-
-        bat.on('exit', (code) => {
-            console.log(`Child exited with code ${code}`);
-        });
-
-        msg.reply("Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes")
+        //TODO
+        //        dbot_console.printConsoleCommande(msg);
+        //
+        //        const spawn = child_process.spawn;
+        //        const bat = spawn('cmd.exe', ['/c', 'startbot.bat']);
+        //
+        //        msg.reply('Restart en cours ....')
+        //
+        //        bat.stdout.on('data', (data) => {
+        //            console.log(data.toString());
+        //        });
+        //
+        //        bat.stderr.on('data', (data) => {
+        //            console.log(data.toString());
+        //        });
+        //
+        //        bat.on('exit', (code) => {
+        //            console.log(`Child exited with code ${code}`);
+        //        });
+        //
+        //        msg.reply("Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes")
     }
 
     //*online -> affiche le temps depuis lequel le bot est en ligne
@@ -51,6 +92,7 @@ exports.commande = function (msg, args, commande) {
     else if (commande[0] == 'stop' && dbot_permission.isadmin(msg.author.id)) {
         dbot_console.printConsoleCommande(msg);
 
+        msg.reply("Arrêt du bot ...")
         process.exit(-1);
     }
 
@@ -58,29 +100,66 @@ exports.commande = function (msg, args, commande) {
     else if (commande[0] == 'datecreation') {
         dbot_console.printConsoleCommande(msg);
 
-        msg.reply('Votre compte a ete cree le : ' + msg.author.createdAt);
+        const embed = new Discord.RichEmbed()
+            .setTitle("   📅   DATE CREATION:   📅   ")
+            .setColor(0xdbae34)
+            .setDescription("Affiche la date de creation de votre compte Discord !")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+
+            .addField('\u200B', '\u200B')
+            //TODO : mettre en forme la DATE
+            .addField('Ton compte a été créé le : ', msg.author.createdAt)
+
+        embed.addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
     }
 
     //*ping -> donne le ping du joueur
     else if (commande[0] == 'ping') {
         dbot_console.printConsoleCommande(msg);
 
-        msg.reply("Ton ping est de : " + msg.author.client.ping + "ms");
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ⛗   PING:   ⛗   ")
+            .setColor(0xdbae34)
+            .setDescription("Affiche votre ping moyen avec le serveur Discord !")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
+
+            .addField('\u200B', '\u200B')
+            .addField('Ton ping moyen est de : ', msg.author.client.ping + "ms")
+
+        embed.addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
     }
 
     //*myavatar -> affiche l'image de l'avatar du joueur
     else if (commande[0] == 'myavatar') {
         dbot_console.printConsoleCommande(msg);
 
-        msg.reply('Voici le lien vers votre avatar : ' + msg.author.avatarURL);
-    }
+        const embed = new Discord.RichEmbed()
+            .setTitle("   ⚇   VOTRE AVATAR DISCORD:   ⚇   ")
+            .setColor(0xdbae34)
+            .setDescription("Affiche votre avatar Discord !")
+            .setFooter('© D-BOT copyright Dream')
+            .setTimestamp()
 
-    //*spam -> Commande de test permet de spammer un chat
-    else if (commande[0] == 'spam' && msg.author.id === admin) {
-        dbot_console.printConsoleCommande(msg);
-        for (var i = 0; i < args[0]; i++) {
-            msg.reply('D-BOT MOD SPAM');
-        }
+            .addField('\u200B', '\u200B')
+
+            .addField('Voici le lien vers votre avatar : ', msg.author.avatarURL)
+            .setImage(msg.author.avatarURL)
+
+        embed.addField('\u200B', '\u200B')
+
+        msg.channel.send({
+            embed
+        });
     }
 
     //*info -> donne les infos du bot
@@ -120,7 +199,7 @@ exports.commande = function (msg, args, commande) {
 
             .addField('\u200B', '\u200B')
 
-            .addField('Votre ID :', msg.author.id)
+            .addField('Ton ID :', msg.author.id)
 
             .addField('\u200B', '\u200B')
 
@@ -171,8 +250,9 @@ exports.commande = function (msg, args, commande) {
 
             var total = 0;
             for (var i = 0; i < args[0]; i++) {
-                embed.addField('Le dé ' + (i + 1) + ' est sur la face : ', random(args[1]))
-                total += random(args[1]);
+                nbrrandom = random(args[1])
+                embed.addField('Le dé ' + (i + 1) + ' est sur la face : ', nbrrandom)
+                total += nbrrandom;
             }
             embed.addField('\u200B', '\u200B')
             embed.addField('Total des dés : ', total);

@@ -8,7 +8,7 @@
 const config = require('./dbot_config.json');
 
 // Version du D-BOT
-const version = "0.9c";
+const version = "0.9g";
 
 // Importation des modules
 const Discord = require('discord.js'); // api de Discord 
@@ -140,7 +140,7 @@ try {
             dbot_musique.commande(msg, args, commande);
 
             //Passage de la commande dans le module DBOT PRISON
-            //            dbot_prison.commande(msg, args, commande);
+            dbot_prison.commande(msg, args, commande);
 
             // *-*-*-*- FIN DU PASSAGE DE LA COMMANDE DANS LES MODULES *-*-*-*-*- //
 
@@ -151,81 +151,21 @@ try {
                 const embed = new Discord.RichEmbed()
                     .setTitle("   ❓   AIDE :   ❓   ")
                     .setColor(0x244dbe)
-                    .setDescription("Voici l'aide de l'aide")
+                    .setDescription("Voici l'aide général du DBOT")
                     .setFooter('© D-BOT copyright Dream')
                     .setTimestamp()
 
                     .addField('\u200B', '\u200B')
 
                     .addField('*', "pour parler avec l 'ia du bot taper * avant votre message")
-                    .addField('/aideg', "pour obtenir l'aide générale")
-                    .addField('/aidewot', "pour obtenir l'aide à propos des commandes World Of Tanks")
-
-                if (dbot_permission.isadmin(msg.author.id)) {
-                    embed
-                        .addField('/aideadmin', "pour obtenir l'aide admin")
-                        .addField('/aidemusique', "pour obtenir l'aide sur la gestion des musiques")
-                        .addField('/aidetournoi', "pour obtenir l'aide sur la gestion des tournois")
-                }
-
-                embed.addField('\u200B', '\u200B')
-                msg.channel.send({
-                    embed
-                });
-
-            }
-
-            //*aideadmin affiche l'aide pour les admins
-            else if (commande[0] == 'aideadmin' && msg.author.id == admin) {
-                dbot_console.printConsoleCommande(msg);
-
-                const embed = new Discord.RichEmbed()
-                    .setTitle("   ❓   AIDE ADMIN:   ❓   ")
-                    .setColor(0xbe2424)
-                    .setDescription("Voici l'aide pour les admins")
-                    .setFooter('© D-BOT copyright Dream')
-                    .setTimestamp()
+                    .addField('/aidedivers ou /aided', "pour obtenir l'aide concernant les fonctions diverses du DBOT")
+                    .addField('/aidewot ou /aidew', "pour obtenir l'aide à propos des commandes du jeu World Of Tanks")
 
                     .addField('\u200B', '\u200B')
-
-                    .addField('/say', "Fait parler le bot dans un channel.")
-                    .addField('/block "nom"', "pour bloquer un utilisateur.")
-                    .addField('/unblock "nom"', "pour débloquer un utilisateur.")
-                    .addField('/restart', "pour restart le bot.")
-                    .addField('/close', "pour fermer le bot.")
-
-                embed.addField('\u200B', '\u200B')
-
                 msg.channel.send({
                     embed
                 });
-            }
 
-            //*aideg affiche l'aide global
-            else if (commande[0] == 'aideg') {
-                dbot_console.printConsoleCommande(msg);
-
-                const embed = new Discord.RichEmbed()
-                    .setTitle("   ❓   AIDE GENERALES:   ❓   ")
-                    .setColor(0x177d9b)
-                    .setDescription("Voici l'aide global du bot")
-                    .setFooter('© D-BOT copyright Dream')
-                    .setTimestamp()
-
-                    .addField('\u200B', '\u200B')
-
-                    .addField('/myavatar', "pour avoir un lien vers votre avatar.")
-                    .addField('/ping', "pour obtenir votre ping.")
-                    .addField('/monid', "pour obtenir votre id.")
-                    .addField('/datecreation', "pour obtenir la date de création de votre compte discord.")
-                    .addField('/roll "nombre de dés" "nombre de face du dé"', "pour jeter X dès à X faces.")
-                    .addField('/info', "pour obtenir les informations concernant le D-BOT.")
-
-                embed.addField('\u200B', '\u200B')
-
-                msg.channel.send({
-                    embed
-                });
             }
 
         }
@@ -240,7 +180,11 @@ try {
             .setAuthor(member.user.username, member.user.avatarURL)
             .setFooter('© D-BOT copyright Dream')
             .setTimestamp()
-            .addField("Bienvenue sur le serveur DreamOfTheYear !")
+            .addField("Bienvenue sur le serveur DreamOfTheYear !", "")
+            .addField('\u200B', '\u200B')
+            .addField("Premium :", member.premium)
+            .addField("Vérifié :", member.verified)
+            .addField("Note :", member.note);
 
         member.guild.defaultChannel.send({
             embed
