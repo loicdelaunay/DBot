@@ -14,10 +14,16 @@ var app = express();
 //Set du folder des pages webs
 app.set('views', path.join(dbot_divers.dossierRoot(), '/data/pageWeb'));
 
+//Set du folder data utilisé par Express
+app.use(express.static(dbot_divers.dossierRoot() + '/data/pageWeb'));
+
 
 //-*-*-*-*- GESTION DES PAGES WEBS -*-*-*-*-*-
+
 app.get('/', function (req, res) {
-    res.render('test.ejs');
+    res.render('Accueil.ejs', {
+        versiondbot: dbot_divers.version()
+    });
 });
 
 //-*-*-*-*- FIN GESTION DES PAGES WEBS -*-*-*-*-*-
