@@ -1,18 +1,15 @@
 //** DBOT YOUTUBE : Api pour la gestion de Youtube**//
 
 // Importation des APIs
-const path = require('path'); // api de gestion des chemins d'accès
 const YoutubeMp3Downloader = require('youtube-mp3-downloader'); //api pour télécharger des MP3 depuis Youtube
 const getYouTubeID = require('get-youtube-id');
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
-
-// Dossier de lancement du bot
-var appDir = path.dirname(require.main.filename);
+const dbot_divers = require('../mes_modules/dbot_divers.js'); // Importation de mon module Divers
 
 // Dossier executable ffmpeg 
-var ffmpegPath = appDir + '/prerequis/ffmpeg/bin/ffmpeg.exe'
+var ffmpegPath = dbot_divers.dossierRoot() + '/prerequis/ffmpeg/bin/ffmpeg.exe'
 
 //Initialisation de l'api youtubeMp3Downloader
 var YD = new YoutubeMp3Downloader({

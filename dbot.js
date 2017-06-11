@@ -7,9 +7,6 @@
 // Chargement du fichier de configuration du D-BOT
 const config = require('./dbot_config.json');
 
-// Version du D-BOT
-const version = "0.9g";
-
 // Importation des modules
 const Discord = require('discord.js'); // api de Discord 
 const client = new Discord.Client(); // api client de Discord
@@ -29,6 +26,10 @@ const dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js');
 const dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
 const dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
 const dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse
+const dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
+
+// Version du D-BOT
+const version = dbot_divers.version();
 
 // Dossier de lancement du bot
 var appDir = path.dirname(require.main.filename);
@@ -84,7 +85,6 @@ client.on('ready', () => {
     client.user.setGame("/aide pour obtenir de l'aide");
     dbot_console.logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
 });
-
 
 
 try {

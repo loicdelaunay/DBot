@@ -1,11 +1,24 @@
 //** DBOT WOT : Api pour la gestion des modules divers du DBOT**//
 
+// Version du D-BOT avec export
+const version = "0.9g";
+exports.version = function () {
+    return version;
+}
+
 // Importation des APIs
 const Discord = require('discord.js'); // api de discord
+const path = require('path'); // api de gestion des chemins d'accès
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
 const dbot_permission = require('../mes_modules/dbot_permission.js'); // Importation de mon module Permission
+
+// Dossier de lancement du bot
+var appDir = path.dirname(require.main.filename);
+exports.dossierRoot = function () {
+    return appDir;
+}
 
 
 exports.commande = function (msg, args, commande) {
