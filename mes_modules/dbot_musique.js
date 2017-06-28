@@ -90,7 +90,7 @@ exports.commande = function (msg, args, commande) {
                 try {
                     connection.playArbitraryInput(args[0].toString());
                 } catch (e) {
-                    msg.reply('Une erreur est survenue :' + e);
+                    msg.reply('Une erreur est survenue : ' + e);
                 }
             }).catch(console.log);
         } else {

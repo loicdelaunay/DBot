@@ -1,7 +1,7 @@
 //** DBOT WOT : Api pour la gestion des modules divers du DBOT**//
 
 // Version du D-BOT avec export
-const version = "0.9g";
+const version = "0.9.1";
 exports.version = function () {
     return version;
 }
@@ -20,6 +20,11 @@ exports.dossierRoot = function () {
     return appDir;
 }
 
+// Dossier executable ffmpeg 
+var ffmpegPath = appDir + '/prerequis/ffmpeg/bin/ffmpeg.exe'
+exports.dossierFfmpeg = function () {
+    return ffmpegPath;
+}
 
 exports.commande = function (msg, args, commande) {
 

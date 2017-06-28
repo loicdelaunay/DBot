@@ -1,1 +1,5 @@
 - Gestion des permissions
+- Gestion d'inventaire style RPG
+- Interface d'installation du BOT
+- Auto détecter nom du serveur au lieu de le configurer
+- Mettre en forme type CSV

@@ -58,7 +58,8 @@ console.log('Version du D-BOT : ' + version);
 console.log('Version de NODEJS : ' + process.version)
 console.log('Version de DISCORDJS : ' + Discord.version)
 
-console.log('Chemin de ffmpegPath utilisé : ' + dbot_youtube.ffmpegpath());
+console.log('Chemin du D-BOT utilisé : ' + appDir);
+console.log('Chemin de ffmpegPath utilisé : ' + dbot_divers.dossierFfmpeg());
 
 // Token du bot 
 const token = config.token;
@@ -74,20 +75,20 @@ console.log('Id admin chargé : ' + dbot_permission.idadmin());
 const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
 console.log(entete2.bgWhite.black);
 
-// Connection à Discord
-client.login(token);
-
-// A la conncetion du bot
-client.on('ready', () => {
-    var dt = dateTime.create();
-    var heurestart = dt.format('d-m-Y H:M:S'); //Set la date du bot sur son heure de démarrage 
-    client.user.setStatus("online");
-    client.user.setGame("/aide pour obtenir de l'aide");
-    dbot_console.logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
-});
-
-
 try {
+
+    // Connection à Discord
+    client.login(token);
+
+    // A la conncetion du bot
+    client.on('ready', () => {
+        var dt = dateTime.create();
+        var heurestart = dt.format('d-m-Y H:M:S'); //Set la date du bot sur son heure de démarrage 
+        client.user.setStatus("online");
+        client.user.setGame("/aide pour obtenir de l'aide");
+        dbot_console.logconsole('Le D-BOT est fonctionnel ! ' + heurestart, 'debug');
+    });
+
     // Quand le bot reçoit un message le traitement s'effectue ici 
     client.on('message', msg => {
 
@@ -96,7 +97,10 @@ try {
         dbot_console.addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
 
         //Importe le message dans le module AutoReponse pour voir si le bot doit répondre
-        dbot_messageAutoReponse.message(msg)
+        dbot_messageAutoReponse.message(msg);
+
+        //Met à jour les informations de l'utilisateur concerné
+        dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg);
     });
 
 
@@ -180,7 +184,7 @@ try {
             .setAuthor(member.user.username, member.user.avatarURL)
             .setFooter('© D-BOT copyright Dream')
             .setTimestamp()
-            .addField("Bienvenue sur le serveur DreamOfTheYear !", "")
+            .addField("Bienvenue sur le serveur " + config.nomduserveur + " !", "")
             .addField('\u200B', '\u200B')
             .addField("Premium :", member.premium)
             .addField("Vérifié :", member.verified)
@@ -194,14 +198,5 @@ try {
     //Catch des erreurs et retour
 } catch (err) {
 
-    //$logerreur log les erreurs
-    function addlogerreurs(text) {
-        var dt = dateTime.create();
-        var formatted = dt.format('d-m-Y');
-        fs.appendFileSync('./logs/erreurs/logerreurs' + formatted + '.txt', text);
-    }
-
-    addlogerreurs("\nERREUR CRITIQUE", err);
     logconsole("ERREUR CRITIQUE : ".red + err.message.red, 'error');
-    return
 }

@@ -4,9 +4,14 @@
 const http = require('http');
 const express = require('express');
 const path = require('path');
+const Discord = require('discord.js'); // api de Discord 
 
 // Importation de mes modules
-const dbot_divers = require('../mes_modules/dbot_divers.js'); // Importation de mon module Divers
+const dbot_divers = require('../mes_modules/dbot_divers.js');
+const dbot_youtube = require('../mes_modules/dbot_youtube.js');
+
+// Chargement du fichier de configuration du D-BOT
+const config = require(dbot_divers.dossierRoot() + '/dbot_config.json');
 
 //Initialisation du module web avec express.js
 var app = express();
@@ -22,7 +27,10 @@ app.use(express.static(dbot_divers.dossierRoot() + '/data/pageWeb'));
 
 app.get('/', function (req, res) {
     res.render('Accueil.ejs', {
-        versiondbot: dbot_divers.version()
+        versiondbot: dbot_divers.version(),
+        versionodejs: process.version,
+        versiondiscordjs: Discord.version,
+        cheminffmpegpath: dbot_youtube.ffmpegpath()
     });
 });
 
@@ -35,4 +43,4 @@ app.use(function (req, res, next) {
 });
 
 //Ecoute du serveur
-app.listen(8080);
+app.listen(config.portserveur);

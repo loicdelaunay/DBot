@@ -4,8 +4,6 @@
 const fs = require('fs'); //api nodejs pour gestion des fichiers
 const dateTime = require('node-datetime'); //api pour la gestion du temps
 
-
-
 // Log les erreurs du D-BOT
 exports.addlogerreur = function (text) {
     var dt = dateTime.create();
@@ -58,6 +56,9 @@ exports.logconsole = function (msg, type, objetmessage) {
             break;
         case 'error':
             log += ' (error)'.error;
+            var dt = dateTime.create();
+            var formatted = dt.format('d-m-Y');
+            fs.appendFileSync('./logs/erreurs/logerreurs' + formatted + '.txt', msg);
             break;
     }
     console.log(log);
