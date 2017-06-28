@@ -27,6 +27,7 @@ const dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de m
 const dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
 const dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse
 const dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
+const dbot_gestionBDD = require('./mes_modules/dbot_gestionBDD.js'); // Importation de mon module BDD
 
 // Version du D-BOT
 const version = dbot_divers.version();
@@ -100,7 +101,7 @@ try {
         dbot_messageAutoReponse.message(msg);
 
         //Met à jour les informations de l'utilisateur concerné
-        dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg);
+        dbot_gestionBDD.updateUtilisateur(msg.author.id, msg);
     });
 
 
