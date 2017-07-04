@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
         versiondbot: dbot_divers.version(),
         versionodejs: process.version,
         versiondiscordjs: Discord.version,
-        cheminffmpegpath: exports.dossierFfmpeg()
+        cheminffmpegpath: dbot_divers.dossierFfmpeg()
     });
 });
 
