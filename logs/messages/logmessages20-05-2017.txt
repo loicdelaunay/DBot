@@ -1,0 +1,513 @@
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 20-05-2017 09:28:14
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+3.mp3
+4.mp3
+ah.mp3
+ah2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+doward.mp2
+merde.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 09:28:14
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 09:28:14
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 20-05-2017 09:28:44
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 09:28:44
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 20-05-2017 10:02:37
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 20-05-2017 10:02:37
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 20-05-2017 10:02:38
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 20-05-2017 10:02:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 20-05-2017 10:02:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 20-05-2017 10:02:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 20-05-2017 10:02:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 20-05-2017 10:02:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 20-05-2017 10:02:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 20-05-2017 10:04:37
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 10:04:38
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 10:04:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:04:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:04:43
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aidemusique posté le : 20-05-2017 10:04:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id 
+ - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url 
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /musiquestop     pour stopper la musique 
+ - /musiquelist     retourne une liste de musique posté le : 20-05-2017 10:04:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 10:14:10
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:14:10
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:14:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:14:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:14:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:14:40
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:15:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:15:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:15:34
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:17:36
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:17:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:17:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:17:59
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:18:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:18:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:18:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:19:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:19:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:19:39
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:23:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:23:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:23:58
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 10:24:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:24:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:24:06
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aidewot posté le : 20-05-2017 10:24:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes WorldOfTanks :
+ - /wotinfo "nomdujoueur"    pour obtenir les stats wot du joueur recherché sur les sites les plus réputés. posté le : 20-05-2017 10:24:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 10:26:00
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:26:01
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:26:01
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 20-05-2017 10:26:07
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ton ping est de : 120ms posté le : 20-05-2017 10:26:07
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 10:32:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 20-05-2017 10:32:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 10:32:13
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 20-05-2017 10:32:17
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱
+
+
+Voici la liste des matchs: posté le : 20-05-2017 10:32:17
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 20-05-2017 10:32:17
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?v=ykwqXuMPsoc narwhals.mp3 posté le : 20-05-2017 10:34:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=ykwqXuMPsoc sous le nom de : narwhals.mp3 posté le : 20-05-2017 10:34:18
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?v=ykwqXuMPsoc narwhals.mp3 posté le : 20-05-2017 10:35:01
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=ykwqXuMPsoc sous le nom de : narwhals.mp3 posté le : 20-05-2017 10:35:01
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 20-05-2017 10:35:18
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+narwhals.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 10:35:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueplay narwhals.mp3 posté le : 20-05-2017 10:35:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Il faut dabord rejoindre un channel avant! posté le : 20-05-2017 10:35:32
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueplay narwhals.mp3 posté le : 20-05-2017 10:35:41
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 20-05-2017 10:36:49
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ton ping est de : 121ms posté le : 20-05-2017 10:36:49
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /version posté le : 20-05-2017 10:37:24
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 20-05-2017 10:37:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+Version de Discord.JS utilisé : 11.1.0
+Version de Node utilisé : v7.10.0 posté le : 20-05-2017 10:37:27
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 20-05-2017 10:38:26
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+Version du D-BOT : 0.2
+Version de Discord.JS utilisé : 11.1.0
+Version de Node utilisé : v7.10.0 posté le : 20-05-2017 10:38:28
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?v=ykwqXuMPsoc narwhals.mp3 posté le : 20-05-2017 10:41:48
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=ykwqXuMPsoc sous le nom de : narwhals.mp3 posté le : 20-05-2017 10:41:48
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:21:28
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:21:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ``` TEST ``` posté le : 20-05-2017 19:21:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:34:56
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : "``` ⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠\
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peut vous donner son code source\
+- La map séléctionnée sera aussi choisi par le script du du D-BOT\
+- La composition du match sera composée des deux équipes et d'un arbitre + un contre arbitre\
+- Les arbitres sont les joueurs Haut gradés du clan DOTY de même pour les contres arbitres\```" posté le : 20-05-2017 19:34:57
+L'utilisateur : gogniole Avec ID : 196300493675429889 a posté le message suivant : *zizi posté le : 20-05-2017 19:35:10
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@!196300493675429889>, Who is your favorite character in Hetalia? posté le : 20-05-2017 19:35:11
+L'utilisateur : gogniole Avec ID : 196300493675429889 a posté le message suivant : *ta mere posté le : 20-05-2017 19:35:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@!196300493675429889>, What's a mere? posté le : 20-05-2017 19:35:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *ta mère posté le : 20-05-2017 19:35:35
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, What's a mere? posté le : 20-05-2017 19:35:36
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *tu as un gros petit cerveau posté le : 20-05-2017 19:35:48
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Oui. posté le : 20-05-2017 19:35:49
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:36:31
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : "``` ⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠\n\n
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peut vous donner son code source
+- La map séléctionnée sera aussi choisi par le script du du D-BOT
+- La composition du match sera composée des deux équipes et d'un arbitre + un contre arbitre
+- Les arbitres sont les joueurs Haut gradés du clan DOTY de même pour les contres arbitres```" posté le : 20-05-2017 19:36:31
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:36:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ``` ⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peut vous donner son code source
+- La map séléctionnée sera aussi choisi par le script du du D-BOT
+- La composition du match sera composée des deux équipes et d'un arbitre + un contre arbitre
+- Les arbitres sont les joueurs Haut gradés du clan DOTY de même pour les contres arbitres``` posté le : 20-05-2017 19:36:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:37:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ``` 
+⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peut vous donner son code source
+
+- La map séléctionnée sera aussi choisi par le script du du D-BOT
+
+- La composition du match sera composée des deux équipes et d'un arbitre + un contre arbitre
+
+- Les arbitres sont les joueurs Haut gradés du clan DOTY de même pour les contres arbitres
+
+``` posté le : 20-05-2017 19:37:13
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:42:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ``` ⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peut vous donner son code source en mp
+
+- La map séléctionnée sera aussi choisi parmis une liste dans le script du D-BOT
+
+- Le match sera composée des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs Haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entrainement, invitera les joueurs et mettera la map choisie par le D-BOT
+par la suite chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes on fini de choisir
+leur tank il pourrons se mettre prêt et ne pourrons plus changer de tank, l'arbitre verifira que celui ci
+correspond bien au tank cité précedement
+
+- Le contre arbitre veillera au bon déroulement des matchs et fera part de toutes remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 19:42:28
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:48:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ``` ⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 19:48:32
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:50:22
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```Markdown #⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 19:50:22
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:50:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```Markdown 
+#⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 19:50:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 19:52:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```java #⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 19:52:13
+L'utilisateur : gogniole Avec ID : 196300493675429889 a posté le message suivant :  posté le : 20-05-2017 19:52:58
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:09:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:09:04
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 20:09:04
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```⚠⚠⚠ VOICI LES REGLES DES TOURNOIS INTRA DOTY ! ⚠⚠⚠
+
+
+- Les matchs sont organisés automatiquement par le script du D-BOT si vous avez des doutes je peux vous donner son code source en mp
+
+- La map sélectionnée sera aussi choisie parmi une liste dans le script du D-BOT ( cette liste sera fournie pendant la création du tournoi )
+
+- Le match sera composé des deux équipes et d'un arbitre + un contre arbitre si possible
+
+- Les arbitres sont les joueurs haut gradés du clan DOTY de même pour les contres arbitres
+
+- L'arbitre créera une salle d'entraînement, invitera les joueurs et mettra la map choisie par le D-BOT
+par la suite, chaque équipe enverra en MP PRIVEE à l'admin le tank choisi, quand les deux équipes ont fini de choisir
+leur tank ils pourront se mettre prêt et ne pourront plus changer de tank, l'arbitre vérifira que celui-ci
+correspond bien au tank cité précédement
+
+- Le contre-arbitre veillera au bon déroulement des matchs et fera part de toute remarque à l'organisateur du tournoi
+
+
+``` posté le : 20-05-2017 20:09:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:09:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:09:47
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : {embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: 'This is an embed',
+    url: 'http://google.com',
+    description: 'This is a test embed to showcase what they look like and what they can do.',
+    fields: [{
+        name: 'Fields',
+        value: 'They can have different fields with small headlines.'
+      },
+      {
+        name: 'Masked links',
+        value: 'You can put [masked links](http://google.com) inside of rich embeds.'
+      },
+      {
+        name: 'Markdown',
+        value: 'You can put all the *usual* **__Markdown__** inside of them.'
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: '© Example'
+    }
+  }
+} posté le : 20-05-2017 20:09:48
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:11:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:11:13
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:13:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:13:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:15:52
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:15:52
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:18:38
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:19:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:20:40
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:20:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:20:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:23:14
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:26:52
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:26:52
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule* posté le : 20-05-2017 20:29:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:29:29
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:29:29
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:29:30
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:29:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:31:28
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:31:29
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:33:37
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:33:38
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:34:24
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:34:25
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:39:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:39:39
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:42:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:43:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:49:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:49:32
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:54:31
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:54:32
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : Si vous avez des avis, correction orthographique ou des idée mp moi 😃 posté le : 20-05-2017 20:55:03
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoirule posté le : 20-05-2017 20:55:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 20:55:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 20-05-2017 21:48:56
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+narwhals.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 21:48:56
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 21:48:56
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 20-05-2017 21:50:35
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+narwhals.mp3
+test2.mp3
+test3.mp3 posté le : 20-05-2017 21:50:35
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 21:50:35
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:00:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /? posté le : 20-05-2017 22:00:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:00:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 22:00:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:00:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 20-05-2017 22:00:16
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:02:35
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:02:36
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:08:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:09:06
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:09:06
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:09:26
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:09:45
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:09:45
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:11:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:11:13
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aideg posté le : 20-05-2017 22:22:43
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Salut voici la liste de mes commandes générales :
+ - /myavatar    pour avoir un lien vers votre avatar 
+ - /ping     pour obtenir votre ping. 
+ - /monid     pour obtenir votre id. 
+ - /datecreation pour obtenir la date de création de votre compte discord.
+ - /wotinfo *nomdujoueur*    pour obtenir les stats wot du joueur recherché sur les sites les plus réputés. 
+ - /info     pour obtenir les informations concernant le D-BOT.
+ - /roll pour jetter un dè à 6 faces. posté le : 20-05-2017 22:22:44
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 20-05-2017 22:22:47
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant :  posté le : 20-05-2017 22:22:48

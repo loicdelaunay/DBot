@@ -1,0 +1,471 @@
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 14-05-2017 13:42:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - pour parler avec l'ia du bot taper * avant votre message 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 14-05-2017 13:42:33
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 14-05-2017 13:42:33
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aideadmin posté le : 14-05-2017 13:42:37
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /musiquestop     pour stopper la musique 
+ - /block "nom du client     pour bloquer un utilisateur. 
+ - /unblock "nom du client"pour débloquer un utilisateur. 
+ - /close     pour fermer le bot. 
+ - /restart     pour restart le bot 
+ - /say    fait parler le bot dans un channel posté le : 14-05-2017 13:42:37
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 14-05-2017 13:43:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - pour parler avec l'ia du bot taper * avant votre message 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 14-05-2017 13:43:51
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 14-05-2017 13:43:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test1.mp3 posté le : 14-05-2017 13:48:31
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test1.mp3 posté le : 14-05-2017 13:48:31
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test1.mp3 posté le : 14-05-2017 13:48:31
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test1.mp3 posté le : 14-05-2017 13:48:31
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test1.mp3 posté le : 14-05-2017 13:49:06
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test1.mp3 posté le : 14-05-2017 13:49:06
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test1.mp3 posté le : 14-05-2017 13:50:01
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test1.mp3 posté le : 14-05-2017 13:50:02
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test2.mp3 posté le : 14-05-2017 13:59:54
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test2.mp3 posté le : 14-05-2017 13:59:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test2.mp3 posté le : 14-05-2017 14:00:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PEsous le nom de : test2.mp3 posté le : 14-05-2017 14:00:39
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test2.mp3 posté le : 14-05-2017 14:10:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PE sous le nom de : test2.mp3 posté le : 14-05-2017 14:10:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:12:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:12:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp3 posté le : 14-05-2017 14:12:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 2.mp3 posté le : 14-05-2017 14:12:42
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:14:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:14:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:14:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:15:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:15:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:15:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:16:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:16:20
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:16:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:17:11
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:17:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:17:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:17:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp3 posté le : 14-05-2017 14:17:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 2.mp3 posté le : 14-05-2017 14:17:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:17:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:17:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp3 posté le : 14-05-2017 14:17:20
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 2.mp3 posté le : 14-05-2017 14:17:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:18:45
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:18:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, zbeub posté le : 14-05-2017 14:18:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:18:47
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:18:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:19:10
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:19:11
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:19:11
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:20:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:20:08
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:20:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:20:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, posté le : 14-05-2017 14:20:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:23:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:23:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp3 posté le : 14-05-2017 14:23:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp32.mp3 posté le : 14-05-2017 14:23:28
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:23:47
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:23:47
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp32.mp3 posté le : 14-05-2017 14:23:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:24:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : posté le : 14-05-2017 14:24:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 1.mp3
+2.mp3 posté le : 14-05-2017 14:24:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:24:48
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : 
+1.mp3
+2.mp3 posté le : 14-05-2017 14:24:48
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyt mKzLoZFz8PE test2.mp3 posté le : 14-05-2017 14:24:59
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : mKzLoZFz8PE sous le nom de : test2.mp3 posté le : 14-05-2017 14:25:00
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 14:25:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : 
+1.mp3
+2.mp3
+test2.mp3 posté le : 14-05-2017 14:25:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueplay test2.mp3 posté le : 14-05-2017 14:25:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquestop posté le : 14-05-2017 14:25:31
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?v=x0R_hPxBtnk&list=RDMM posté le : 14-05-2017 14:48:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=x0R_hPxBtnk&list=RDMM sous le nom de : undefined posté le : 14-05-2017 14:48:33
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?v=x0R_hPxBtnk&list=RDMM bigflo_lavraivie.mp3 posté le : 14-05-2017 14:58:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=x0R_hPxBtnk&list=RDMM sous le nom de : bigflo_lavraivie.mp3 posté le : 14-05-2017 14:58:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?v=x0R_hPxBtnk&list=RDMM sous le nom de : bigflo_lavraivie.mp3 posté le : 14-05-2017 14:58:13
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:37:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le tournoi à bien été lancé ! posté le : 14-05-2017 18:37:43
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:40:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 18:40:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : djnapalmenormezbeubbite posté le : 14-05-2017 18:40:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:40:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 18:40:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+djnapalm
+enormezbeub
+bite posté le : 14-05-2017 18:40:40
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : '''test''' posté le : 14-05-2017 18:42:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```test``` posté le : 14-05-2017 18:42:42
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:50:11
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:52:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:53:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:53:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 14-05-2017 18:53:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 14-05-2017 18:53:54
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 14-05-2017 18:53:54
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 14-05-2017 18:53:55
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide :
+ - pour parler avec l 'ia du bot taper * avant votre message
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 14-05-2017 18:53:55
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes :
+ - /aideadmin pour obtenir l'aide admin
+ - /aidemusique pour obtenir l'aide sur la gestrion des musiques
+ - /aidetournoi pour obtenir l'aide sur la gestion des tournois posté le : 14-05-2017 18:53:55
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:54:00
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /roll posté le : 14-05-2017 18:57:44
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le dé est sur la face : 4 posté le : 14-05-2017 18:57:44
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:57:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:58:11
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 18:58:12
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+djnapalm
+enormezbeub
+bite posté le : 14-05-2017 18:58:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:58:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 18:58:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+djnapalm
+enormezbeub
+bite
+3 posté le : 14-05-2017 18:58:41
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 18:59:18
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 18:59:18
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+djnapalm
+enormezbeub
+bite
+3 posté le : 14-05-2017 18:59:18
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+djnapalm
+enormezbeub
+bite
+2 posté le : 14-05-2017 18:59:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:01:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:01:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+4 posté le : 14-05-2017 19:01:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+3 posté le : 14-05-2017 19:01:42
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:03:07
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:03:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+4 posté le : 14-05-2017 19:03:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+3 posté le : 14-05-2017 19:03:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, dans la boucle posté le : 14-05-2017 19:03:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur3va affronter : joueur4 posté le : 14-05-2017 19:03:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:03:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:03:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+4 posté le : 14-05-2017 19:03:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Les joueurs encore en jeu sont : 
+joueur1
+joueur2
+joueur3
+joueur4
+3 posté le : 14-05-2017 19:03:41
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur3va affronter : joueur4 posté le : 14-05-2017 19:03:41
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:04:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:04:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur4va affronter : joueur2 posté le : 14-05-2017 19:04:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur3va affronter : undefined posté le : 14-05-2017 19:04:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:04:21
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:04:22
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:05:06
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:05:06
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur2va affronter : joueur3 posté le : 14-05-2017 19:05:07
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, le joueur : joueur4va affronter : undefined posté le : 14-05-2017 19:05:07
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```test``````test``` posté le : 14-05-2017 19:08:56
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:09:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:09:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ```le joueur : joueur4va affronter : joueur2``````le joueur : joueur3va affronter : undefined``` posté le : 14-05-2017 19:09:40
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:13:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:13:40
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'organisation des matchs : 
+```le joueur : joueur3 va affronter : joueur2``````le joueur : joueur4 va affronter : joueur1``` posté le : 14-05-2017 19:13:41
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:15:30
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:15:30
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'organisation des matchs : 
+```Markdownle joueur : #joueur2# va affronter : #joueur3#``````Markdownle joueur : #joueur4# va affronter : #joueur1#``` posté le : 14-05-2017 19:15:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:15:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:15:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'organisation des matchs : 
+```Markdown le joueur : #joueur2# va affronter : #joueur3#``````Markdown le joueur : #joueur4# va affronter : #joueur1#``` posté le : 14-05-2017 19:15:59
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:18:22
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:18:22
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'organisation des matchs : 
+```Markdown 
+le joueur : joueur3# va affronter : joueur2``````Markdown 
+le joueur : joueur4# va affronter : joueur1``` posté le : 14-05-2017 19:18:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```Markdown #hello world ``` posté le : 14-05-2017 19:18:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```Markdown
+#general interesting really interesting
+``` posté le : 14-05-2017 19:19:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```Markdown
+#general# interesting really interesting
+``` posté le : 14-05-2017 19:19:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```Markdown
+general interesting really interesting
+``` posté le : 14-05-2017 19:19:58
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:21:53
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:22:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:22:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /monid posté le : 14-05-2017 19:25:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /monid posté le : 14-05-2017 19:26:40
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /monid posté le : 14-05-2017 19:27:25
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /monid posté le : 14-05-2017 19:28:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 14-05-2017 19:29:28
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+Version de Discord.JS utilisé : 10.0.1
+Version de Node utilisé : v7.10.0 posté le : 14-05-2017 19:29:28
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 14-05-2017 19:31:52
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+Version de Discord.JS utilisé : 11.1.0
+Version de Node utilisé : v7.10.0 posté le : 14-05-2017 19:31:53
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /myid posté le : 14-05-2017 19:32:00
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /monid posté le : 14-05-2017 19:32:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : test posté le : 14-05-2017 19:32:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Votre ID : 118072401681448960 posté le : 14-05-2017 19:32:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 14-05-2017 19:32:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 174.33333333333334 posté le : 14-05-2017 19:32:50
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 14-05-2017 19:37:39
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Votre ping est de : 161 posté le : 14-05-2017 19:37:39
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 14-05-2017 19:37:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Votre ping est de : 149ms posté le : 14-05-2017 19:37:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ping posté le : 14-05-2017 19:37:55
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Votre ping est de : 149ms posté le : 14-05-2017 19:37:55
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aidemusique posté le : 14-05-2017 19:39:48
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueimportytid "id de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son id 
+ - /musiqueimportyturl "url de la musique" "nom du fichier importé"    pour importé une musique depuis youtube avec son url 
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /musiquestop     pour stopper la musique 
+ - /musiquelist     retourne une liste de musique posté le : 14-05-2017 19:39:48
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM posté le : 14-05-2017 19:40:01
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM sous le nom de : undefined posté le : 14-05-2017 19:40:01
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM test3.mp3 posté le : 14-05-2017 19:41:06
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM sous le nom de : test3.mp3 posté le : 14-05-2017 19:41:07
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueimportyturl https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM posté le : 14-05-2017 19:41:56
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Importation de la vidéo youtube avec id : https://www.youtube.com/watch?list=PLzN_roNMeZz38cb4IPpkI7cuXbT78CL3A&v=MLOUZz7wzPM sous le nom de : undefined posté le : 14-05-2017 19:41:57
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 19:42:28
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici la liste de mes musiques : 
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+test2.mp3
+test3.mp3 posté le : 14-05-2017 19:42:29
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquelist posté le : 14-05-2017 19:43:08
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, ****** LISTE DES MUSIQUES ******* 
+
+1.mp3
+2.mp3
+Bigflo & Oli - La vraie vie.mp3
+bigflo_lavraivie.mp3
+test2.mp3
+test3.mp3 posté le : 14-05-2017 19:43:08
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:44:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:44:33
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:45:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:45:45
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:45:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Markdown posté le : 14-05-2017 19:45:46
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:46:14
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Génération des pools avec les joueurs restants ... posté le : 14-05-2017 19:46:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+le joueur : joueur3# va affronter : joueur2
+le joueur : joueur4# va affronter : joueur1 posté le : 14-05-2017 19:46:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:46:54
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+```
+le joueur : joueur3# va affronter : joueur2``````
+le joueur : joueur4# va affronter : joueur1``` posté le : 14-05-2017 19:46:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:47:22
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```
+le joueur : joueur3 va affronter : joueur2``````
+le joueur : joueur4 va affronter : joueur1``` posté le : 14-05-2017 19:47:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : ```Markdown
+#hello world :)
+``` posté le : 14-05-2017 19:47:55
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:50:36
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```Markdown
+le joueur : <span style="color:blue">joueur3text</span>joueur3 va affronter : joueur2``````Markdown
+le joueur : <span style="color:blue">joueur4text</span>joueur4 va affronter : joueur1``` posté le : 14-05-2017 19:50:37
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:51:04
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```HTML
+le joueur : <span style="color:blue">joueur2text</span>joueur2 va affronter : joueur3``````HTML
+le joueur : <span style="color:blue">joueur4text</span>joueur4 va affronter : joueur1``` posté le : 14-05-2017 19:51:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:53:01
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```py
+le joueur : @joueur3 va affronter : @joueur2``````py
+le joueur : @joueur4 va affronter : @joueur1``` posté le : 14-05-2017 19:53:01
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:53:28
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```Python
+le joueur : @joueur3 va affronter : @joueur2``````Python
+le joueur : @joueur4 va affronter : @joueur1``` posté le : 14-05-2017 19:53:29
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:54:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```css
+le joueur : @joueur2 va affronter : @joueur3``````css
+le joueur : @joueur4 va affronter : @joueur1``` posté le : 14-05-2017 19:54:03
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 19:54:27
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```css
+le joueur : joueur3 va affronter : @joueur2``````css
+le joueur : joueur4 va affronter : @joueur1``` posté le : 14-05-2017 19:54:27
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : test posté le : 14-05-2017 19:57:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : hello posté le : 14-05-2017 19:57:31
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:02:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```xl
+le joueur : __***joueur3***__ va affronter : __***joueur2***__``````xl
+le joueur : __***joueur4***__ va affronter : __***joueur1***__``` posté le : 14-05-2017 20:02:03
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:05:23
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```Markdown
+le joueur : __***joueur3***__ va affronter : __***joueur2***__``````Markdown
+le joueur : __***joueur4***__ va affronter : __***joueur1***__``` posté le : 14-05-2017 20:05:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:05:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```css
+le joueur : __***joueur2***__ va affronter : __***joueur3***__``````css
+le joueur : __***joueur4***__ va affronter : __***joueur1***__``` posté le : 14-05-2017 20:05:34
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:07:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : TOURNOI TEST DE LA DOTY ! #1 posté le : 14-05-2017 20:07:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+
+```css
+le joueur : ***joueur3*** va affronter : ***joueur2***``````css
+le joueur : ***joueur4*** va affronter : ***joueur1***``` posté le : 14-05-2017 20:07:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:11:52
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : U+27A4TOURNOI TEST DE LA DOTY ! #1 posté le : 14-05-2017 20:11:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+le joueur : ***joueur2*** va affronter : ***joueur3***``````css
+le joueur : ***joueur4*** va affronter : ***joueur1***``` posté le : 14-05-2017 20:11:53
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:12:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : U+27A4TOURNOI TEST DE LA DOTY ! #1 posté le : 14-05-2017 20:12:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+le joueur : ***joueur3*** va affronter : ***joueur2***``````css
+le joueur : ***joueur4*** va affronter : ***joueur1***``` posté le : 14-05-2017 20:12:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:14:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:14:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+ ⚔ le joueur : ***joueur2*** va affronter : ***joueur3***``````css
+ ⚔ le joueur : ***joueur4*** va affronter : ***joueur1***``` posté le : 14-05-2017 20:14:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:15:20
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:15:21
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:15:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:15:34
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+ ⚔#1 le joueur : ***joueur3*** va affronter : ***joueur2***``````css
+ ⚔#2 le joueur : ***joueur4*** va affronter : ***joueur1***``` posté le : 14-05-2017 20:15:35
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:16:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:16:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+ ⚔ #1 le joueur : #joueur3 va affronter : #joueur2``````css
+ ⚔ #2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 14-05-2017 20:16:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:16:33
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:16:33
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 14-05-2017 20:16:34
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : moi je pose ça là posté le : 14-05-2017 20:16:52
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:16:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:16:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : posté le : 14-05-2017 20:16:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:17:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:17:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : posté le : 14-05-2017 20:17:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 14-05-2017 20:17:51
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪TOURNOI TEST DE LA DOTY ! #1✪ posté le : 14-05-2017 20:17:51
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 14-05-2017 20:17:52
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : génération de liste aléatoire de match 😃 on pourra l'utiliser plus tard :p posté le : 14-05-2017 20:18:24

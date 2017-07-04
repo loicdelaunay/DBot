@@ -1,0 +1,136 @@
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 13-05-2017 15:41:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 13-05-2017 15:41:14
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, 
+ - /aideadmin pour obtenir l"aide admin posté le : 13-05-2017 15:41:14
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:41:52
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 13-05-2017 15:41:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode .... posté le : 13-05-2017 15:41:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart terminé .... posté le : 13-05-2017 15:41:53
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 13-05-2017 15:42:04
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 13-05-2017 15:42:04
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 13-05-2017 15:42:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:53:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 13-05-2017 15:53:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode .... posté le : 13-05-2017 15:53:09
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart terminé .... posté le : 13-05-2017 15:53:10
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 13-05-2017 15:53:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 13-05-2017 15:53:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 13-05-2017 15:53:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aideadmin posté le : 13-05-2017 15:53:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /block "client" 
+ - /musiquestop     pour stopper la musique 
+ - /block "client"     pour bloquer un utilisateur. 
+ - /unblockpour débloquer un utilisateur. 
+ - /close     pour fermer le bot. 
+ - /restart     pour restart le bot posté le : 13-05-2017 15:53:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:56:29
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 13-05-2017 15:56:29
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode .... posté le : 13-05-2017 15:56:30
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart terminé .... posté le : 13-05-2017 15:56:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 13-05-2017 15:56:36
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 13-05-2017 15:56:37
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 13-05-2017 15:56:37
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:56:41
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:56:57
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /close posté le : 13-05-2017 15:57:02
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aideadmin posté le : 13-05-2017 15:58:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /musiquestop     pour stopper la musique 
+ - /block "client"     pour bloquer un utilisateur. 
+ - /unblockpour débloquer un utilisateur. 
+ - /close     pour fermer le bot. 
+ - /restart     pour restart le bot posté le : 13-05-2017 15:58:53
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 15:59:43
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 13-05-2017 15:59:43
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 13-05-2017 15:59:43
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aide posté le : 13-05-2017 15:59:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Voici l'aide : 
+ - /aideg pour obtenir l'aide générale
+ - /aidewot pour obtenir l'aide à propos des commandes World Of Tanks posté le : 13-05-2017 15:59:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Avec votre rôle vous avez accès aux commandes suivantes : 
+ - /aideadmin pour obtenir l"aide admin posté le : 13-05-2017 15:59:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /aideadmin posté le : 13-05-2017 15:59:56
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Salut voici la liste de mes commandes admin :
+ - /musiqueplay "nomdelamusique"    pour lire une musique dans le salon 
+ - /musiquesplaybyurl "url"     pour lire de la musique depuis une url 
+ - /musiquestop     pour stopper la musique 
+ - /block "nom du client"     pour bloquer un utilisateur. 
+ - /unblock "nom du client"pour débloquer un utilisateur. 
+ - /close     pour fermer le bot. 
+ - /restart     pour restart le bot posté le : 13-05-2017 15:59:56
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueplay 1.mp3 posté le : 13-05-2017 16:00:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /restart posté le : 13-05-2017 16:01:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart en cours .... posté le : 13-05-2017 16:01:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Restart Okay, fermeture de l 'ancienne méthode, merci de patienter 3 secondes posté le : 13-05-2017 16:01:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiqueplay 1.mp3 posté le : 13-05-2017 16:01:29
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /musiquestop posté le : 13-05-2017 16:02:04
+L'utilisateur : fyretoxic Avec ID : 153163554281750528 a posté le message suivant : Toi qui conseille de faire les MAJ Windows update ?? Oulah y a un problème posté le : 13-05-2017 16:06:35
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant :  posté le : 13-05-2017 16:06:49
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : C'est hyper important de faire les majs :3 posté le : 13-05-2017 16:07:03
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /close posté le : 13-05-2017 16:08:19
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 13-05-2017 16:14:32
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+ Version de DISCORD.JS : 10.0.1Version de Node : v7.10.0 posté le : 13-05-2017 16:14:32
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /info posté le : 13-05-2017 16:15:20
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le D-BOT est un bot discord basée sur DISCORD.JS développé par Dream il a pour but d etre un vrai couteau suisse !
+ Version de Discord.JS utilisé : 10.0.1
+Version de Node utilisé : v7.10.0 posté le : 13-05-2017 16:15:20
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ia salut posté le : 13-05-2017 16:30:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /ia test posté le : 13-05-2017 16:31:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : !salut posté le : 13-05-2017 16:32:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : !salut posté le : 13-05-2017 16:33:05
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ca va. posté le : 13-05-2017 16:33:06
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : !bien et toi ? posté le : 13-05-2017 16:33:12
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : !salut posté le : 13-05-2017 16:34:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ca va. posté le : 13-05-2017 16:34:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :salut posté le : 13-05-2017 16:35:13
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ca va. posté le : 13-05-2017 16:35:14
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :bien posté le : 13-05-2017 16:35:17
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : !hey posté le : 13-05-2017 16:35:57
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :hey posté le : 13-05-2017 16:36:00
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Anna. posté le : 13-05-2017 16:36:01
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :quoi? posté le : 13-05-2017 16:36:05
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :bite posté le : 13-05-2017 16:36:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, *pulls hand back* Hey! Quit it! posté le : 13-05-2017 16:36:21
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :pd posté le : 13-05-2017 16:36:36
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Dar ce esti. posté le : 13-05-2017 16:36:39
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :je te comprend pas  😢 posté le : 13-05-2017 16:36:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Tu mens encore. posté le : 13-05-2017 16:36:47
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :comme ça ? posté le : 13-05-2017 16:36:53
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Oui. posté le : 13-05-2017 16:36:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :AH! posté le : 13-05-2017 16:37:00
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, *watches you* What's wrong? posté le : 13-05-2017 16:37:00
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : :je suis français posté le : 13-05-2017 16:37:07
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Vraiment? Je ne crois pas. posté le : 13-05-2017 16:37:07
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : Bon j'ai mit un petit intelligence artificiel dans mon D-BOT alors si vous taper un message commençant par * il va vous répondre ( il est peu teubé par contre ) posté le : 13-05-2017 16:38:09
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *salut ! posté le : 13-05-2017 16:38:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Ca va?? posté le : 13-05-2017 16:38:16
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *bien et toi ? posté le : 13-05-2017 16:38:21
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Je vais bien. posté le : 13-05-2017 16:38:22
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *tu raconte quoi de beau ? posté le : 13-05-2017 16:38:29
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Bah rien et toi? posté le : 13-05-2017 16:38:30
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : c'est cool hein :3 posté le : 13-05-2017 16:38:35
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *tu suce ? posté le : 13-05-2017 16:38:44
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Io sono io! Tu? posté le : 13-05-2017 16:38:45
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *comment devenir millionaire ? posté le : 13-05-2017 16:39:50
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Parce que 114 jours on veut etre immortel. posté le : 13-05-2017 16:39:51
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : *AH! posté le : 13-05-2017 16:40:02
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, No me pediste que te amara? Me estas engañando. posté le : 13-05-2017 16:40:04
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /roll posté le : 13-05-2017 16:45:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : <@118072401681448960>, Le dè est sur la face : 2 posté le : 13-05-2017 16:45:42

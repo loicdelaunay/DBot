@@ -1,0 +1,94 @@
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:29:17
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪undefined✪ posté le : 19-05-2017 20:29:17
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+function () {
+          var listedesjoueurs = tournoi.participants;
+          var affichelistedesjoueurs = "";
+          listedesjoueurs.forEach(function (joueur) {
+              affichelistedesjoueurs += joueur + "\n";
+          })
+          var listedesmatch = ""
+          var compteur = 0;
+          while (listedesjoueurs.length > 1) {
+              compteur++;
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe1 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe2 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              //gestion de l'affichage
+              listedesmatch += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
+          }
+          return listedesmatch;
+      } posté le : 19-05-2017 20:29:21
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:35:24
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪undefined✪ posté le : 19-05-2017 20:35:25
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+function () {
+          var listedesjoueurs = tournoi.participants;
+          var affichelistedesjoueurs = "";
+          listedesjoueurs.forEach(function (joueur) {
+              affichelistedesjoueurs += joueur + "\n";
+          })
+          var listedesmatch = ""
+          var compteur = 0;
+          while (listedesjoueurs.length > 1) {
+              compteur++;
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe1 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe2 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              //gestion de l'affichage
+              listedesmatch += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
+          }
+          return listedesmatch;
+      } posté le : 19-05-2017 20:35:25
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:47:54
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:53:55
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:54:15
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```css
+ ⚔ n°1 le joueur : #joueur3 va affronter : #joueur2``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 20:54:15
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:56:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱 posté le : 19-05-2017 20:56:46
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 20:56:46
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:57:23
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱 posté le : 19-05-2017 20:57:23
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : voici la liste des matchs : ```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 20:57:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:58:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱 posté le : 19-05-2017 20:58:42
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : voici la liste des matchs : 
+
+
+```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 20:58:43
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 20:59:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱
+
+oici la liste des matchs: posté le : 19-05-2017 20:59:58
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```css
+ ⚔ n°1 le joueur : #joueur2 va affronter : #joueur3``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 20:59:58
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 21:00:23
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱
+
+
+Voici la liste des matchs: posté le : 19-05-2017 21:00:23
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ```css
+ ⚔ n°1 le joueur : #joueur3 va affronter : #joueur2``````css
+ ⚔ n°2 le joueur : #joueur4 va affronter : #joueur1``` posté le : 19-05-2017 21:00:23
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 19-05-2017 21:07:03
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : 🔱🔱🔱 TOURNOI TEST DE LA DOTY ! #1 🔱🔱🔱
+
+
+Voici la liste des matchs: posté le : 19-05-2017 21:07:03

@@ -1,0 +1,28 @@
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 18-05-2017 22:03:35
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 18-05-2017 22:21:46
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 18-05-2017 22:29:24
+L'utilisateur : Dream Avec ID : 118072401681448960 a posté le message suivant : /tournoistart posté le : 18-05-2017 22:30:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : ✪undefined✪ posté le : 18-05-2017 22:30:19
+L'utilisateur : DreamBot Avec ID : 271656866575024138 a posté le message suivant : Voici l'organisation des matchs : 
+
+function () {
+          var listedesjoueurs = tournoi.participants;
+          var affichelistedesjoueurs = "";
+          listedesjoueurs.forEach(function (joueur) {
+              affichelistedesjoueurs += joueur + "\n";
+          })
+          var listedesmatch = ""
+          var compteur = 0;
+          while (listedesjoueurs.length > 1) {
+              compteur++;
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe1 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              var joueurselectionne = mesOutils.random(listedesjoueurs.length - 2);
+              var equipe2 = listedesjoueurs[joueurselectionne];
+              listedesjoueurs.splice(joueurselectionne, 1);
+              //gestion de l'affichage
+              listedesmatch += ('```css\n ⚔ n°' + compteur + ' le joueur : #' + equipe1 + " va affronter : #" + equipe2 + "```")
+          }
+          return listedesmatch;
+      } posté le : 18-05-2017 22:30:19
