@@ -79,6 +79,11 @@ exports.updateUtilisateur = function (idUtilisateur, msg) {
                             infoUtilisateur.datemessage = date;
                         }
 
+                        //Update le nom de l'utilisateur si il à changé
+                        if (infoUtilisateur.nom != msg.author.username) {
+                            infoUtilisateur.nom = msg.author.username;
+                        }
+
                         //Réécrit le fichier JSON
                         fs.writeFile(destination, JSON.stringify(infoUtilisateur), 'utf-8', function (err) {
                             if (err) {

@@ -100,8 +100,19 @@ try {
         dbot_messageAutoReponse.message(msg);
 
         //Met à jour les informations de l'utilisateur concerné
-        dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg);
+        xp = 10 // Ajoute 10 XP à tous les utilisateurs 
+        dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg, xp);
     });
+
+    //Exécute une action toutes les 10 secondes
+    function every10s() {
+        //Exécute les actions ci dessous
+
+        setTimeout(every10s, 10 * 1000);
+    }
+
+    //Quand le bot a start éxécute la boucle
+    every10s();
 
 
     // Quand le bot recoit une commande

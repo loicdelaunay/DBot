@@ -13,5 +13,12 @@
     "_idadmin": "id discord de l'admin du bot",
 
     "portserveur": 8080,
-    "_portserveur": "Indique sur quel port le serveur web va démarrer, attention EACESS signifie que le port est déjà utilisé"
+    "_portserveur": "Indique sur quel port le serveur web va démarrer, attention EACESS signifie que le port est déjà utilisé",
+
+    "xpparmessage": 10,
+    "_xpparmessage": "Indique le nombre d'exp gagnés par message posté",
+
+    "nomgrade1": "petit nouveau",
+    "xpgrade1": 100,
+    "_grade1": "Indique les paramètre du grade 1",
 }
