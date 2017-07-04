@@ -4,7 +4,7 @@
 const fs = require('fs'); //api nodejs pour gestion des fichiers
 const dateTime = require('node-datetime'); //api pour la gestion du temps
 
-// Log les erreurs du D-BOT
+// DEPRACATED -> il faut passer par la console (logconsole) avec le tag 'error' en deuxième paramètre. Log les erreurs du D-BOT
 exports.addlogerreur = function (text) {
     var dt = dateTime.create();
     var formatted = dt.format('d-m-Y');

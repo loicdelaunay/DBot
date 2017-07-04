@@ -21,7 +21,6 @@
         "express": "^4.15.3",
         "express.js": "^1.0.0",
         "get-youtube-id": "^1.0.0",
-        "mongodb": "^2.2.29",
         "node-datetime": "^1.0.1",
         "opusscript": "0.0.3",
         "wargamer": "^0.5.0",

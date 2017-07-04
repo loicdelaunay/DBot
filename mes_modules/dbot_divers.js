@@ -1,7 +1,7 @@
 //** DBOT WOT : Api pour la gestion des modules divers du DBOT**//
 
 // Version du D-BOT avec export
-const version = "0.9.1";
+const version = "0.9.2";
 exports.version = function () {
     return version;
 }
