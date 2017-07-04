@@ -70,9 +70,6 @@ exports.updateUtilisateur = function (idUtilisateur, msg) {
                     } else {
                         var infoUtilisateur = JSON.parse(data);
 
-                        //Quand le fichier est accessible l'update
-                        console.log(infoUtilisateur);
-
                         //Update le message si il n'est pas null
                         if (msg != null) {
                             infoUtilisateur.derniermessage = msg.content;
