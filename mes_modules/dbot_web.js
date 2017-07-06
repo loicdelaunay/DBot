@@ -25,6 +25,7 @@ app.use(express.static(dbot_divers.dossierRoot() + '/data/pageWeb'));
 
 //-*-*-*-*- GESTION DES PAGES WEBS -*-*-*-*-*-
 
+//*Page d'accueil
 app.get('/', function (req, res) {
     res.render('Accueil.ejs', {
         versiondbot: dbot_divers.version(),

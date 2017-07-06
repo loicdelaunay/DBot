@@ -4,78 +4,111 @@
 // CTRL + F *nomdelacommande pour rechercher les commandes dans le projet 
 // CTRL + F $nomdelafonction pour rechercher les fonctions dans le projet 
 
-// Chargement du fichier de configuration du D-BOT
-const config = require('./dbot_config.json');
-
-// Importation des modules
-const Discord = require('discord.js'); // api de Discord 
-const client = new Discord.Client(); // api client de Discord
-const dateTime = require('node-datetime'); //api pour la gestion du temps
-const child_process = require('child_process'); //api pour gérer les processus
-const colors = require('colors'); // api pour gérer la couleur dans la console 
-const path = require('path'); // api de gestion des chemins d'accès
-
-// Importation de mes modules
-const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
-const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
-const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
-const dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
-const dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
-const dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
-const dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
-const dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
-const dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
-const dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse
-const dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
-
-// Version du D-BOT
-const version = dbot_divers.version();
-
-// Dossier de lancement du bot
-var appDir = path.dirname(require.main.filename);
-
-
-// Initialisation des couleurs du thème de la console
-colors.setTheme({
-    silly: 'rainbow',
-    input: 'grey',
-    verbose: 'cyan',
-    prompt: 'grey',
-    info: 'green',
-    data: 'grey',
-    help: 'cyan',
-    warn: 'yellow',
-    debug: 'blue',
-    error: 'red'
-});
-
-// Initialisation du bot
-const entete = '\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n'
-console.log(entete.bgWhite.black);
-
-
-console.log('Version du D-BOT : ' + version);
-console.log('Version de NODEJS : ' + process.version)
-console.log('Version de DISCORDJS : ' + Discord.version)
-
-console.log('Chemin du D-BOT utilisé : ' + appDir);
-console.log('Chemin de ffmpegPath utilisé : ' + dbot_divers.dossierFfmpeg());
-
-// Token du bot 
-const token = config.token;
-console.log('Token Discord du bot utilisé : ' + config.token);
-
-// Préfix des commandes du bot
-const prefix = config.prefix;
-console.log('Prefix des commandes utilisé : ' + config.prefix);
-
-// Id Admin
-console.log('Id admin chargé : ' + dbot_permission.idadmin());
-
-const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
-console.log(entete2.bgWhite.black);
-
 try {
+
+    // Importation des modules
+    const Discord = require('discord.js'); // api de Discord 
+    const client = new Discord.Client(); // api client de Discord
+    const dateTime = require('node-datetime'); //api pour la gestion du temps
+    const child_process = require('child_process'); //api pour gérer les processus
+    const colors = require('colors'); // api pour gérer la couleur dans la console 
+    const path = require('path'); // api de gestion des chemins d'accès
+    const fs = require('fs'); // api de gestion des fichiers
+
+    // Chargement du fichier de configuration du D-BOT ou si il n'existe pas lance l'installation du DBOT
+    const config = require('./dbot_config.json');
+
+    // Importation de mes modules
+    const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
+    console.log("Chargment de l'api divers ok...");
+
+    const dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
+    console.log("Chargment de l'api console ok...");
+
+    const dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
+    console.log("Chargment de l'api permission ok...");
+
+    const dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
+    console.log("Chargment de l'api infoUtilisateurs ok...");
+
+    //Importation de mes modules dépendants du fichier de configuration
+    if (config.module_youtube) {
+        const dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
+        console.log("Chargment de l'api youtube ok...");
+    }
+    if (config.module_prison) {
+        const dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
+        console.log("Chargment de l'api prison ok...");
+    }
+    if (config.module_worlOfTank) {
+        const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
+        const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
+        console.log("Chargment de l'api worldoftank ok...");
+    }
+    if (config.module_musique) {
+        const dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
+        console.log("Chargment de l'api musique ok...");
+    }
+    if (config.module_messageAutoReponse) {
+        const dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse 
+        console.log("Chargment de l'api autoreponse ok...");
+    }
+    if (config.module_serveurWeb) {
+        const dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
+        console.log("Chargment de l'api serveurweb ok...");
+    }
+    console.log("\nFIN DU CHARGEMENT DES API'S");
+
+    //Nettoyage de la console
+    dbot_console.clear();
+
+
+    // Version du D-BOT
+    const version = dbot_divers.version();
+
+    // Dossier de lancement du bot
+    var appDir = path.dirname(require.main.filename);
+
+    // Initialisation des couleurs du thème de la console
+    colors.setTheme({
+        silly: 'rainbow',
+        input: 'grey',
+        verbose: 'cyan',
+        prompt: 'grey',
+        info: 'green',
+        data: 'grey',
+        help: 'cyan',
+        warn: 'yellow',
+        debug: 'blue',
+        error: 'red'
+    });
+
+    // Initialisation du bot
+    const entete = '\n********************** LANCEMENT DU D-BOT ' + version + ' ... ***********************\n\n'
+    console.log(entete.bgWhite.black);
+
+
+    console.log('Version du D-BOT : ' + version);
+    console.log('Version de NODEJS : ' + process.version)
+    console.log('Version de DISCORDJS : ' + Discord.version)
+
+    console.log('Chemin du D-BOT utilisé : ' + appDir);
+    console.log('Chemin de ffmpegPath utilisé : ' + dbot_divers.dossierFfmpeg());
+
+    // Token du bot 
+    const token = config.token;
+    console.log('Token Discord du bot utilisé : ' + config.token);
+
+    // Préfix des commandes du bot
+    const prefix = config.prefix;
+    console.log('Prefix des commandes utilisé : ' + config.prefix);
+
+    // Id Admin
+    console.log('Id admin chargé : ' + dbot_permission.idadmin());
+
+    const entete2 = '\n********************** FICHIER DE CONFIGURATION ***********************\n\n'
+    console.log(entete2.bgWhite.black);
+
 
     // Connection à Discord
     client.login(token);
@@ -97,10 +130,12 @@ try {
         dbot_console.addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
 
         //Importe le message dans le module AutoReponse pour voir si le bot doit répondre
-        dbot_messageAutoReponse.message(msg);
+        if (config.module_messageAutoReponse) {
+            dbot_messageAutoReponse.message(msg);
+        }
 
         //Met à jour les informations de l'utilisateur concerné
-        xp = 10 // Ajoute 10 XP à tous les utilisateurs 
+        xp = config.xpparmessage // Ajoute X XP à tous les utilisateurs envoyant un message
         dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg, xp);
     });
 
@@ -146,16 +181,24 @@ try {
             dbot_divers.commande(msg, args, commande);
 
             //Passage de la commande dans le module DBOT WOT
-            dbot_wot.commande(msg, args, commande);
+            if (config.module_worlOfTank) {
+                dbot_wot.commande(msg, args, commande);
+            }
 
             //Passage de la commande dans le module DBOT WOTTOURNOI
-            dbot_wotTournoi.commande(msg, args, commande);
+            if (config.module_worlOfTank) {
+                dbot_wotTournoi.commande(msg, args, commande);
+            }
 
             //Passage de la commande dans le module DBOT MUSIQUE
-            dbot_musique.commande(msg, args, commande);
+            if (config.musique) {
+                dbot_musique.commande(msg, args, commande);
+            }
 
             //Passage de la commande dans le module DBOT PRISON
-            dbot_prison.commande(msg, args, commande);
+            if (config.module_prison) {
+                dbot_prison.commande(msg, args, commande);
+            }
 
             // *-*-*-*- FIN DU PASSAGE DE LA COMMANDE DANS LES MODULES *-*-*-*-*- //
 
