@@ -1,0 +1,12 @@
+nav {
+    -webkit-app-region: drag;
+}
+
+ul {
+    -webkit-app-region: no-drag;
+    cursor: hand;
+}
+
+#btnQuitter {
+    margin-left: 50px;
+}

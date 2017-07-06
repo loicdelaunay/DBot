@@ -1,0 +1,78 @@
+<!-- MAIN -->
+
+
+<head>
+
+    <!-- Importation du css Materialize -->
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <!-- Importation de mon css -->
+    <link rel="stylesheet" type="text/css" href="css/moncss.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper green">
+            <a href="#" class="brand-logo center">DBOT CONFIG</a>
+            <ul id="btnQuitter" class="hoverable hide-on-med-and-down right center-align">
+                <i class="material-icons medium center-align">power_settings_new</i>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="nomserveur" type="text" class="validate">
+                    <label for="nomserveur">Nom du serveur Discord</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="token" type="text" class="validate">
+                    <label for="token">Token du bot</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                    <label for="disabled">Disabled</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    This is an inline input field:
+                    <div class="input-field inline">
+                        <input id="email" type="email" class="validate">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+    <!--Importation jQuery (toujours avant) materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--Importation materialize.js-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <!--Importation de mon JS-->
+    <script type="text/javascript" src="js/monjs.js"></script>
+</body>
