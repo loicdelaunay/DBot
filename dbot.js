@@ -6,78 +6,17 @@
 
 try {
 
-    // Importation des modules electronJS
-    const electron = require('electron'); // Importation du framework electron
-    const app = electron.app; // Raccourcie pour accèder au framework electron
-    const BrowserWindow = electron.BrowserWindow; // Raccourcie pour accéder au gestion des fenètres de electron
-    const ipc = electron.ipcMain;
+    // Affichage GUI PRIORITAIRE ! 
+    var dbot_gui = require('./mes_modules/dbot_gui.js');
 
     // Importation des modules
-    const Discord = require('discord.js'); // api de Discord 
-    const client = new Discord.Client(); // api client de Discord
-    const dateTime = require('node-datetime'); //api pour la gestion du temps
-    const child_process = require('child_process'); //api pour gérer les processus
-    const colors = require('colors'); // api pour gérer la couleur dans la console 
-    const path = require('path'); // api de gestion des chemins d'accès
-    const fs = require('fs'); // api de gestion des fichiers
-
-    //**    Gestion affichage de la fenetre d'accueil   **//
-
-    let mainWindow;
-
-    function createWindow() {
-
-        mainWindow = new BrowserWindow({
-            width: 1280,
-            height: 1020,
-            title: 'DBOT',
-            movable: true,
-            maximized: false,
-            center: true,
-            frame: false
-        });
-
-        mainWindow.loadURL(`file://${__dirname}/data/gui/accueil.html`);
-
-        mainWindow.on('closed', () => {
-            mainWindow = null;
-        })
-    }
-
-    app.on('ready', createWindow);
-
-    app.on('window-all-closed', () => {
-        if (process.platform !== 'darwin') {
-            app.quit();
-        }
-    });
-
-    app.on('activate', () => {
-        if (mainWindow === null) {
-            createWindow();
-        }
-    });
-
-
-    //* GESTION IPC *//
-
-    //Quand l'ipc reçoit une erreur
-    ipc.on('log-error', (event, arg) => {
-        console.log('Erreur : ' + arg + ' ! Veuillez rapporter ce bug au développeur de l\'application.');
-        event.sender.send('error-logged');
-    });
-
-    //Quand l'ipc reçoit l'information de quitter
-    ipc.on('quitter', () => {
-        app.quit();
-    });
-
-
-    //**    FIN Gestion affichage de la fenetre d'accueil   **//
-
-
-
-    //**    Gestion du code du DBOT   **//
+    var Discord = require('discord.js'); // api de Discord 
+    var client = new Discord.Client(); // api client de Discord
+    var dateTime = require('node-datetime'); //api pour la gestion du temps
+    var child_process = require('child_process'); //api pour gérer les processus
+    var colors = require('colors'); // api pour gérer la couleur dans la console 
+    var path = require('path'); // api de gestion des chemins d'accès
+    var fs = require('fs'); // api de gestion des fichiers
 
     // Chargement du fichier de configuration du D-BOT ou si il n'existe pas lance l'installation du DBOT
     if (!fs.existsSync('./dbot_config.json')) {
@@ -86,52 +25,60 @@ try {
     // Si le fichier de config existe ( donc le DBOT est installé ) éxécute le programme
     else {
         console.log("Fichier de configuration trouvé ! Chargement des options.");
-        const config = require('./dbot_config.json');
+        var config = require('./dbot_config.json');
         console.log("Options chargées");
 
         // Importation de mes modules
-        const dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
+        var dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
         console.log("Chargment de l'api divers ok...");
 
-        const dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
+        var dbot_console = require('./mes_modules/dbot_console.js'); // Importation de mon module Console
         console.log("Chargment de l'api console ok...");
 
-        const dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
+        var dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
         console.log("Chargment de l'api permission ok...");
 
-        const dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
+        var dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
         console.log("Chargment de l'api infoUtilisateurs ok...");
 
-        //Importation de mes modules dépendants du fichier de configuration
+
+        //Initialisation des modules configurable
+        var dbot_youtube = null;
+        var dbot_prison = null;
+        var dbot_wot = null;
+        var dbot_wotTournoi = null;
+        var dbot_musique = null;
+        var dbot_messageAutoReponse = null;
+        var dbot_web = null;
+
+        //Importation de mes modules en fonction du fichier de configuration
         if (config.module_youtube) {
-            const dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
+            dbot_youtube = require('./mes_modules/dbot_youtube.js'); // Importation de mon module Youtube
             console.log("Chargment de l'api youtube ok...");
         }
         if (config.module_prison) {
-            const dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
+            dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
             console.log("Chargment de l'api prison ok...");
         }
         if (config.module_worlOfTank) {
-            const dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
-            const dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
+            dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
+            dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
             console.log("Chargment de l'api worldoftank ok...");
         }
         if (config.module_musique) {
-            const dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
+            dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
             console.log("Chargment de l'api musique ok...");
         }
         if (config.module_messageAutoReponse) {
-            const dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse 
+            dbot_messageAutoReponse = require('./mes_modules/dbot_messageAutoReponse.js'); // Importation de mon module messageAutoReponse 
             console.log("Chargment de l'api autoreponse ok...");
         }
         if (config.module_serveurWeb) {
-            const dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
+            dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
             console.log("Chargment de l'api serveurweb ok...");
         }
         console.log("\nFIN DU CHARGEMENT DES API'S");
 
-        //Nettoyage de la console
-        dbot_console.clear();
 
 
         // Version du D-BOT
@@ -223,6 +170,8 @@ try {
 
         // Quand le bot recoit une commande
         client.on('message', msg => {
+
+            dbot_gui.consoleADD(msg.content);
 
             //découpe le message en argument pour chaque espaces 
             var args = msg.content.split(" ").slice(1);
