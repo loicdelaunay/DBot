@@ -26,7 +26,7 @@ function createWindow() {
         frame: false
     });
 
-    mainWindow.loadURL(path.join(__dirname, '../data/gui', 'accueil.html'));
+    mainWindow.loadURL(path.join(__dirname, '../data/gui', 'app.html'));
 
     mainWindow.on('closed', () => {
         mainWindow = null;

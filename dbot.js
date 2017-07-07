@@ -60,7 +60,7 @@ try {
             dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
             console.log("Chargment de l'api prison ok...");
         }
-        if (config.module_worlOfTank) {
+        if (config.module_worldOfTank) {
             dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
             dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
             console.log("Chargment de l'api worldoftank ok...");

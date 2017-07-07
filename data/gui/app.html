@@ -1,0 +1,152 @@
+<!-- MAIN -->
+
+
+<head>
+
+    <!-- Importation du css Materialize -->
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <!-- Importation de mon css -->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="green">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">DBOT</a>
+            <ul id="btnQuitter" class="hoverable right center-align">
+                <i class="material-icons medium center-align">power_settings_new</i>
+            </ul>
+        </div>
+    </nav>
+    <ul class="green lighten-1 tabs tabs-transparent">
+        <li class="tab"><a class="active" href="#test1">Accueil</a></li>
+        <li class="tab"><a href="#test2">Option</a></li>
+        <li class="tab disabled"><a href="#test3">Bientôt ...</a></li>
+        <li class="tab disabled"><a href="#test4">Bientôt ...</a></li>
+    </ul>
+
+    <!- GESTION ACCUEIL -->
+    <div id="test1" class="col s12">
+
+        <h5>ACCUEIL</h5>
+        <br>
+
+        <h5 id="console">TEST</h5>
+    </div>
+
+    <!- GESTION OPTION -->
+    <div id="test2" class="col s12">
+
+        <h5>PARAMETRES DU DBOT</h5>
+        <br>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Entrer le nom de votre serveur Discord" id="nomserveur" type="text" class="validate">
+                        <label for="nomserveur">Nom du serveur Discord</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Entrer le prefix des commandes" id="prefix" type="text" class="validate">
+                        <label for="prefix">Prefix des commandes</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Entrer le Token du bot donné par Discord" id="token" type="text" class="validate">
+                        <label for="token">Token du bot</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input placeholder="Entrer l'id de l'admin Discord" id="idadmin" type="number" class="validate">
+                        <label for="idadmin">idadmin</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input placeholder="Entrer le port de votre serveur web" id="portserveur" type="number" class="validate">
+                        <label for="portserveur">Port du serveur web</label>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_worldOfTank" checked="checked" />
+                        <label for="module_worldOfTank">Module WorldOfTanks</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_youtube" checked="checked" />
+                        <label for="module_youtube">Module Youtube</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_prison" checked="checked" />
+                        <label for="module_prison">Module Prison</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_musique" checked="checked" />
+                        <label for="module_musique">Module Musique</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_messageAutoReponse" checked="checked" />
+                        <label for="module_messageAutoReponse">Module Message autoReponse</label>
+                    </div>
+
+                    <div class="input-field col s4">
+                        <input type="checkbox" id="module_serveurWeb" checked="checked" />
+                        <label for="module_serveurWeb">Module Serveur web</label>
+                    </div>
+
+                </div>
+
+                <p>
+                    <div class="input-field col s12 center-align">
+                        <a id="btnOptionSauvegarder" class="waves-effect waves-light btn green"><i class="material-icons left">settings</i>SAUVEGARDER</a>
+                    </div>
+                </p>
+                <h5 id="optionModifie" class="red-text"></h5>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="validationOption" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Valider les modifications ?</h4>
+            <p>Une fois les modifications apportées, merci de relancer DBOT</p>
+        </div>
+        <div class="modal-footer">
+            <a id="validationOptionAnnuler" class="modal-action modal-close waves-effect waves-red btn-flat red-text">Annuler</a>
+            <a id="validationOptionComfirmer" class="modal-action modal-close waves-effect waves-green btn-flat green-text">Comfirmer</a>
+        </div>
+    </div>
+
+
+    <!- GESTION RIEN -->
+    <div id="test3" class="col s12">Test 3</div>
+
+    <!- GESTION RIEN -->
+    <div id="test4" class="col s12">Test 4</div>
+
+</body>
+
+
+
+<!--Importation jQuery (toujours avant) materialize.js-->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--Importation Hammer (toujours avant) materialize.js-->
+<script src="js/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+
+<!--Importation materialize.js-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<!--Importation de mon JS-->
+<script type="text/javascript" src="js/app.js"></script>
