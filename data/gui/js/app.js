@@ -3,11 +3,15 @@ const ipc = require('electron').ipcRenderer; //Module permettant de communiquer 
 const remote = require('electron').remote;
 const fs = require('fs'); //Module gestion fichiers
 const path = require("path");
+var dateTime = require('node-datetime'); //api pour la gestion du temps
 
 
 // A l'initialisation de l'app
 $(document).ready(function () {
+    //Initialise les objets materialize
     $('.modal').modal();
+
+    //Affiche les options en fonction du fichier de config
     affichageOptions();
 });
 
@@ -18,8 +22,22 @@ document.getElementById('btnQuitter').addEventListener('click', () => {
 
 //Gestion des IPC
 ipc.on('consoleADD', (event, msg) => {
-    alert(msg);
-    document.getElementById('console').innerHTML = msg;
+
+    var destination = path.join(__dirname, 'consoleline.html');
+
+    var dt = dateTime.create();
+    var date = dt.format('d-m-Y H:M:S'); //Set la date de la console
+
+    fs.readFile(destination, 'utf-8', function (err, data) {
+        if (err) {
+            remote.dialog.showErrorBox('Erreur !', "L'application a rencontré une erreur. Erreur pendant l'ajout d'une ligne." + destination);
+        } else {
+            var consoleline = data.replace("*!msg!*", msg);
+            consoleline = consoleline.replace("*!date!*", date);
+
+            document.getElementById('baliseConsole').innerHTML += consoleline;
+        }
+    });
 });
 
 //Demande de la validation de la sauvegarde les options du fichier de configuration
@@ -63,6 +81,49 @@ function affichageOptions() {
             document.getElementById('idadmin').value = optionsJSON.idadmin;
 
             document.getElementById('portserveur').value = optionsJSON.portserveur;
+
+            //Checkbox
+            if (optionsJSON.module_worldOfTank) {
+                document.getElementById('module_worldOfTank').checked = true;
+            } else {
+                document.getElementById('module_worldOfTank').checked = false;
+            }
+
+            //Checkbox
+            if (optionsJSON.module_youtube) {
+                document.getElementById('module_youtube').checked = true;
+            } else {
+                document.getElementById('module_youtube').checked = false;
+            }
+
+            //Checkbox
+            if (optionsJSON.module_prison) {
+                document.getElementById('module_prison').checked = true;
+            } else {
+                document.getElementById('module_prison').checked = false;
+            }
+
+            //Checkbox
+            if (optionsJSON.module_musique) {
+                document.getElementById('module_musique').checked = true;
+            } else {
+                document.getElementById('module_musique').checked = false;
+            }
+
+            //Checkbox
+            if (optionsJSON.module_messageAutoReponse) {
+                document.getElementById('module_messageAutoReponse').checked = true;
+            } else {
+                document.getElementById('module_messageAutoReponse').checked = false;
+            }
+
+            //Checkbox
+            if (optionsJSON.module_serveurWeb) {
+                document.getElementById('module_serveurWeb').checked = true;
+            } else {
+                document.getElementById('module_serveurWeb').checked = false;
+            }
+
         }
     });
 }
@@ -94,6 +155,43 @@ function updateOptions() {
             optionsJSON.idadmin = document.getElementById('idadmin').value;
 
             optionsJSON.portserveur = document.getElementById('portserveur').value;
+
+            //Checkbox
+            if (document.getElementById('module_worldOfTank').checked) {
+                optionsJSON.module_worldOfTank = true;
+            } else {
+                optionsJSON.module_worldOfTank = false;
+            }
+
+            if (document.getElementById('module_youtube').checked) {
+                optionsJSON.module_youtube = true;
+            } else {
+                optionsJSON.module_youtube = false;
+            }
+
+            if (document.getElementById('module_prison').checked) {
+                optionsJSON.module_prison = true;
+            } else {
+                optionsJSON.module_prison = false;
+            }
+
+            if (document.getElementById('module_musique').checked) {
+                optionsJSON.module_musique = true;
+            } else {
+                optionsJSON.module_musique = false;
+            }
+
+            if (document.getElementById('module_messageAutoReponse').checked) {
+                optionsJSON.module_messageAutoReponse = true;
+            } else {
+                optionsJSON.module_messageAutoReponse = false;
+            }
+
+            if (document.getElementById('module_worldOfTank').checked) {
+                optionsJSON.module_serveurWeb = true;
+            } else {
+                optionsJSON.module_serveurWeb = false;
+            }
 
             //Réécrit le fichier JSON
             fs.writeFile(destination, JSON.stringify(optionsJSON), 'utf-8', function (err) {

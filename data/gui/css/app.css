@@ -10,3 +10,7 @@ ul {
 #btnQuitter {
     margin-left: 50px;
 }
+
+#baliseConsole {
+    margin-bottom: 0px !important;
+}
