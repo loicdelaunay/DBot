@@ -26,7 +26,7 @@ if (!fs.existsSync('./dbot_config.json')) {
 else {
     console.log("Fichier de configuration trouvé ! Chargement des options.");
     var config = require('./dbot_config.json');
-    console.log("Options chargées");
+    console.log("Fichier de configuration chargé...");
 
     // Importation de mes modules
     var dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
@@ -40,6 +40,9 @@ else {
 
     var dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
     console.log("Chargment de l'api infoUtilisateurs ok...");
+
+    var dbot_afk = require('./mes_modules/dbot_afk.js'); // Importation de mon module des afk
+    console.log("Chargment de l'api afk ok...");
 
 
     //Initialisation des modules configurable
@@ -199,6 +202,9 @@ else {
 
             //Passage de la commande dans le module DBOT DIVERS
             dbot_divers.commande(msg, args, commande);
+
+            //Passage de la commande dans le module DBOT AFK
+            dbot_afk.commande(msg, args, commande);
 
             //Passage de la commande dans le module DBOT WOT
             if (config.module_worlOfTank) {
