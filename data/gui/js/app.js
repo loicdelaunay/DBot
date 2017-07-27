@@ -3,9 +3,11 @@ const ipc = require('electron').ipcRenderer; //Module permettant de communiquer 
 const remote = require('electron').remote;
 const fs = require('fs'); //Module gestion fichiers
 const path = require("path");
+const jquery = require("jquery");
 var dateTime = require('node-datetime'); //api pour la gestion du temps
 
-
+//Global app
+var compteur = 0; //Compteur de message 
 // A l'initialisation de l'app
 $(document).ready(function () {
     //Initialise les objets materialize
@@ -21,6 +23,8 @@ document.getElementById('btnQuitter').addEventListener('click', () => {
 });
 
 //Gestion des IPC
+
+//Quand une ligne doit etre ajouter a la console
 ipc.on('consoleADD', (event, msg) => {
 
     var destination = path.join(__dirname, 'consoleline.html');
@@ -34,8 +38,13 @@ ipc.on('consoleADD', (event, msg) => {
         } else {
             var consoleline = data.replace("*!msg!*", msg);
             consoleline = consoleline.replace("*!date!*", date);
+            consoleline = consoleline.replace("*!numero!*", compteur);
 
+            //Je suis sure qu'il y à une méthode pour transformer ça en objet et le récup avec une sorte de this :S #jesuisc# xD
             document.getElementById('baliseConsole').innerHTML += consoleline;
+
+
+            compteur += 1;
         }
     });
 });
@@ -66,7 +75,6 @@ function affichageOptions() {
         if (err) {
             remote.dialog.showErrorBox('Erreur !', "L'application a rencontré une erreur. Erreur pendant la lecture du fichier de configuration.");
         } else {
-            alert("Fichier config trouvé");
 
             var optionsJSON = JSON.parse(data);
 

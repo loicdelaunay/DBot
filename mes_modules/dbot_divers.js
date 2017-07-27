@@ -1,7 +1,7 @@
 //** DBOT WOT : Api pour la gestion des modules divers du DBOT**//
 
 // Version du D-BOT avec export
-const version = "0.9.2";
+const version = "0.9.7";
 exports.version = function () {
     return version;
 }
@@ -9,6 +9,8 @@ exports.version = function () {
 // Importation des APIs
 const Discord = require('discord.js'); // api de discord
 const path = require('path'); // api de gestion des chemins d'accès
+const dateTime = require('node-datetime'); //api pour la gestion du temps
+const fs = require('fs'); // api de lecture/ecriture de fichier
 
 // Importation de mes modules
 const dbot_console = require('../mes_modules/dbot_console.js'); // Importation de mon module Console
@@ -24,6 +26,15 @@ exports.dossierRoot = function () {
 var ffmpegPath = appDir + '/prerequis/ffmpeg/bin/ffmpeg.exe'
 exports.dossierFfmpeg = function () {
     return ffmpegPath;
+}
+
+// Retourne le dernier mot
+function derniermot(mot) {
+    var n = mot.split(" ");
+    return n[n.length - 1];
+}
+exports.derniermot = function (mot) {
+    return derniermot(mot);
 }
 
 exports.commande = function (msg, args, commande) {
@@ -65,6 +76,70 @@ exports.commande = function (msg, args, commande) {
         msg.channel.send({
             embed
         });
+    }
+
+    //*afk -> Permet de se mettre AFK pendant X temps
+    else if (commande[0] == 'afk') {
+        dbot_console.printConsoleCommande(msg);
+
+        //Set la date d'update 
+        var dt = dateTime.create();
+        var date = dt.format('d-m-Y H:M:S');
+
+        //Fichier de destination 
+        var destination = appDir + '/data/afk/afk.json'
+
+        try {
+
+            fs.stat(destination, function (err, data) {
+
+                //Si le fichier n'existe pas 
+                if (err) {
+                    dbot_console.logconsole("Erreur, impossible de trouver le fichier afk.json dans data/afk", 'error')
+
+                }
+
+                //Si le fichier existe l'update
+                else {
+
+                    fs.readFile(destination, 'utf-8', function (err, data) {
+
+                        if (err) {
+                            throw err;
+                        } else {
+                            var afkData = JSON.parse(data);
+
+                            var find = msg.author.id;
+                            var replace1 = new RegExp(find, 'g');
+                            var replace2 = new RegExp(find + "&heure&", 'g');
+
+                            console.log(afkData.afk);
+
+                            afkData.afk.replace(replace1, " ");
+                            afkData.afk.replace(replace2, " ");
+
+                            if (args[0] == null) {
+                                afkData.afk += msg.author.id + ' ';
+                            }
+                            if (args[0] != null && args[0] == 'pendant') {
+                                afkData.afk += '&heure& ' + args[1];
+                            }
+
+
+                            //Réécrit le fichier JSON
+                            fs.writeFile(destination, JSON.stringify(afkData), 'utf-8', function (err) {
+                                if (err) {
+                                    dbot_console.logconsole("Erreur pendant l'écriture du nouveau fichier afk : " + err, "error")
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+
+        } catch (err) {
+            dbot_console.logconsole("Erreur pendant l'update afk de l'utilisateur" + err, "error")
+        }
     }
 
     //*close -> Arrete le bot
@@ -283,18 +358,12 @@ exports.commande = function (msg, args, commande) {
             });
         }
     }
-}
 
-// Retourne un integral aléatoire compris entre 0 et max 
-function random(max) {
-    return Math.floor((Math.random() * max) + 1);
-}
-exports.random = function (max) {
-    return random(max)
-}
-
-// Retourne le dernier mot
-exports.derniermot = function (mot) {
-    var n = mot.split(" ");
-    return n[n.length - 1];
+    // Retourne un integral aléatoire compris entre 0 et max 
+    function random(max) {
+        return Math.floor((Math.random() * max) + 1);
+    }
+    exports.random = function (max) {
+        return random(max)
+    }
 }
