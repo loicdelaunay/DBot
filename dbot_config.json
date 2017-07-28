@@ -1,1 +1,25 @@
-{"nomserveur":"DreamOfTheYear","_nomserveur":"Indique le nom du serveur Discord","token":"MzE1NzkyNDQ1NDE1ODgyNzUz.DAL4Og.AQcF9UG6Uw8ZLw2f3tkKHJKbgzM","_token":"Token du bot fourni par l'api discord","prefix":"/","_prefix":"Le début du message pour éxécuter une commande du DBOT sur Discord","idadmin":"118072401681448960","_idadmin":"id discord de l'admin du bot","portserveur":"8080","_portserveur":"Indique sur quel port le serveur web va démarrer, attention EACESS signifie que le port est déjà utilisé","module_worldOfTank":true,"module_youtube":true,"module_prison":true,"module_musique":true,"module_messageAutoReponse":true,"module_serveurWeb":true,"_module":"Indiques quels modules du DBOT activer","xpparmessage":10,"_xpparmessage":"Indique le nombre d'exp gagnés par message posté","nomgrade1":"petit nouveau","xpgrade1":100,"_grade1":"Indique les paramètres du grade 1"}
+{
+    "nomserveur": "DreamOfTheYear",
+    "_nomserveur": "Indique le nom du serveur Discord",
+    "token": "MzE1NzkyNDQ1NDE1ODgyNzUz.DAL4Og.AQcF9UG6Uw8ZLw2f3tkKHJKbgzM",
+    "_token": "Token du bot fourni par l'api discord",
+    "prefix": "/",
+    "_prefix": "Le début du message pour éxécuter une commande du DBOT sur Discord",
+    "idadmin": "118072401681448960",
+    "_idadmin": "id discord de l'admin du bot",
+    "portserveur": "8080",
+    "_portserveur": "Indique sur quel port le serveur web va démarrer, attention EACESS signifie que le port est déjà utilisé",
+    "module_worldOfTank": true,
+    "module_youtube": true,
+    "module_prison": true,
+    "module_musique": true,
+    "module_messageAutoReponse": true,
+    "module_serveurWeb": true,
+    "module_afk": true,
+    "_module": "Indiques quels modules du DBOT activer",
+    "xpparmessage": 10,
+    "_xpparmessage": "Indique le nombre d'exp gagnés par message posté",
+    "nomgrade1": "petit nouveau",
+    "xpgrade1": 100,
+    "_grade1": "Indique les paramètres du grade 1"
+}

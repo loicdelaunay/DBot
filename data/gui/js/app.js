@@ -37,10 +37,10 @@ ipc.on('consoleADD', (event, msg) => {
             remote.dialog.showErrorBox('Erreur !', "L'application a rencontré une erreur. Erreur pendant l'ajout d'une ligne." + destination);
         } else {
             var consoleline = data.replace("*!msg!*", msg);
+            consoleline = consoleline.replace("*!author!*", msg.author.username);
             consoleline = consoleline.replace("*!date!*", date);
             consoleline = consoleline.replace("*!numero!*", compteur);
 
-            //Je suis sure qu'il y à une méthode pour transformer ça en objet et le récup avec une sorte de this :S #jesuisc# xD
             document.getElementById('baliseConsole').innerHTML += consoleline;
 
 
@@ -132,6 +132,13 @@ function affichageOptions() {
                 document.getElementById('module_serveurWeb').checked = false;
             }
 
+            //Checkbox
+            if (optionsJSON.module_afk) {
+                document.getElementById('module_afk').checked = true;
+            } else {
+                document.getElementById('module_afk').checked = false;
+            }
+
         }
     });
 }
@@ -199,6 +206,12 @@ function updateOptions() {
                 optionsJSON.module_serveurWeb = true;
             } else {
                 optionsJSON.module_serveurWeb = false;
+            }
+
+            if (document.getElementById('module_afk').checked) {
+                optionsJSON.module_afk = true;
+            } else {
+                optionsJSON.module_afk = false;
             }
 
             //Réécrit le fichier JSON

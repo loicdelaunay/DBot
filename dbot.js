@@ -41,9 +41,6 @@ else {
     var dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
     console.log("Chargment de l'api infoUtilisateurs ok...");
 
-    var dbot_afk = require('./mes_modules/dbot_afk.js'); // Importation de mon module des afk
-    console.log("Chargment de l'api afk ok...");
-
 
     //Initialisation des modules configurable
     var dbot_youtube = null;
@@ -53,6 +50,7 @@ else {
     var dbot_musique = null;
     var dbot_messageAutoReponse = null;
     var dbot_web = null;
+    var dbot_afk = null;
 
     //Importation de mes modules en fonction du fichier de configuration
     if (config.module_youtube) {
@@ -79,6 +77,10 @@ else {
     if (config.module_serveurWeb) {
         dbot_web = require('./mes_modules/dbot_web.js'); // Importation de mon module Web
         console.log("Chargment de l'api serveurweb ok...");
+    }
+    if (config.module_afk) {
+        dbot_afk = require('./mes_modules/dbot_afk.js'); // Importation de mon module Web
+        console.log("afk ok...");
     }
     console.log("\nFIN DU CHARGEMENT DES API'S");
 
@@ -204,7 +206,9 @@ else {
             dbot_divers.commande(msg, args, commande);
 
             //Passage de la commande dans le module DBOT AFK
-            dbot_afk.commande(msg, args, commande);
+            if (config.module_afk) {
+                dbot_afk.commande(msg, args, commande);
+            }
 
             //Passage de la commande dans le module DBOT WOT
             if (config.module_worlOfTank) {
