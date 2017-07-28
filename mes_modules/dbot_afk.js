@@ -89,8 +89,8 @@ exports.commande = function (msg, args, commande) {
                         console.log("DEFAULT")
                 }
 
-                //Converti la date pour enregistrement 
-                date.toJSON();
+                //Fichier afk Json de l'utilisateur
+                var infoTemp = '{ "id": ' + idUtilisateur + ', "timestampFinAfk": ' + "\"" + date + "\"" + '}';
 
                 //Vérifie si le fichier utilisateur existe 
                 fs.stat(destination, function (err, data) {
@@ -98,9 +98,6 @@ exports.commande = function (msg, args, commande) {
                     //Si le fichier n'existe pas 
                     if (err) {
                         dbot_console.logconsole("Création d'un fichier afk pour l'utilisateur " + idUtilisateur + ' alias : ' + msg.author.username + '...', 'debug');
-
-                        //Génère une variable avec les infos préremplis
-                        var infoTemp = '{ "id": ' + idUtilisateur + ', "timestampFinAfk": ' + date.toString() + '}';
 
                         //Créer le fichier
                         fs.writeFile(destination, infoTemp, 'utf8', function (err) {
@@ -125,9 +122,6 @@ exports.commande = function (msg, args, commande) {
                                 dbot_console.logconsole("Problème pendant la suppression d'un fichier afk : " + destination, 'debug')
                             } else {
                                 dbot_console.logconsole("Création d'un fichier afk après sa suppression pour l'utilisateur : " + idUtilisateur + 'alias : ' + msg.author.username, 'debug')
-
-                                //Génère une variable avec les infos préremplis
-                                var infoTemp = '{ "id": ' + idUtilisateur + ', "timestampFinAfk": ' + date.toString() + '}';
 
                                 //Créer le fichier
                                 fs.writeFile(destination, infoTemp, function (err) {
@@ -154,7 +148,6 @@ exports.commande = function (msg, args, commande) {
 }
 
 
-/*
 function afkRefresh() {
 
     var destinationRefresh = dbot_divers.dossierRoot() + '/data/afk/';
@@ -174,14 +167,16 @@ function afkRefresh() {
                     var infoUtilisateurAfk = JSON.parse(data);
 
                     var date = new Date();
+                    var dateAfk = new Date(infoUtilisateurAfk.timestampFinAfk);
 
                     //si la date AFK est dépassé
-                    if (date > infoUtilisateurAfk.timestampFinAfk) {
+                    if (date > dateAfk) {
+                        var finAfkPour = destinationRefreshFile.id;
                         fs.unlink(destinationRefreshFile, function (error) {
                             if (err) {
                                 dbot_console.logconsole("Problème pendant la suppression d'un fichier afk : " + destination, 'debug')
                             } else {
-                                dbot_console.logconsole("Fin d'afk pour : " + destinationRefreshFile.id, 'debug')
+                                dbot_console.logconsole("Fin d'afk pour : " + finAfkPour, 'debug')
                             }
                         });
                     }
@@ -197,4 +192,3 @@ x = 5; // Temps en secondes de rafraichissement
 
 //Appelle une première fois la fonction
 setInterval(afkRefresh, x * 1000);
-*/
