@@ -269,8 +269,7 @@ else {
             .setAuthor(member.user.username, member.user.avatarURL)
             .setFooter('© D-BOT copyright Dream')
             .setTimestamp()
-            .addField("Bienvenue sur le serveur " + config.nomduserveur + " !", "")
-            .addField('\u200B', '\u200B')
+            .addField("Bienvenue sur le serveur ", config.nomduserveur + " !")
 
         member.guild.defaultChannel.send({
             embed
