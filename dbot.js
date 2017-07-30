@@ -176,8 +176,6 @@ else {
     // Quand le bot recoit une commande
     client.on('message', msg => {
 
-        dbot_gui.consoleADD(msg.content);
-
         //découpe le message en argument pour chaque espaces 
         var args = msg.content.split(" ").slice(1);
 
@@ -197,8 +195,11 @@ else {
         }
 
         //Les aides 
-
         if (msg.content.startsWith(prefix)) {
+
+
+            //Affiche la commande dans le GUI
+            dbot_gui.consoleADD(msg);
 
             // *-*-*-*- PASSAGE DE LA COMMANDE DANS LES MODULES *-*-*-*-*- //
 

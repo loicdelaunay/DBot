@@ -15,7 +15,7 @@
     "module_musique": true,
     "module_messageAutoReponse": true,
     "module_serveurWeb": true,
-    "module_afk": true,
+    "module_afk": false,
     "_module": "Indiques quels modules du DBOT activer",
     "xpparmessage": 10,
     "_xpparmessage": "Indique le nombre d'exp gagnés par message posté",

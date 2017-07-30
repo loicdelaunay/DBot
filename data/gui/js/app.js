@@ -30,15 +30,15 @@ ipc.on('consoleADD', (event, msg) => {
     var destination = path.join(__dirname, 'consoleline.html');
 
     var dt = dateTime.create();
-    var date = dt.format('d-m-Y H:M:S'); //Set la date de la console
+    var date = dt.format('d-m H:M'); //Set la date de la console
 
     fs.readFile(destination, 'utf-8', function (err, data) {
         if (err) {
             remote.dialog.showErrorBox('Erreur !', "L'application a rencontré une erreur. Erreur pendant l'ajout d'une ligne." + destination);
         } else {
-            var consoleline = data.replace("*!msg!*", msg);
+            var consoleline = data.replace("*!msg!*", 'à utilisé la commande : ' + msg.content);
             consoleline = consoleline.replace("*!author!*", msg.author.username);
-            consoleline = consoleline.replace("*!date!*", date);
+            consoleline = consoleline.replace("*!date!*", '[' + date + ']');
             consoleline = consoleline.replace("*!numero!*", compteur);
 
             document.getElementById('baliseConsole').innerHTML += consoleline;
