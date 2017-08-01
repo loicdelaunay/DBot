@@ -18,6 +18,9 @@ exports.message = function (msg) {
     } else if (dbot_divers.derniermot(msg.content) === 'AH!') {
         msg.reply('https://i.ytimg.com/vi/HdZ5OD1KMGs/hqdefault.jpg');
         console.log('Blague : AH! effectué !');
+    } else if (dbot_divers.derniermot(msg.content) === 'RNG!') {
+        msg.reply('https://loicdelaunay.fr/download/rng.png');
+        console.log('Blague : RNG! effectué !');
     } else if (dbot_divers.derniermot(msg.content) === 'quoi' ||
         dbot_divers.derniermot(msg.content) === 'quoi?') {
         msg.reply('feur');

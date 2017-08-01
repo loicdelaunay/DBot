@@ -41,6 +41,9 @@ else {
     var dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
     console.log("Chargment de l'api infoUtilisateurs ok...");
 
+    var dbot_discordLog = require('./mes_modules/dbot_discordLog.js'); // Importation de mon module des logs discord
+    console.log("Chargment de l'api discordLog ok...");
+
 
     //Initialisation des modules configurable
     var dbot_youtube = null;
@@ -148,6 +151,9 @@ else {
     // Quand le bot reçoit un message le traitement s'effectue ici 
     client.on('message', msg => {
 
+        //Si le message vient du bot alors l'ignore 
+        if (message.author.bot) return;
+
         var dt = dateTime.create();
         var formatted = dt.format('d-m-Y H:M:S');
         dbot_console.addlogmessage("L'utilisateur : " + msg.author.username + ' Avec ID : ' + msg.author.id + ' a posté le message suivant : ' + msg.content + ' posté le : ' + formatted + '\n');
@@ -175,6 +181,9 @@ else {
 
     // Quand le bot recoit une commande
     client.on('message', msg => {
+
+        //Si le message vient du bot alors l'ignore 
+        if (message.author.bot) return;
 
         //découpe le message en argument pour chaque espaces 
         var args = msg.content.split(" ").slice(1);
@@ -264,12 +273,13 @@ else {
     client.on('guildMemberAdd', member => {
 
         const embed = new Discord.RichEmbed()
-            .setTitle("   ☺   BIENVENUE:   ☺   ")
+            .setTitle("  📢  BIENVENUE:  📢   ")
             .setColor(0x00ff00)
             .setAuthor(member.user.username, member.user.avatarURL)
             .setFooter('© D-BOT copyright Dream')
             .setTimestamp()
-            .addField("Bienvenue sur le serveur ", config.nomduserveur + " !")
+
+            .addField('\u200B', '\u200B')
 
         member.guild.defaultChannel.send({
             embed
