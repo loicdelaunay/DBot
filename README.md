@@ -26,7 +26,7 @@ Un maximum de fonctionnalités ! :
 <br>
 
 
-### 3DBOT créé par LoicDELAUNAY: 
+### DBOT créé par LoicDELAUNAY: 
 
  * [mon site web](https://loicdelaunay.fr)
  
