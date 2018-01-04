@@ -1,1 +1,1 @@
-electron . 
+node dbot.js

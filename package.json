@@ -28,7 +28,5 @@
         "opusscript": "0.0.3",
         "youtube-mp3-downloader": "^0.5.2"
     },
-    "devDependencies": {
-        "electron": "^1.8.1"
-    }
+    "devDependencies": {}
 }
