@@ -4,19 +4,20 @@
 // CTRL + F *nomdelacommande pour rechercher les commandes dans le projet 
 // CTRL + F $nomdelafonction pour rechercher les fonctions dans le projet 
 
-/*try {*/
+// Version du D-BOT
+const version = "0.9.7";
 
 // Affichage GUI PRIORITAIRE ! 
 var dbot_gui = require('./mes_modules/dbot_gui.js');
 
 // Importation des modules
-var Discord = require('discord.js'); // api de Discord 
-var client = new Discord.Client(); // api client de Discord
-var dateTime = require('node-datetime'); //api pour la gestion du temps
-var child_process = require('child_process'); //api pour gérer les processus
-var colors = require('colors'); // api pour gérer la couleur dans la console 
-var path = require('path'); // api de gestion des chemins d'accès
-var fs = require('fs'); // api de gestion des fichiers
+const Discord = require('discord.js'); // api de Discord 
+const client = new Discord.Client(); // api client de Discord
+const dateTime = require('node-datetime'); //api pour la gestion du temps
+const child_process = require('child_process'); //api pour gérer les processus
+const colors = require('colors'); // api pour gérer la couleur dans la console 
+const path = require('path'); // api de gestion des chemins d'accès
+const fs = require('fs'); // api de gestion des fichiers
 
 // Chargement du fichier de configuration du D-BOT ou si il n'existe pas lance l'installation du DBOT
 if (!fs.existsSync('./dbot_config.json')) {
@@ -28,7 +29,7 @@ else {
     var config = require('./dbot_config.json');
     console.log("Fichier de configuration chargé...");
 
-    // Importation de mes modules
+    // Importation de mes modules obligatoire
     var dbot_divers = require('./mes_modules/dbot_divers.js'); // Importation de mon module Divers
     console.log("Chargment de l'api divers ok...");
 
@@ -38,18 +39,10 @@ else {
     var dbot_permission = require('./mes_modules/dbot_permission.js'); // Importation de mon module Console
     console.log("Chargment de l'api permission ok...");
 
-    var dbot_infoUtilisateurs = require('./mes_modules/dbot_infoUtilisateurs.js'); // Importation de mon module des infosUtilisateurs
-    console.log("Chargment de l'api infoUtilisateurs ok...");
-
-    var dbot_discordLog = require('./mes_modules/dbot_discordLog.js'); // Importation de mon module des logs discord
-    console.log("Chargment de l'api discordLog ok...");
-
 
     //Initialisation des modules configurable
     var dbot_youtube = null;
     var dbot_prison = null;
-    var dbot_wot = null;
-    var dbot_wotTournoi = null;
     var dbot_musique = null;
     var dbot_messageAutoReponse = null;
     var dbot_web = null;
@@ -63,11 +56,6 @@ else {
     if (config.module_prison) {
         dbot_prison = require('./mes_modules/dbot_prison.js'); // Importation de mon module Prison
         console.log("Chargment de l'api prison ok...");
-    }
-    if (config.module_worldOfTank) {
-        dbot_wot = require('./mes_modules/dbot_wot.js'); // Importation de mon module World of tanks
-        dbot_wotTournoi = require('./mes_modules/dbot_wotTournoi.js'); // Importation de mon module World of tanks
-        console.log("Chargment de l'api worldoftank ok...");
     }
     if (config.module_musique) {
         dbot_musique = require('./mes_modules/dbot_musique.js'); // Importation de mon module Musique
@@ -86,11 +74,6 @@ else {
         console.log("afk ok...");
     }
     console.log("\nFIN DU CHARGEMENT DES API'S");
-
-
-
-    // Version du D-BOT
-    const version = dbot_divers.version();
 
     // Dossier de lancement du bot
     var appDir = path.dirname(require.main.filename);
@@ -151,8 +134,8 @@ else {
     // Quand le bot reçoit un message le traitement s'effectue ici 
     client.on('message', msg => {
 
-        //Si le message vient du bot alors l'ignore 
-        if (message.author.bot) return;
+        //Si le message vient du bot alors on l'ignore 
+        if (msg.author.bot) return;
 
         var dt = dateTime.create();
         var formatted = dt.format('d-m-Y H:M:S');
@@ -163,27 +146,6 @@ else {
             dbot_messageAutoReponse.message(msg);
         }
 
-        //Met à jour les informations de l'utilisateur concerné
-        xp = config.xpparmessage // Ajoute X XP à tous les utilisateurs envoyant un message
-        dbot_infoUtilisateurs.updateUtilisateur(msg.author.id, msg, xp);
-    });
-
-    //Exécute une action toutes les 10 secondes
-    function every10s() {
-        //Exécute les actions ci dessous
-
-        setTimeout(every10s, 10 * 1000);
-    }
-
-    //Quand le bot a start éxécute la boucle
-    every10s();
-
-
-    // Quand le bot recoit une commande
-    client.on('message', msg => {
-
-        //Si le message vient du bot alors l'ignore 
-        if (message.author.bot) return;
 
         //découpe le message en argument pour chaque espaces 
         var args = msg.content.split(" ").slice(1);
@@ -218,16 +180,6 @@ else {
             //Passage de la commande dans le module DBOT AFK
             if (config.module_afk) {
                 dbot_afk.commande(msg, args, commande);
-            }
-
-            //Passage de la commande dans le module DBOT WOT
-            if (config.module_worlOfTank) {
-                dbot_wot.commande(msg, args, commande);
-            }
-
-            //Passage de la commande dans le module DBOT WOTTOURNOI
-            if (config.module_worlOfTank) {
-                dbot_wotTournoi.commande(msg, args, commande);
             }
 
             //Passage de la commande dans le module DBOT MUSIQUE
@@ -286,9 +238,3 @@ else {
         });
     });
 }
-/*
-    //Catch des erreurs et retour
-} catch (err) {
-
-    console.error("ERREUR CRITIQUE : " + err);
-}*/

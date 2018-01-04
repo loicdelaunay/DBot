@@ -13,24 +13,22 @@
     "author": "Loïc DELAUNAY",
     "license": "MIT License",
     "dependencies": {
-        "bufferutil": "^3.0.1",
+        "bufferutil": "^3.0.3",
         "colors": "^1.1.2",
-        "discord.js": "^11.1.0",
-        "ejs": "^2.5.6",
+        "discord.js": "^11.2.1",
+        "ejs": "^2.5.7",
         "erlpack": "^0.1.2",
-        "express": "^4.15.3",
+        "express": "^4.16.2",
         "express.js": "^1.0.0",
         "get-youtube-id": "^1.0.0",
         "hammer": "0.0.5",
         "jquery": "^3.2.1",
-        "materialize-css": "^0.99.0",
         "node-datetime": "^1.0.1",
         "npm-gui": "^0.3.1",
         "opusscript": "0.0.3",
-        "wargamer": "^0.5.0",
-        "youtube-mp3-downloader": "^0.5.0"
+        "youtube-mp3-downloader": "^0.5.2"
     },
     "devDependencies": {
-        "electron": "^1.6.11"
+        "electron": "^1.8.1"
     }
 }

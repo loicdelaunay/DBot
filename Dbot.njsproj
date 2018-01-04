@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{86810156-e175-416d-9a98-461178bb29c1}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>dbot.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="idées.txt" />
+        <Content Include="dbot_config.json" />
+        <Content Include="package-lock.json" />
+        <Content Include="package.json" />
+        <Content Include="LICENSE.md" />
+        <Content Include="README.md" />
+        <Compile Include="dbot.js" />
+        <Compile Include="mes_modules\dbot_afk.js" />
+        <Compile Include="mes_modules\dbot_console.js" />
+        <Compile Include="mes_modules\dbot_discordLog.js" />
+        <Compile Include="mes_modules\dbot_divers.js" />
+        <Compile Include="mes_modules\dbot_gui.js" />
+        <Compile Include="mes_modules\dbot_infoUtilisateurs.js" />
+        <Compile Include="mes_modules\dbot_messageAutoReponse.js" />
+        <Compile Include="mes_modules\dbot_musique.js" />
+        <Compile Include="mes_modules\dbot_permission.js" />
+        <Compile Include="mes_modules\dbot_prison.js" />
+        <Compile Include="mes_modules\dbot_web.js" />
+        <Compile Include="mes_modules\dbot_wot.js" />
+        <Compile Include="mes_modules\dbot_wotTournoi.js" />
+        <Compile Include="mes_modules\dbot_youtube.js" />
+        <Content Include="data\gui\app.html" />
+        <Content Include="data\gui\consoleline.html" />
+        <Content Include="data\infoUtilisateurs\118072401681448960.json" />
+        <Content Include="data\infoUtilisateurs\315792445415882753.json" />
+        <Content Include="data\infoUtilisateurs\template.json" />
+        <Content Include="data\pageWeb\Accueil.ejs" />
+        <Content Include="data\wotTournoi\rule.txt" />
+        <Content Include="data\wotTournoi\tournoi.json" />
+        <Content Include="data\gui\css\app.css" />
+        <Content Include="data\gui\css\materialize.css" />
+        <Content Include="data\gui\css\materialize.min.css" />
+        <Compile Include="data\gui\js\app.js" />
+        <Compile Include="data\gui\js\hammer.min.js" />
+        <Compile Include="data\gui\js\jquery-2.1.1.min.js" />
+        <Compile Include="data\gui\js\materialize.js" />
+        <Compile Include="data\gui\js\materialize.min.js" />
+        <Content Include="data\pageWeb\css\Accueil.css" />
+        <Content Include="data\pageWeb\css\materialize.css" />
+        <Content Include="data\pageWeb\css\materialize.min.css" />
+        <Compile Include="data\pageWeb\js\materialize.js" />
+        <Compile Include="data\pageWeb\js\materialize.min.js" />
+        <Content Include="data\pageWeb\ressources\Logo.png" />
+        <Content Include="logs\commandes\logcommandes06-07-2017.txt" />
+        <Content Include="logs\commandes\logcommandes07-06-2017.txt" />
+        <Content Include="logs\commandes\logcommandes08-06-2017.txt" />
+        <Content Include="logs\commandes\logcommandes09-06-2017.txt" />
+        <Content Include="logs\commandes\logcommandes10-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes11-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes13-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes14-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes18-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes19-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes20-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes21-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes22-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes25-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes26-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes26-07-2017.txt" />
+        <Content Include="logs\commandes\logcommandes27-05-2017.txt" />
+        <Content Include="logs\commandes\logcommandes27-07-2017.txt" />
+        <Content Include="logs\commandes\logcommandes28-06-2017.txt" />
+        <Content Include="logs\commandes\logcommandes28-07-2017.txt" />
+        <Content Include="logs\commandes\logcommandes30-07-2017.txt" />
+        <Content Include="logs\erreurs\logerreurs26-07-2017.txt" />
+        <Content Include="logs\erreurs\logerreurs27-05-2017.txt" />
+        <Content Include="logs\erreurs\logerreurs27-07-2017.txt" />
+        <Content Include="logs\erreurs\logerreurs28-06-2017.txt" />
+        <Content Include="logs\messages\logmessages04-07-2017.txt" />
+        <Content Include="logs\messages\logmessages06-07-2017.txt" />
+        <Content Include="logs\messages\logmessages07-06-2017.txt" />
+        <Content Include="logs\messages\logmessages07-07-2017.txt" />
+        <Content Include="logs\messages\logmessages08-06-2017.txt" />
+        <Content Include="logs\messages\logmessages08-07-2017.txt" />
+        <Content Include="logs\messages\logmessages09-06-2017.txt" />
+        <Content Include="logs\messages\logmessages10-05-2017.txt" />
+        <Content Include="logs\messages\logmessages11-05-2017.txt" />
+        <Content Include="logs\messages\logmessages13-05-2017.txt" />
+        <Content Include="logs\messages\logmessages14-05-2017.txt" />
+        <Content Include="logs\messages\logmessages18-05-2017.txt" />
+        <Content Include="logs\messages\logmessages19-05-2017.txt" />
+        <Content Include="logs\messages\logmessages20-05-2017.txt" />
+        <Content Include="logs\messages\logmessages21-05-2017.txt" />
+        <Content Include="logs\messages\logmessages22-05-2017.txt" />
+        <Content Include="logs\messages\logmessages25-05-2017.txt" />
+        <Content Include="logs\messages\logmessages26-05-2017.txt" />
+        <Content Include="logs\messages\logmessages26-07-2017.txt" />
+        <Content Include="logs\messages\logmessages27-05-2017.txt" />
+        <Content Include="logs\messages\logmessages27-07-2017.txt" />
+        <Content Include="logs\messages\logmessages28-06-2017.txt" />
+        <Content Include="logs\messages\logmessages28-07-2017.txt" />
+        <Content Include="logs\messages\logmessages30-07-2017.txt" />
+        <Content Include="prerequis\ffmpeg\README.txt" />
+        <Content Include="prerequis\ffmpeg\doc\developer.html" />
+        <Content Include="prerequis\ffmpeg\doc\faq.html" />
+        <Content Include="prerequis\ffmpeg\doc\fate.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-all.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-bitstream-filters.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-codecs.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-devices.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-filters.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-formats.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-protocols.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-resampler.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-scaler.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg-utils.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffmpeg.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffplay-all.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffplay.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffprobe-all.html" />
+        <Content Include="prerequis\ffmpeg\doc\ffprobe.html" />
+        <Content Include="prerequis\ffmpeg\doc\general.html" />
+        <Content Include="prerequis\ffmpeg\doc\git-howto.html" />
+        <Content Include="prerequis\ffmpeg\doc\libavcodec.html" />
+        <Content Include="prerequis\ffmpeg\doc\libavdevice.html" />
+        <Content Include="prerequis\ffmpeg\doc\libavfilter.html" />
+        <Content Include="prerequis\ffmpeg\doc\libavformat.html" />
+        <Content Include="prerequis\ffmpeg\doc\libavutil.html" />
+        <Content Include="prerequis\ffmpeg\doc\libswresample.html" />
+        <Content Include="prerequis\ffmpeg\doc\libswscale.html" />
+        <Content Include="prerequis\ffmpeg\doc\nut.html" />
+        <Content Include="prerequis\ffmpeg\doc\platform.html" />
+        <Content Include="prerequis\ffmpeg\licenses\bzip2.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\fontconfig.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\freetype.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\frei0r.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\gme.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\gnutls.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\lame.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libass.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libbluray.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libbs2b.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libcaca.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libgsm.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libiconv.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libilbc.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libmfx.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libmodplug.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libtheora.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libvorbis.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libvpx.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\libwebp.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\opencore-amr.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\openh264.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\openjpeg.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\opus.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\rtmpdump.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\snappy.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\soxr.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\speex.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\twolame.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\vid.stab.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\vo-amrwbenc.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\wavpack.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\x264.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\x265.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\xavs.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\xvid.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\xz.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\zimg.txt" />
+        <Content Include="prerequis\ffmpeg\licenses\zlib.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="data" />
+        <Folder Include="data\gui" />
+        <Folder Include="data\gui\css" />
+        <Folder Include="data\gui\fonts" />
+        <Folder Include="data\gui\fonts\roboto" />
+        <Folder Include="data\gui\js" />
+        <Folder Include="data\infoUtilisateurs" />
+        <Folder Include="data\musiques" />
+        <Folder Include="data\pageWeb" />
+        <Folder Include="data\pageWeb\css" />
+        <Folder Include="data\pageWeb\fonts" />
+        <Folder Include="data\pageWeb\fonts\roboto" />
+        <Folder Include="data\pageWeb\js" />
+        <Folder Include="data\pageWeb\ressources" />
+        <Folder Include="data\wotTournoi" />
+        <Folder Include="Dbot" />
+        <Folder Include="Dbot\Dbot" />
+        <Folder Include="logs" />
+        <Folder Include="logs\commandes" />
+        <Folder Include="logs\erreurs" />
+        <Folder Include="logs\messages" />
+        <Folder Include="mes_modules" />
+        <Folder Include="prerequis" />
+        <Folder Include="prerequis\ffmpeg" />
+        <Folder Include="prerequis\ffmpeg\bin" />
+        <Folder Include="prerequis\ffmpeg\doc" />
+        <Folder Include="prerequis\ffmpeg\doc\examples" />
+        <Folder Include="prerequis\ffmpeg\licenses" />
+        <Folder Include="prerequis\ffmpeg\presets" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

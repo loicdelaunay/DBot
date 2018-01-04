@@ -1,11 +1,5 @@
 //** DBOT DIVERS : Api pour la gestion des modules divers du DBOT**//
 
-// Version du D-BOT avec export
-const version = "0.9.7";
-exports.version = function () {
-    return version;
-}
-
 // Importation des APIs
 const Discord = require('discord.js'); // api de discord
 const path = require('path'); // api de gestion des chemins d'accès
